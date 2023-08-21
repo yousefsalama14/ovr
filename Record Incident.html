@@ -1,0 +1,1560 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Incidents</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/datatables.min.css">
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap5.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/fixedColumns.dataTables.min.css">
+            <link rel="stylesheet" href="assets/css/buttons.bootstrap5.min.css">
+            <link rel="stylesheet" href="assets/css/editor.dataTables.min.css"> -->
+    <!-- <link rel="stylesheet" href="assets/css/select.dataTables.min.css"> -->
+    <link rel="stylesheet" href="assets/fonts/font-awesome/css/all.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css"> -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/DmsFont.css">
+    <link rel="stylesheet" href="assets/css/DmsNewFont.css">
+    <link rel="stylesheet" href="assets/css/en-font.css">
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap-icons.css"> -->
+    <link rel="stylesheet" href="assets/css/DMSmain.css">
+    <link rel="stylesheet" href="assets/css/Ovr.css">
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="assets/js/popper.min.js"></script> -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap5.min.js"></script>
+    <script src="assets/js/fixedColumns.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.buttons.min.js"></script>
+    <script src="assets/js/buttons.colVis.min.js"></script>
+    <script src="assets/js/buttons.html5.min.js"></script>
+    <script src="assets/js/buttons.print.min.js"></script>
+    <script src="assets/js/pdfmake.min.js"></script>
+    <script src="assets/js/select.dataTables.min.js"></script>
+    <script src="assets/js/echarts.min.js"></script>
+    <script src="assets/js/echarts-theme-shine.js"></script>
+    <!-- <script src="assets/js/jquery.datetimepicker.full.min.js"></script> -->
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/jquery.nicescroll.min.js"></script>
+    <!--<script src="assets/js/dashboard-charts.js"></script>-->
+    <script src="assets/js/DMSmain.js"></script>
+    <script src="assets/js/Oph.js"></script>
+</head>
+
+<body class="DMSBlueBlue">
+    <!-- header -->
+    <nav class="navbar navbar-expand-sm bg-light shadow-sm sticky-top flex-md-nowrap">
+        <div class="container-fluid">
+            <div class="toggle-menu-wrapper">
+                <a href="#" class="toggle-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <a class="navbar-brand nav-logo" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse navbar-collapse" id="navbarMain">
+                <!-- <div class="app-nam"><img src="assets/images/outpatient-icon.png" alt=""><h4 class="text-green">OVR</h4></div> -->
+                <div class="ms-auto mb-sm-0 navbar-nav d-flex justify-content-end">
+                    <ul class="nav-item header-tools d-flex align-items-center justify-content-center">
+                        <li class="app-name">
+                            <img src="assets/images/ovr.svg" alt="">
+                            <h4 class="text-green">OVR</h4>
+                        </li>
+                        <li class="vr mx-2"></li>
+                        <li>
+                            <a href="#" class="px-1" title="Info"><i class="dms-icon-info"></i></a>
+                        </li>
+                        <li class="px-2 dropdown" title="Masseage">
+                            <a href="#" data-bs-toggle="dropdown"
+                                class="navbar-link dropdown-toggle icon position-relative" aria-expanded="false"
+                                aria-haspopup="true">
+                                <i class="dms-icon-envelope"></i>
+                                <span
+                                    class="position-absolute top-0 translate-middle p-1 bg-danger border-light rounded-circle badge"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end animate slideIn msg-view p-2">
+                                <p class="msg-num">Masseage (<span>10</span>)</p>
+                                <a href="#" class="list-group-item list-group-item-action msg-item">
+                                    <div class="d-flex">
+                                        <div class="msg-img me-1 rounded-circle">
+                                            <img src="assets/images/user.jpg" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column flex-grow-1">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1 msg-name">Dr. Mazen Hany</h5>
+                                                <small class="text-muted msg-date">12/10/2022</small>
+                                            </div>
+                                            <div class="d-flex flex-column msg-details">
+                                                <p class="mb-1">RE: Case of lun</p>
+                                                <small class="text-secondary">56 yo female pt. known case of lung ca s/p
+                                                    radio and chemotherapy.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action msg-item">
+                                    <div class="d-flex">
+                                        <div class="msg-img me-1 rounded-circle">
+                                            <img src="assets/images/user.jpg" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column flex-grow-1">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1 msg-name">Dr. Mazen Hany</h5>
+                                                <small class="text-muted msg-date">12/10/2022</small>
+                                            </div>
+                                            <div class="d-flex flex-column msg-details">
+                                                <p class="mb-1">RE: Case of lun</p>
+                                                <small class="text-secondary">56 yo female pt. known case of lung ca s/p
+                                                    radio and chemotherapy.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action msg-item">
+                                    <div class="d-flex">
+                                        <div class="msg-img me-1 rounded-circle">
+                                            <img src="assets/images/user.jpg" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column flex-grow-1">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1 msg-name">Dr. Mazen Hany</h5>
+                                                <small class="text-muted msg-date">12/10/2022</small>
+                                            </div>
+                                            <div class="d-flex flex-column msg-details">
+                                                <p class="mb-1">RE: Case of lun</p>
+                                                <small class="text-secondary">56 yo female pt. known case of lung ca s/p
+                                                    radio and chemotherapy.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="p-1 d-grid alert-all text-center">View all messages</a>
+                            </div>
+                        </li>
+                        <li class="px-2 dropdown" title="Alert">
+                            <a href="#" data-bs-toggle="dropdown"
+                                class="navbar-link dropdown-toggle icon position-relative" role="button"
+                                aria-expanded="false"><i class="dms-icon-bell"></i>
+                                <span
+                                    class="position-absolute top-0 translate-middle p-1 bg-danger border-light rounded-circle badge"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end animate slideIn msg-view p-2">
+                                <p class="msg-num">Notifications (<span>5</span>)</p>
+                                <a href="#" class="list-group-item list-group-item-action msg-item">
+                                    <div class="d-flex flex-column flex-grow-1">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1 msg-name">Ali Ahmed</h5>
+                                            <small class="text-muted msg-date">12/10/2022</small>
+                                        </div>
+                                        <div class="d-flex flex-column msg-details">
+                                            <p class="mb-1 text-secondary">
+                                                Not sure if we'll need any further instruction on how to utilise the
+                                                encoded ID in links from the new email broadcast tool.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action msg-item">
+                                    <div class="d-flex flex-column flex-grow-1">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1 msg-name">Islam Mohamed</h5>
+                                            <small class="text-muted msg-date">12/10/2022</small>
+                                        </div>
+                                        <div class="d-flex flex-column msg-details">
+                                            <p class="mb-1 text-secondary">
+                                                Not sure if we'll need any further instruction on how to utilise the
+                                                encoded ID in links from the new email broadcast tool.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="p-1 d-grid alert-all text-center">View all notifications</a>
+                            </div>
+                        </li>
+                        <li class="px-2 dropdown" title="Apps Menu">
+                            <a href="#" data-bs-toggle="dropdown"
+                                class="navbar-link dropdown-toggle icon position-relative" aria-expanded="false"><i
+                                    class="dms-icon-grid"></i></a>
+                            <div class="dropdown-menu apps-menu dropdown-menu-end animate slideIn">
+                                <div class="d-flex flex-row flex-wrap justify-content-center">
+                                    <a href="#" class="col-4 app-item mb-2"><img src="assets/images/lab.png" alt=""
+                                            title="LAB">
+                                        <p class="mt-2">LAB</p>
+                                    </a>
+                                    <a href="#" class="col-4 app-item mb-2"><img src="assets/images/operation.png"
+                                            alt="" title="operation">
+                                        <p class="mt-2">operation</p>
+                                    </a>
+                                    <a href="#" class="col-4 app-item mb-2"><img src="assets/images/outpa.png" alt=""
+                                            title="Outpatient Manager">
+                                        <p class="mt-2">Outpatient Manager</p>
+                                    </a>
+                                    <a href="#" class="col-4 app-item mb-2"><img src="assets/images/assets.png" alt=""
+                                            title="Fixed Assets">
+                                        <p class="mt-2">Fixed Assets</p>
+                                    </a>
+                                    <a href="#" class="col-4 app-item mb-2"><img src="assets/images/invoice.png" alt=""
+                                            title="invoice">
+                                        <p class="mt-2">invoice</p>
+                                    </a>
+                                    <a href="#" class="col-4 app-item mb-2"><img src="assets/images/housekeeping.png"
+                                            alt="" title="housekeeping">
+                                        <p class="mt-2">housekeeping</p>
+                                    </a>
+                                </div>
+                                <a href="#" class="btn btn-secondary btn-sm d-grid px-5">Main Menu</a>
+                            </div>
+                        </li>
+                        <li class="px-1" title="Arabic Lang"> <a href="#"><i class="dms-icon-arabic"></i></a></li>
+                        <li class="vr mx-2"></li>
+                        <li class="navbar-user dropdown">
+                            <a href="#" class="navbar-link dropdown-toggle d-flex align-items-center"
+                                data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                                <img src="assets/images/user.jpg" alt=""><span class="d-none d-md-inline">Islam
+                                    Ali</span><b class="caret"></b>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end animate slideIn me-1">
+                                <a href="#" class="dropdown-item">Edit Profile</a>
+                                <a href="#" class="dropdown-item">Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">Log Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="bg-light shadow sidebar">
+        <ul class="sidebar-item">
+            <li>
+                <a href="#" title="dashboard"><i class="fa-solid fa-house"></i>
+                    <h3>dashboard</h3>
+                </a>
+            </li>
+            <li class="active">
+                <a href="#" title="Incidents"><i class="fa-solid fa-exclamation-triangle"></i>
+                    <h3>Incidents</h3>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- main content min-vh-100-->
+    <main class="main-content">
+        <div class="container-fluid">
+            <!-- page title -->
+            <div
+                class="page-title mb-3 border-bottom bg-light d-flex align-items-center justify-content-center sticky-top">
+                <!-- breadcrumb -->
+                <div class="p-0 ps-1 m-auto m-sm-0">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb position-relative">
+                            <li class="breadcrumb-item">OVR</li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                <h2>Incidents</h2>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                <!-- action-tools  -->
+                <div class="ms-auto ms-sm-auto m-sm-0 p-1">
+                    <div class="action-tools d-flex align-items-center justify-content-end">
+                        <!--  -->
+                        <select id="themeSelector" class="form-select me-2">
+                            <option selected="" disabled="" value="">Theme</option>
+                            <option value="NewDMS">New DMS</option>
+                            <option value="DMSBlueBlue">CMIS</option>
+                            <option value="DMSBlue">ERP</option>
+                        </select>
+                        <select id="MenuSize" class="form-select me-2">
+                            <option selected="" disabled="" value="">Menu</option>
+                            <option value="menu-lg">Big</option>
+                            <option value="menu-sm">Icon Bar</option>
+                            <option value="pinned-menu">Pinned Menu</option>
+                        </select>
+                        <select id="themeColor" class="form-select me-2 d-none">
+                            <option selected="" disabled="" value="">Color</option>
+                            <option value="theme-green">green</option>
+                            <option value="theme-red">red</option>
+                            <option value="theme-blue">blue</option>
+                            <option value="theme-yellow">yellow</option>
+                        </select>
+                        <!--  -->
+                        <a class="px-1 btn-filter" title="Advance Search" data-bs-toggle="offcanvas"
+                            href="#offcanvasFilter" role="button" aria-controls="offcanvasFilter"><i
+                                class="fa fa-filter"></i></a>
+                        <span class="vr mx-2"></span>
+                        <a href="#" class="px-1" title="New"><i class="fa fa-plus-circle"></i></a>
+                        <span class="vr mx-2"></span>
+                        <a href="#" class="px-1" title="Save"><i class="fa fa-floppy-disk"></i></a>
+                        <span class="vr mx-2"></span>
+                        <a href="#" class="px-1" title="XLS file"><i class="dms-icon-xls-file1"></i></a>
+                        <a href="#" class="px-1" title="PDF file"><i class="dms-icon-pdf-file1"></i></a>
+                    </div>
+                    <!-- filter element-->
+                    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                        id="offcanvasFilter" aria-labelledby="offcanvasFilterLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><i class="fa fa-filter"></i> Search
+                            </h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <label class="form-label">Name</label>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <input type="text" class="form-control form-control-sm" placeholder="code">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <label class="form-label">Title</label>
+                                    <input type="text" class="form-control form-control-sm">
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <label class="form-label">Title</label>
+                                    <input type="text" class="form-control form-control-sm">
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <label class="form-label">Date (from - to)</label>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-2">
+                                            <input type="text" class="form-control form-control-sm from">
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <input type="text" class="form-control form-control-sm to">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <fieldset class="rounded-1 p-2">
+                                        <legend class="ps-1 pe-1"> Group Title</legend>
+                                        <div class="row">
+                                            <div class="col-12 mb-1">
+                                                <label class="form-label">text</label>
+                                                <input type="text" class="form-control form-control-sm">
+                                            </div>
+                                            <div class="col-2 mb-1 pe-0">
+                                                <label class="form-label">#</label>
+                                                <input type="text" class="form-control form-control-sm">
+                                            </div>
+                                            <div class="col-10 mb-1">
+                                                <label class="form-label">text</label>
+                                                <input type="text" class="form-control form-control-sm">
+                                            </div>
+                                            <div class="col-12 col-md-6 mb-1">
+                                                <label class="form-label">text</label>
+                                                <input type="text" class="form-control form-control-sm">
+                                            </div>
+                                            <div class="col-12 col-md-6 mb-1">
+                                                <label class="form-label">text</label>
+                                                <input type="text" class="form-control form-control-sm">
+                                            </div>
+                                            <div class="col-12 col-md-6 mb-1">
+                                                <label class="form-label">text</label>
+                                                <input type="text" class="form-control form-control-sm">
+                                            </div>
+                                            <div class="col-12 col-md-6 mb-1">
+                                                <label class="form-label">text</label>
+                                                <input type="text" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <label class="form-label">Email address</label>
+                                    <input type="email" class="form-control form-control-sm"
+                                        placeholder="name@example.com">
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <label class="form-label">textarea</label>
+                                    <textarea class="form-control" rows="2"></textarea>
+                                </div>
+                                <div class="col-md-7 mb-2">
+                                    <label class="form-label">Email</label>
+                                    <input type="text" class="form-control-plaintext form-control-sm"
+                                        value="email@example.com" readonly>
+                                </div>
+                                <div class="col-md-5 mb-2">
+                                    <label class="form-label">Date</label>
+                                    <input type="text" class="form-control form-control-sm datepicker">
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <label class="form-label">Input Title</label>
+                                    <input type="text" class="form-control form-control-sm">
+                                    <span class="form-text">Must be 8-20 characters long.</span>
+                                </div>
+                                <hr class="border-secondary">
+                                <div class="mb-2">
+                                    <label class="me-2 form-label">Group Title</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input " type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio1" value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">text 1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">text 2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio3" value="option3">
+                                        <label class="form-check-label" for="inlineRadio3">text 3 </label>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="mb-2">
+                                    <label class="form-label">Group Title</label>
+                                    <div class="">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input " type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio11" value="option11">
+                                            <label class="form-check-label" for="inlineRadio11">Text 1</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio12" value="option12">
+                                            <label class="form-check-label" for="inlineRadio12">Text 2</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="inlineRadio13" value="option13">
+                                            <label class="form-check-label" for="inlineRadio13">Text 3 </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="mb-2">
+                                    <label class="me-2 form-label"> Group Title</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">Default checkbox</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">Checked checkbox</label>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="mb-2">
+                                    <label class="me-2 form-label">Group Title</label>
+                                    <br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+                                        <label class="form-check-label" for="flexCheckDefault1">Default checkbox</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
+                                        <label class="form-check-label" for="flexCheckChecked2">Checked checkbox</label>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="mb-2">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="floatingSelect"
+                                            aria-label="Floating label select example">
+                                            <option selected>Open this select menu</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                        <label for="floatingSelect">Works with selects</label>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="mt-2 d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <a href="#" class="btn btn-outline-secondary btn-sm px-5"><i
+                                            class="fa fa-refresh"></i> Refresh</a>
+                                    <a href="#" class="btn btn-primary btn-sm px-5" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"><i class="fa fa-search"></i> Search</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- filter tags -->
+                    <div
+                        class="filter-tags d-flex flex-row align-items-center justify-content-end flex-wrap gap-2 me-2">
+                        <!-- <div class="tag">
+                                <span class="tag-icon"><i class="fa fa-filter"></i></span>
+                                <span class="tag-text">Name</span>
+                                <a href="#" class="tag-close" aria-hidden="true"><i class="fa fa-remove"></i></a>
+                            </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- content -->
+            <div class="page-content">
+                <!-- <div id="patientsPanel" class="row mb-3">
+                    <div id="patientsList" class="col-12 col-lg-4 col-xl-3 mb-3 mb-lg-0">
+                        <div class="card h-100 bg-warning bg-opacity-10">
+                            <div class="card-body p-0">
+                                <div class="card-icons py-1 px-2">
+                                    <div class="row row-cols-lg-4 row-cols-xl-5 g-0" style="counter-reset: myCounter;">
+                                        <div class="col patientIcon">
+                                            <div class="icons-wrapper icons-success"><i class="fas fa-user"></i></div>
+                                        </div>
+                                        <div class="col patientIcon">
+                                            <div class="icons-wrapper icons-success"><i class="fas fa-user"></i></div>
+                                        </div>
+                                        <div class="col patientIcon">
+                                            <div class="icons-wrapper icons-success"><i class="fas fa-user"></i></div>
+                                        </div>
+                                        <div class="col patientIcon">
+                                            <div class="icons-wrapper icons-primary"><i class="fas fa-user"></i></div>
+                                        </div>
+                                        <div class="col patientIcon">
+                                            <div class="icons-wrapper icons-primary"><i class="fas fa-user"></i></div>
+                                        </div>
+                                        <div class="col patientIcon">
+                                            <div class="icons-wrapper icons-primary"><i class="fas fa-user"></i></div>
+                                        </div>
+                                        <div class="col patientIcon">
+                                            <div class="icons-wrapper icons-primary"><i class="fas fa-user"></i></div>
+                                        </div>
+                                        <div class="col patientIcon">
+                                            <div class="icons-wrapper icons-primary"><i class="fas fa-user"></i></div>
+                                        </div>
+                                        <div class="col patientIcon">
+                                            <div class="icons-wrapper icons-warning"><i class="fas fa-user"></i></div>
+                                        </div>
+                                        <div class="col d-flex align-items-center">
+                                            <div class="morePatients">
+                                                <a href="#" class="fw-bold text-dark" data-bs-toggle="modal"
+                                                    data-bs-target="#FullPatientsListModal">
+                                                    19 Patients
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex">
+                                    <a href="#" class="btn btn-primary border-end" data-bs-toggle="modal"
+                                        data-bs-target="#FullPatientsListModal">(10) Waiting Patients</a>
+                                    <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#FullPatientsListModal">(9) Transferred Patients</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="patientInfo" class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+                        <div class="card flex-row h-100 bg-warning bg-opacity-10">
+                            <div class="card-body d-flex">
+                                <div class="patientPic">
+                                    <div class="icons-wrapper-lg icons-success"><i class="fas fa-user"></i></div>
+                                </div>
+                                <div class="patientText">
+                                    <p class="card-text mb-2 patientName">Ahmed Emadeldeen ismaiel</p>
+                                    <p class="card-text mb-2 patientMR">10523657 / Male / 30 Y</p>
+                                    <div class="critical-indicators">
+                                        <a href="#"><i class="icon icon-bell"></i></a>
+                                        <a href="#"><i class="icon icon-cough"></i></a>
+                                        <a href="#"><i class="fas fa-bell"></i></a>
+                                        <a href="#"><i class="icon icon-alarm-clock"></i></a>
+                                        <a href="#"><i class="icon icon-patient-isolation"></i></a>
+                                        <a href="#"><i class="icon icon-embryo"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="patientHistor" class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+                        <div class="card h-100 bg-warning bg-opacity-10" style="max-height: 142px;overflow-y: auto;">
+                            <div class="card-header bg-transparent fw-bold border-0">
+                                History
+                            </div>
+                            <div class="card-body pt-2">
+                                <div class="row">
+                                    <div class="col-3">22/03/2023</div>
+                                    <div class="col-6">Preglaucoma Unspecified</div>
+                                    <div class="col-3">365.00</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">15/11/2022</div>
+                                    <div class="col-6">Cataract</div>
+                                    <div class="col-3">366.90</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">18/11/2021</div>
+                                    <div class="col-6">Preglaucoma Unspecified</div>
+                                    <div class="col-3">365.00</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">15/09/2021</div>
+                                    <div class="col-6">Open angle glauc w/borderline</div>
+                                    <div class="col-3">365.01</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">15/11/2022</div>
+                                    <div class="col-6">Cataract</div>
+                                    <div class="col-3">366.90</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">22/03/2023</div>
+                                    <div class="col-6">Preglaucoma Unspecified</div>
+                                    <div class="col-3">365.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="visitControls" class="col-sm-12 col-xl-1">
+                        <div class="visit-btn-wrapper">
+                            <div class="btn btn-group rounded-0 p-0">
+                                <button type="button" class="btn bg-secondary bg-opacity-50 rounded-0 px-2">End</button>
+                                <button type="button"
+                                    class="btn btn-secondary dropdown-toggle dropdown-toggle-split rounded-0 px-0"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Wait</a></li>
+                                    <li><a class="dropdown-item" href="#">Transfer</a></li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn btn-primary rounded-0">Start Next</button>
+                        </div>
+                    </div>
+                </div> -->
+                <div id="patientsBody" class="">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="nav nav-tabs steps-tabs row" id="myTab" role="tablist">
+                                <li class="nav-item col-md-4" role="presentation">
+                                    <button class="nav-link active" id="Incident-tab" data-bs-toggle="tab"
+                                        data-bs-target="#Incident-tab-pane" type="button" role="tab"
+                                        aria-controls="Incident-tab-pane" aria-selected="true">
+                                        <div class="icon-circle">
+                                            <i class="fas fa-inbox"></i>
+                                        </div>
+                                        Incident Record
+                                    </button>
+                                </li>
+                                <li class="nav-item col-md-4" role="presentation">
+                                    <button class="nav-link" id="Supervisor-tab" data-bs-toggle="tab"
+                                        data-bs-target="#Supervisor-tab-pane" type="button" role="tab"
+                                        aria-controls="Supervisor-tab-pane" aria-selected="false">
+                                        <div class="icon-circle">
+                                            <i class="fas fa-inbox"></i>
+                                        </div>
+                                        Supervisor
+                                    </button>
+                                </li>
+                                <li class="nav-item col-md-4" role="presentation">
+                                    <button class="nav-link" id="QIPs-tab" data-bs-toggle="tab"
+                                        data-bs-target="#QIPs-tab-pane" type="button" role="tab"
+                                        aria-controls="QIPs-tab-pane" aria-selected="false">
+                                        <div class="icon-circle">
+                                            <i class="fas fa-inbox"></i>
+                                        </div>
+                                        QIPs
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="Incident-tab-pane" role="tabpanel"
+                                    aria-labelledby="Incident-tab" tabindex="0">
+                                    <div class="card-body">
+                                        <form class="row g-3 needs-validation" novalidate="">
+                                            <div class="col-12">
+                                                <h6 class="text-primary fw-bold">Incident Type</h6>
+                                            </div>
+                                            <div class="col-md-3 position-relative">
+                                                <label for="IncidentId" class="form-label">Incident Id</label>
+                                                <input type="text" class="form-control" id="IncidentId" value="3256454"
+                                                    required="">
+                                                <div class="valid-tooltip">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 position-relative">
+                                                <label for="IncidentDate" class="form-label">Incident Date</label>
+                                                <input type="date" class="form-control" id="IncidentDate" value="Mark"
+                                                    required="">
+                                                <div class="valid-tooltip">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 position-relative">
+                                                <label for="IncidentTime" class="form-label">Incident Time</label>
+                                                <input type="time" class="form-control" id="IncidentTime" value="Mark"
+                                                    required="">
+                                                <div class="valid-tooltip">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 position-relative">
+                                                <label for="IncidentLocation" class="form-label">Incident
+                                                    Location</label>
+                                                <select class="form-select" id="IncidentLocation" required="">
+                                                    <option selected="" disabled="" value="">Choose Location</option>
+                                                    <option>...</option>
+                                                </select>
+                                                <div class="invalid-tooltip">
+                                                    Please select a valid Location.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="LocationDetails" class="form-label">Location Details</label>
+                                                <textarea class="form-control" id="LocationDetails"
+                                                    placeholder="Please enter a Location Details."
+                                                    required=""></textarea>
+                                                <div class="invalid-feedback">
+                                                    Please enter a Location Details.
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <form class="g-3 needs-validation mt-5 border-top border-primary pt-5">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h6 class="text-primary fw-bold">Affected Person Details</h6>
+                                                </div>
+                                                <div class="col-md-3 position-relative">
+                                                    <label for="AffectedPersonSelect" class="form-label">Affected
+                                                        Person</label>
+                                                    <select class="form-select" id="AffectedPersonSelect" required="">
+                                                        <option selected="" disabled="" value="">Choose Affected Person
+                                                        </option>
+                                                        <option value="patient">Patient</option>
+                                                        <option value="staff">Staff</option>
+                                                        <option value="visitor">Visitor</option>
+                                                        <option value="other">Other</option>
+                                                    </select>
+                                                    <div class="invalid-tooltip">
+                                                        Please select a valid Affected Person.
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 position-relative hidden patient-option">
+                                                    <label for="MRInput" class="form-label">MR <a href="#"
+                                                            class="ms-1 text-primary"><i
+                                                                class="fa-solid fa-magnifying-glass"></i></a></label>
+                                                    <div class="d-flex">
+                                                        <input type="text" class="form-control rounded-0 rounded-start" id="MRInput"
+                                                            placeholder="MR" required="">
+                                                        <input type="text" class="form-control rounded-0 rounded-end" id="MRInput"
+                                                            placeholder="Patient Name" required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 position-relative hidden staff-option">
+                                                    <label for="PatientName" class="form-label">Staff Name</label>
+                                                    <select class="form-select" id="PatientName" required="">
+                                                        <option selected="" disabled="" value="">Choose Patient Name
+                                                        </option>
+                                                        <option>...</option>
+                                                    </select>
+                                                    <div class="invalid-tooltip">
+                                                        Please select a valid Patient Name.
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 position-relative hidden visitor-option">
+                                                    <label for="PatientName" class="form-label">Visitor Name</label>
+                                                    <select class="form-select" id="PatientName" required="">
+                                                        <option selected="" disabled="" value="">Choose Patient Name
+                                                        </option>
+                                                        <option>...</option>
+                                                    </select>
+                                                    <div class="invalid-tooltip">
+                                                        Please select a valid Patient Name.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <!-- <div class="col-12">
+                                                    <p class="text-primary fw-bold">Hossam Hassan Salem /
+                                                        1053333
+                                                    </p>
+                                                </div> -->
+                                                <div class="col-md-4 position-relative">
+                                                    <label for="Gender" class="form-label">Gender</label>
+                                                    <select class="form-select" id="Gender" required>
+                                                        <option selected>Male</option>
+                                                        <option>Female</option>
+                                                    </select>
+                                                    <!-- <p>Male</p> -->
+                                                </div>
+                                                <div class="col-md-4 position-relative">
+                                                    <label for="Age" class="form-label">Age</label>
+                                                    <!-- <input type="text" class="form-control" id="Age" required> -->
+                                                    <p>47 Years</p>
+                                                </div>
+                                                <div class="col-md-4 position-relative">
+                                                    <label for="DateofBirth" class="form-label">Date of
+                                                        Birth</label>
+                                                    <!-- <input type="date" class="form-control" id="DateofBirth"
+                                                        value="Mark" required> -->
+                                                    <p>12/10/1976 </p>
+                                                </div>
+                                                <div class="col-md-4 position-relative">
+                                                    <label for="affectedPersonNumber"
+                                                        class="form-label">Mobile number</label>
+                                                    <input type="text" class="form-control" id="affectedPersonNumber"
+                                                        value="01004510645" required="">
+                                                </div>
+                                                <div class="col-md-4 position-relative">
+                                                    <label for="affectedPersonEmail" class="form-label">Email</label>
+                                                    <div class="input-group has-validation">
+                                                        <span class="input-group-text"
+                                                            id="affectedPersonEmailPrepend">@</span>
+                                                        <input type="text" class="form-control" id="affectedPersonEmail"
+                                                            aria-describedby="affectedPersonEmailPrepend" required=""
+                                                            value="Yousef.mohamed@dmsegypt.com">
+                                                        <div id="validationServerUsernameFeedback"
+                                                            class="invalid-feedback">
+                                                            Please choose a username.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 position-relative">
+                                                    <label for="affectedPersonAddress"
+                                                        class="form-label">Address</label>
+                                                    <input type="text" class="form-control" id="affectedPersonAddress"
+                                                        value="48 Gamal Abd Elnaser st/ Tanta/Gharbia/Egypt"
+                                                        required="">
+                                                </div>
+                                            </div>
+                                            <style>
+                                                .hidden {
+                                                    display: none;
+                                                }
+                                            </style>
+                                        </form>
+
+                                        <form class="row g-3 needs-validation mt-5 border-top border-primary pt-5" novalidate="">
+                                            <div class="col-12">
+                                                <label for="EventDetails" class="form-label">Event Details</label>
+                                                <textarea class="form-control" id="EventDetails"
+                                                    placeholder="Please enter a Event Details." required=""></textarea>
+                                                <div class="invalid-feedback">
+                                                    Please enter a Event Details.
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-body mt-3">
+                                        <h5 class="text-primary">Immediate Action/Witnesses</h5>
+                                        <form class="row g-3 needs-validation" novalidate="">
+                                            <div class="col-md-3 position-relative">
+                                                <label for="ImmediateAction" class="form-label">Immediate Action</label>
+                                                <select class="form-select" id="ImmediateAction" required="">
+                                                    <option selected="" disabled="" value="">Choose Immediate Action
+                                                    </option>
+                                                    <option>...</option>
+                                                </select>
+                                                <div class="invalid-tooltip">
+                                                    Please select a valid Immediate Action.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="Comment" class="form-label">Comment</label>
+                                                <textarea class="form-control" id="Comment"
+                                                    placeholder="Please enter a Comment." required=""></textarea>
+                                                <div class="invalid-feedback">
+                                                    Please enter a Comment.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <h6>Witness Details</h6>
+                                            </div>
+                                            <div class="col-md-3 position-relative">
+                                                <label for="WitnessType" class="form-label">Type</label>
+                                                <select class="form-select" id="WitnessType" required="">
+                                                    <option selected="" disabled="" value="">Choose Type</option>
+                                                    <option>...</option>
+                                                </select>
+                                                <div class="invalid-tooltip">
+                                                    Please select a valid Type.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 position-relative">
+                                                <label for="WitnessMR" class="form-label">MR</label>
+                                                <select class="form-select" id="WitnessMR" required="">
+                                                    <option selected="" disabled="" value="">Choose MR</option>
+                                                    <option>...</option>
+                                                </select>
+                                                <div class="invalid-tooltip">
+                                                    Please select a valid MR.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 position-relative">
+                                                <label for="WitnessPatientName" class="form-label">Patient Name</label>
+                                                <select class="form-select" id="WitnessPatientName" required="">
+                                                    <option selected="" disabled="" value="">Choose Patient Name
+                                                    </option>
+                                                    <option>...</option>
+                                                </select>
+                                                <div class="invalid-tooltip">
+                                                    Please select a valid Patient Name.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 d-flex align-items-end justify-content-end">
+                                                <button type="button" class="btn btn-primary">
+                                                    <i class="fas fa-plus"></i>
+                                                    add witness
+                                                </button>
+                                            </div>
+                                        </form>
+                                        <div id="setupTabel" class="table-responsive mt-3">
+                                            <table class="table table-striped table-hover align-middle table-sm">
+                                                <colgroup>
+                                                    <col style="width: 30px;">
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col style="width: 60px;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th data-orderable="false"></th>
+                                                        <th scope="col">Type</th>
+                                                        <th scope="col">MR</th>
+                                                        <th scope="col">Name</th>
+                                                        <th scope="col" data-orderable="false">Email</th>
+                                                        <th scope="col" data-orderable="false">Contact</th>
+                                                        <th scope="col" data-orderable="false">Address</th>
+                                                        <th data-orderable="false"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">Staff</span>
+                                                            <input type="text" class="form-control" value="Staff">
+                                                        </td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">1053333</span>
+                                                            <input type="text" class="form-control" value="1053333">
+                                                        </td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">Ahmed Mahmoud</span>
+                                                            <input type="text" class="form-control"
+                                                                value="Ahmed Mahmoud">
+                                                        </td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">info@company.com</span>
+                                                            <input type="text" class="form-control"
+                                                                value="info@company.com">
+                                                        </td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">0123546977</span>
+                                                            <input type="text" class="form-control" value="0123546977">
+                                                        </td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">48 Gamal Abd Elnaser</span>
+                                                            <input type="text" class="form-control"
+                                                                value="48 Gamal Abd Elnaser">
+                                                        </td>
+                                                        <td class="dt-right">
+                                                            <a href="#"
+                                                                class="text-primary row-edit fa fa-pencil-alt"></a>
+                                                            <a href="#"
+                                                                class="text-danger delete-row fa fa-trash-alt"></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">Staff</span>
+                                                            <input type="text" class="form-control" value="Staff">
+                                                        </td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">985411</span>
+                                                            <input type="text" class="form-control" value="985411">
+                                                        </td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">Ahmed Mahmoud</span>
+                                                            <input type="text" class="form-control"
+                                                                value="Ahmed Mahmoud">
+                                                        </td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">info@company.com</span>
+                                                            <input type="text" class="form-control"
+                                                                value="info@company.com">
+                                                        </td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">0123546977</span>
+                                                            <input type="text" class="form-control" value="0123546977">
+                                                        </td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">48 Gamal Abd Elnaser</span>
+                                                            <input type="text" class="form-control"
+                                                                value="48 Gamal Abd Elnaser">
+                                                        </td>
+                                                        <td class="dt-right">
+                                                            <a href="#"
+                                                                class="text-primary row-edit fa fa-pencil-alt"></a>
+                                                            <a href="#"
+                                                                class="text-danger delete-row fa fa-trash-alt"></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">Staff</span>
+                                                            <input type="text" class="form-control" value="Staff">
+                                                        </td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">1053333</span>
+                                                            <input type="text" class="form-control" value="1053333">
+                                                        </td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">Ahmed Mahmoud</span>
+                                                            <input type="text" class="form-control"
+                                                                value="Ahmed Mahmoud">
+                                                        </td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">info@company.com</span>
+                                                            <input type="text" class="form-control"
+                                                                value="info@company.com">
+                                                        </td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">0123546977</span>
+                                                            <input type="text" class="form-control" value="0123546977">
+                                                        </td>
+                                                        <td class="row-inline-editable" data-search="">
+                                                            <span class="editable">48 Gamal Abd Elnaser</span>
+                                                            <input type="text" class="form-control"
+                                                                value="48 Gamal Abd Elnaser">
+                                                        </td>
+                                                        <td class="dt-right">
+                                                            <a href="#"
+                                                                class="text-primary row-edit fa fa-pencil-alt"></a>
+                                                            <a href="#"
+                                                                class="text-danger delete-row fa fa-trash-alt"></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="Supervisor-tab-pane" role="tabpanel"
+                                    aria-labelledby="Supervisor-tab" tabindex="0">
+                                    <div class="card-body">
+                                        <h5 class="text-primary">Nurse Manager/Supervisor Notification</h5>
+                                        <form class="row g-3 needs-validation" novalidate>
+                                            <div class="col-md-4 position-relative">
+                                                <label for="validationTooltip01" class="form-label">ID</label>
+                                                <input type="text" class="form-control" id="validationTooltip01"
+                                                    value="1312648" required="">
+                                                <div class="valid-tooltip">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 position-relative">
+                                                <label for="validationTooltip01" class="form-label">Supervisor
+                                                    Name</label>
+                                                <input type="text" class="form-control" id="validationTooltip01"
+                                                    value="Mark" required="">
+                                                <div class="valid-tooltip">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 position-relative">
+                                                <label for="validationEmail" class="form-label">Email</label>
+                                                <div class="input-group has-validation">
+                                                    <span class="input-group-text" id="validationEmailPrepend">@</span>
+                                                    <input type="text" class="form-control" id="validationEmail"
+                                                        aria-describedby="validationEmailPrepend" required="">
+                                                    <div class="invalid-tooltip">
+                                                        Please choose a unique and valid Email.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="ReporterRemark" class="form-label">Reporter Remark</label>
+                                                <textarea class="form-control" id="ReporterRemark"
+                                                    placeholder="Please enter a Reporter Remark."
+                                                    required=""></textarea>
+                                                <div class="invalid-feedback">
+                                                    Please enter a Reporter Remark.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="SupervisorRemark" class="form-label">Supervisor
+                                                    Remark</label>
+                                                <textarea class="form-control" id="SupervisorRemark"
+                                                    placeholder="Please enter a Supervisor Remark."
+                                                    required=""></textarea>
+                                                <div class="invalid-feedback">
+                                                    Please enter a Supervisor Remark.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <p>Medical Event</p>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="radio" class="form-check-input" id="MedicalEventYes"
+                                                        name="MedicalEvent">
+                                                    <label class="form-check-label" for="MedicalEventYes">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="radio" class="form-check-input" id="MedicalEventNo"
+                                                        name="MedicalEvent">
+                                                    <label class="form-check-label" for="MedicalEventNo">No</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 position-relative">
+                                                <label for="HarmLevel" class="form-label">Harm Level</label>
+                                                <select class="form-select" id="HarmLevel" required="">
+                                                    <option selected="" disabled="" value="">Choose Level</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                </select>
+                                                <div class="invalid-tooltip">
+                                                    Please select a valid Level.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <textarea class="form-control" id="details"
+                                                    placeholder="Please enter Details." required=""></textarea>
+                                                <div class="invalid-feedback">
+                                                    Please enter Details.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <p>Injury Outcome</p>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="radio" class="form-check-input" id="NoInjury"
+                                                        name="radio-stacked">
+                                                    <label class="form-check-label" for="NoInjury">No Injury</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="radio" class="form-check-input" id="Minor"
+                                                        name="radio-stacked">
+                                                    <label class="form-check-label" for="Minor">Minor</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="radio" class="form-check-input" id="Serious"
+                                                        name="radio-stacked">
+                                                    <label class="form-check-label" for="Serious">Serious</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="radio" class="form-check-input" id="Death"
+                                                        name="radio-stacked">
+                                                    <label class="form-check-label" for="Death">Death</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="radio" class="form-check-input" id="InjuryOutcomeOther"
+                                                        name="radio-stacked">
+                                                    <label class="form-check-label"
+                                                        for="InjuryOutcomeOther">Other</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="PhysicianAssessment" class="form-label">Physician's
+                                                    Assessment</label>
+                                                <textarea class="form-control" id="PhysicianAssessment"
+                                                    placeholder="Please enter a Physician's Assessment."
+                                                    required=""></textarea>
+                                                <div class="invalid-feedback">
+                                                    Please enter a Physician's Assessment.
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="QIPs-tab-pane" role="tabpanel" aria-labelledby="QIPs-tab"
+                                    tabindex="0">
+                                    <div class="card-body">
+                                        <h5 class="text-primary">RCA</h5>
+                                        <form class="row g-3 needs-validation" novalidate="">
+                                            <div class="col-12">
+                                                <label for="MostObviousFailure" class="form-label">Identify The Most
+                                                    Obvious Failure</label>
+                                                <textarea class="form-control" id="MostObviousFailure"
+                                                    placeholder="Please enter a Identify The Most Obvious Failure."
+                                                    required=""></textarea>
+                                                <div class="invalid-feedback">
+                                                    Identify The Most Obvious Failure.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="FramingProblem" class="form-label">Framing The
+                                                    Problem</label>
+                                                <textarea class="form-control" id="FramingProblem"
+                                                    placeholder="Please enter a Framing The Problem."
+                                                    required=""></textarea>
+                                                <div class="invalid-feedback">
+                                                    Please enter a Framing The Problem.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="WhatHappened" class="form-label">Defining The Problem - What
+                                                    Happened</label>
+                                                <textarea class="form-control" id="WhatHappened"
+                                                    placeholder="Please enter a Defining The Problem - What Happened."
+                                                    required=""></textarea>
+                                                <div class="invalid-feedback">
+                                                    Defining The Problem - What Happened.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="HowHappen" class="form-label">Defining The Problem - How Did
+                                                    It Happen</label>
+                                                <textarea class="form-control" id="HowHappen"
+                                                    placeholder="Please enter a Defining The Problem - How Did It Happen."
+                                                    required=""></textarea>
+                                                <div class="invalid-feedback">
+                                                    Defining The Problem - How Did It Happen.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="WhyHappen" class="form-label">Defining The Problem - Why Did
+                                                    It Happen</label>
+                                                <textarea class="form-control" id="WhyHappen"
+                                                    placeholder="Please enter a Defining The Problem - Why Did It Happen."
+                                                    required=""></textarea>
+                                                <div class="invalid-feedback">
+                                                    Defining The Problem - Why Did It Happen.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="RootCause" class="form-label">Root Cause - The 5
+                                                    Whys</label>
+                                                <textarea class="form-control" id="RootCause"
+                                                    placeholder="Please enter a Root Cause - The 5 Whys."
+                                                    required=""></textarea>
+                                                <div class="invalid-feedback">
+                                                    Root Cause - The 5 Whys.
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-body mt-3">
+                                        <h5 class="text-primary">QIPs</h5>
+                                        <form class="row g-3 needs-validation" novalidate="">
+                                            <div class="col-md-3 position-relative">
+                                                <label for="Category" class="form-label">Category</label>
+                                                <select class="form-select" id="Category" required="">
+                                                    <option selected="" disabled="" value="">Choose Category</option>
+                                                    <option>...</option>
+                                                </select>
+                                                <div class="invalid-tooltip">
+                                                    Please select a valid Category.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 position-relative">
+                                                <label for="EventType" class="form-label"></label>
+                                                <select class="form-select" id="EventType" required="">
+                                                    <option selected="" disabled="" value="">Choose Event Type</option>
+                                                    <option>...</option>
+                                                </select>
+                                                <div class="invalid-tooltip">
+                                                    Please select a valid Event Type.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 d-flex align-items-end">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="CloseEvent">
+                                                    <label class="form-check-label" for="CloseEvent">Close Event</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 d-flex align-items-end justify-content-end">
+                                                <button type="button" class="btn btn-primary">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                    sheet
+                                                </button>
+                                            </div>
+                                            <div class="col-md-3 position-relative">
+                                                <label for="Department" class="form-label">Department</label>
+                                                <select class="form-select" id="Department" required="">
+                                                    <option selected="" disabled="" value="">Choose Department</option>
+                                                    <option>...</option>
+                                                </select>
+                                                <div class="invalid-tooltip">
+                                                    Please select a valid Department.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <p>Corrective Action</p>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="radio" class="form-check-input"
+                                                        id="CompleteAppropriate" name="CorrectiveAction">
+                                                    <label class="form-check-label" for="CompleteAppropriate">Complete
+                                                        And Appropriate</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="radio" class="form-check-input"
+                                                        id="IncompleteInappropriate" name="CorrectiveAction">
+                                                    <label class="form-check-label"
+                                                        for="IncompleteInappropriate">Incomplete And
+                                                        Inappropriate</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <p>OVR Completeness</p>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="checkbox" class="form-check-input" id="ComplianceTime">
+                                                    <label class="form-check-label" for="ComplianceTime">Compliance
+                                                        Time</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        id="ImplementationCorrectiveAction">
+                                                    <label class="form-check-label"
+                                                        for="ImplementationCorrectiveAction">Implementation Of
+                                                        Corrective Action</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        id="DevelopmentActionPlan">
+                                                    <label class="form-check-label"
+                                                        for="DevelopmentActionPlan">Development Of Action Plan </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 position-relative">
+                                                <label for="OVRClassifications" class="form-label">OVR
+                                                    Classifications</label>
+                                                <select class="form-select" id="OVRClassifications" required="">
+                                                    <option selected="" disabled="" value="">Choose OVR Classifications
+                                                    </option>
+                                                    <option>...</option>
+                                                </select>
+                                                <div class="invalid-tooltip">
+                                                    Please select a valid OVR Classifications.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <p>Contributing Factor Categories</p>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        id="InadequateEducationTraining">
+                                                    <label class="form-check-label"
+                                                        for="InadequateEducationTraining">Inadequate Education And
+                                                        Training</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="checkbox" class="form-check-input" id="Negligence">
+                                                    <label class="form-check-label" for="Negligence">Negligence</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        id="ProcedureClinical">
+                                                    <label class="form-check-label" for="ProcedureClinical">Policy
+                                                        And Procedure/Clinical Practice Guidelines </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="checkbox" class="form-check-input" id="Equipment">
+                                                    <label class="form-check-label" for="Equipment">Equipment</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="checkbox" class="form-check-input" id="Workload">
+                                                    <label class="form-check-label" for="Workload">Workload</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="checkbox" class="form-check-input" id="Scheduling">
+                                                    <label class="form-check-label" for="Scheduling">Scheduling </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="Action" class="form-label">Action</label>
+                                                <textarea class="form-control" id="Action"
+                                                    placeholder="Please enter a Action." required=""></textarea>
+                                                <div class="invalid-feedback">
+                                                    Please enter a Action.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="Recommendation" class="form-label">Recommendation</label>
+                                                <textarea class="form-control" id="Recommendation"
+                                                    placeholder="Please enter a Recommendation." required=""></textarea>
+                                                <div class="invalid-feedback">
+                                                    Please enter a Recommendation.
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="RecommendationRemarks" class="form-label">Recommendation
+                                                    Remarks</label>
+                                                <textarea class="form-control" id="RecommendationRemarks"
+                                                    placeholder="Please enter a Recommendation Remarks."
+                                                    required=""></textarea>
+                                                <div class="invalid-feedback">
+                                                    Please enter a Recommendation Remarks.
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="d-flex align-items-center justify-content-center fixed-bottom border-top bg-light">
+        <div class="d-flex align-items-center py-2">
+            <span class="me-2">&copy; All rights reserved 2023
+                <a href="https://www.dmsegypt.net/" class="me-2 text-decoration-none lh-1">
+                    <img src="assets/images/logo-small.png" alt="DMS logo" class="">
+                </a></span>
+            <ul class="nav list-unstyled d-flex ms-2 align-items-center social">
+                <li class="ms-2"><a class="" href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li class="ms-2"><a class="" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li class="ms-2"><a class="" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li class="ms-2"><a class="" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Full Patients List Modal -->
+    <div class="modal fade" id="FullPatientsListModal" tabindex="-1" aria-labelledby="FullPatientsListModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="FullPatientsListModalLabel">All Patients List</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive mt-1">
+                        <table class="table table-striped table-hover table-sm autoDataTablized" data-colreorder='true'
+                            data-paging='true' data-pagelength='5' data-ordering='true'
+                            data-nonorderable='nonOrderable'>
+                            <colgroup>
+                                <col style="width: 100px;">
+                                <col style="width: 200px;">
+                                <col style="width: 75px;">
+                                <col style="width: 200px;">
+                                <col style="width: 100px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Appointment</th>
+                                    <th>Name</th>
+                                    <th>Status</th>
+                                    <th>Location</th>
+                                    <th>Est. Return Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>02:40 PM</td>
+                                    <td>Ahmed Esam Adel Alazwar</td>
+                                    <td class="text-center">
+                                        <div class="status info">
+                                            <i class="fa-solid fa-shuffle"></i>Transferred
+                                        </div>
+                                    </td>
+                                    <td>Dr. Ali Abdulfatah Waiting</td>
+                                    <td>03:05 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>02:55 PM</td>
+                                    <td>Ali Mohamed Abdulazim</td>
+                                    <td class="text-center">
+                                        <div class="status success">
+                                            <i class="fa-solid fa-circle-check"></i>Ready
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>02:35 PM</td>
+                                    <td>Sobhi Ahmed Adel</td>
+                                    <td class="text-center">
+                                        <div class="status warning">
+                                            <i class="fa-solid fa-glasses"></i>Preparation
+                                        </div>
+                                    </td>
+                                    <td>Preperation Room 114</td>
+                                    <td>03:05 PM</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== Start Default modal ========== -->
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional: Place to the bottom of scripts -->
+    <script>
+        // const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+
+        $(document).ready(function () {
+            $("#AffectedPersonSelect").change(function () {
+                var selectedOption = $(this).val();
+
+                // Hide all elements
+                $(".hidden").addClass("hidden");
+
+                // Show the selected element based on the selected option
+                if (selectedOption === "patient") {
+                    $(".patient-option").removeClass("hidden");
+                    $(".staff-option").addClass("hidden");
+                    $(".visitor-option").addClass("hidden");
+                } else if (selectedOption === "staff") {
+                    $(".staff-option").removeClass("hidden");
+                    $(".patient-option").addClass("hidden");
+                    $(".visitor-option").addClass("hidden");
+                } else if (selectedOption === "visitor") {
+                    $(".visitor-option").removeClass("hidden");
+                    $(".staff-option").addClass("hidden");
+                    $(".patient-option").addClass("hidden");
+                }
+            });
+        });
+
+
+    </script>
+    <!-- ========== End Default modal ========== -->
+
+</body>
+
+</html>

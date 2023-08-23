@@ -11,10 +11,14 @@
     cursor: pointer;
 }
 
-div.dataTables_wrapper div.dataTables_length {
+#IncidentsTable div.dt-buttons {
+    float: right;
+}
+
+/* div.dataTables_wrapper div.dataTables_length {
     bottom: -25px;
     position: relative;
-}
+} */
 
 .status {
     padding: .5rem 1rem;
@@ -46,6 +50,14 @@ div.dataTables_wrapper div.dataTables_length {
 .status.danger {
     background-color: #a9444231;
     color: #a94442;
+}
+
+body.DMSBlueBlue .page-title a[data-bs-dismiss="offcanvas"] {
+    color: #fff;
+}
+
+.page-link:hover {
+    color: #fff;
 }
 
 /***** End Common *****/
@@ -658,9 +670,9 @@ div.dataTables_wrapper div.dataTables_length {
 .nav-tabs.steps-tabs .nav-link {
     border: 0;
     padding: 0;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
     margin: auto;
     position: relative;
     z-index: 10;
@@ -743,9 +755,11 @@ div.dataTables_wrapper div.dataTables_length {
 label+p {
     color: #8e9092;
 }
-.form-label{
+
+.form-label {
     font-weight: 600;
 }
+
 /***** End Steps Tabs *****/
 /***** Select *****/
 .select2-container--default .select2-selection--multiple {
@@ -763,8 +777,198 @@ label+p {
 }
 
 /***** End Select *****/
+/***** Timeline *****/
+.steps {
+    display: flex;
+}
+
+.step {
+
+    position: relative;
+}
+
+.step>span:after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #007EA7;
+    margin: auto;
+}
+
+.step span.done {
+    background-color: #337ab7;
+    color: #fff;
+}
+
+.step .done:after {
+    background-color: #007EA7;
+}
+
+.step span.undone {
+    background-color: #6c757d;
+}
+
+.step .undone:after {
+    background-color: #6c757d;
+}
+
+
+.step:last-child span::after {
+    display: none;
+}
+
+.step span {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.step:not(:last-child) span {
+    margin-right: 20px;
+}
+
+/* background Colors */
+.bg-info {
+    background-color: #17a2b8;
+}
+
+.bg-success {
+    background-color: #039A1A;
+}
+
+.bg-danger {
+    background-color: #F97171;
+}
+
+.bg-requested {
+    background-color: #FFA500;
+    color: #fff;
+}
+
+li.not-active .bg-requested {
+    background-color: #ffa5003d;
+}
+
+li.not-active .bg-requested:hover {
+    background-color: #FFA500;
+    color: #fff;
+}
+
+.step>span.bg-requested:after {
+    background-color: #FFA500;
+}
+
+.bg-appointment {
+    background-color: #F24C4C;
+    color: #fff;
+}
+
+li.not-active .bg-appointment {
+    background-color: #f24c4c40;
+}
+
+li.not-active .bg-appointment:hover {
+    background-color: #F24C4C;
+    color: #fff;
+}
+
+.step>span.bg-appointment:after {
+    background-color: #F24C4C;
+}
+
+.bg-processing {
+    background-color: #0a7687;
+    color: #fff;
+}
+
+li.not-active .bg-processing {
+    background-color: #0a76872b;
+}
+
+li.not-active .bg-processing:hover {
+    background-color: #0a7687;
+    color: #fff;
+}
+
+.step>span.bg-processing:after {
+    background-color: #0a7687;
+}
+
+.bg-resulted {
+    background-color: #601052;
+    color: #fff;
+}
+
+li.not-active .bg-resulted {
+    background-color: #60105229;
+}
+
+li.not-active .bg-resulted:hover {
+    background-color: #601052;
+    color: #fff;
+}
+
+.step>span.bg-resulted:after {
+    background-color: #601052;
+}
+
+.bg-confirmed {
+    background-color: #039A1A;
+    color: #fff;
+}
+
+li.not-active .bg-confirmed {
+    background-color: #039a1a3b;
+}
+
+li.not-active .bg-confirmed:hover {
+    background-color: #039A1A;
+    color: #fff;
+}
+
+.step>span.bg-confirmed:after {
+    background-color: #039A1A;
+}
+
+.bg-ended {
+    background-color: #29434C;
+    color: #fff;
+}
+
+li.not-active .bg-ended {
+    background-color: #29434c33;
+}
+
+li.not-active .bg-ended:hover {
+    background-color: #29434C;
+    color: #fff;
+}
+
+.step>span.bg-ended:after {
+    background-color: #29434C;
+}
+
+li.not-active .bg-primary {
+    background-color: #337ab733;
+}
+
+li.not-active .bg-primary:hover {
+    background-color: #286090;
+}
+
+/***** End Timeline *****/
+/***** DMS Style issues solutions *****/
 /***** Colors *****/
-.btn-outline-primary{
+.btn-outline-primary {
     --bs-btn-color: var(--appColor);
     --bs-btn-border-color: var(--appColor);
     --bs-btn-hover-bg: var(--appColor);
@@ -774,4 +978,46 @@ label+p {
     --bs-btn-disabled-color: var(--appColor);
     --bs-btn-disabled-border-color: var(--appColor);
 }
+
+.btn:hover {
+    color: var(--bs-btn-hover-color) !important;
+}
+
 /***** End Colors *****/
+/***** Links *****/
+body.DMSBlueBlue .page-title a[data-bs-dismiss="offcanvas"] {
+    color: #fff;
+}
+
+.page-link:hover {
+    color: #fff;
+}
+
+/***** End Links *****/
+/***** Floating select *****/
+.form-floating>.form-select {
+    padding: 1rem 0.75rem;
+}
+
+.form-floating>.form-select~label {
+    opacity: 1;
+    transform: unset;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.form-floating>.form-select:focus,
+.form-floating>.form-select:not(:placeholder-shown) {
+    padding-top: 1.625rem;
+    padding-bottom: 0.625rem;
+}
+
+.form-floating>.form-select:focus~label,
+.form-floating>.form-select:not([value=""]):valid~label {
+    opacity: .65;
+    transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
+/***** End Floating select *****/
+/***** End DMS Style issues solutions *****/

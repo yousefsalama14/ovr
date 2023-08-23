@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Incidents</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/datatables.min.css">
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap5.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/fixedColumns.dataTables.min.css">
+            <link rel="stylesheet" href="assets/css/buttons.bootstrap5.min.css">
+            <link rel="stylesheet" href="assets/css/editor.dataTables.min.css"> -->
+    <!-- <link rel="stylesheet" href="assets/css/select.dataTables.min.css"> -->
+    <link rel="stylesheet" href="assets/fonts/font-awesome/css/all.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css"> -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/DmsFont.css">
+    <link rel="stylesheet" href="assets/css/DmsNewFont.css">
+    <link rel="stylesheet" href="assets/css/en-font.css">
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap-icons.css"> -->
+    <link rel="stylesheet" href="assets/css/DMSmain.css">
+    <link rel="stylesheet" href="assets/css/Ovr.css">
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="assets/js/popper.min.js"></script> -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap5.min.js"></script>
+    <script src="assets/js/fixedColumns.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.buttons.min.js"></script>
+    <script src="assets/js/buttons.colVis.min.js"></script>
+    <script src="assets/js/buttons.html5.min.js"></script>
+    <script src="assets/js/buttons.print.min.js"></script>
+    <script src="assets/js/pdfmake.min.js"></script>
+    <script src="assets/js/select.dataTables.min.js"></script>
+    <script src="assets/js/echarts.min.js"></script>
+    <script src="assets/js/echarts-theme-shine.js"></script>
+    <!-- <script src="assets/js/jquery.datetimepicker.full.min.js"></script> -->
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/jquery.nicescroll.min.js"></script>
+    <!--<script src="assets/js/dashboard-charts.js"></script>-->
+    <script src="assets/js/DMSmain.js"></script>
+    <script src="assets/js/Oph.js"></script>
+</head>
+
+<body class="DMSBlueBlue">
+    <!-- header -->
+    <nav class="navbar navbar-expand-sm bg-light shadow-sm sticky-top flex-md-nowrap">
+        <div class="container-fluid">
+            <div class="toggle-menu-wrapper">
+                <a href="#" class="toggle-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <a class="navbar-brand nav-logo" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse navbar-collapse" id="navbarMain">
+                <!-- <div class="app-nam"><img src="assets/images/outpatient-icon.png" alt=""><h4 class="text-green">OVR</h4></div> -->
+                <div class="ms-auto mb-sm-0 navbar-nav d-flex justify-content-end">
+                    <ul class="nav-item header-tools d-flex align-items-center justify-content-center">
+                        <li class="app-name">
+                            <img src="assets/images/ovr.svg" alt="">
+                            <h4 class="text-green">OVR</h4>
+                        </li>
+                        <li class="vr mx-2"></li>
+                        <li>
+                            <a href="#" class="px-1" title="Info"><i class="dms-icon-info"></i></a>
+                        </li>
+                        <li class="px-2 dropdown" title="Masseage">
+                            <a href="#" data-bs-toggle="dropdown"
+                                class="navbar-link dropdown-toggle icon position-relative" aria-expanded="false"
+                                aria-haspopup="true">
+                                <i class="dms-icon-envelope"></i>
+                                <span
+                                    class="position-absolute top-0 translate-middle p-1 bg-danger border-light rounded-circle badge"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end animate slideIn msg-view p-2">
+                                <p class="msg-num">Masseage (<span>10</span>)</p>
+                                <a href="#" class="list-group-item list-group-item-action msg-item">
+                                    <div class="d-flex">
+                                        <div class="msg-img me-1 rounded-circle">
+                                            <img src="assets/images/user.jpg" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column flex-grow-1">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1 msg-name">Dr. Mazen Hany</h5>
+                                                <small class="text-muted msg-date">12/10/2022</small>
+                                            </div>
+                                            <div class="d-flex flex-column msg-details">
+                                                <p class="mb-1">RE: Case of lun</p>
+                                                <small class="text-secondary">56 yo female pt. known case of lung ca s/p
+                                                    radio and chemotherapy.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action msg-item">
+                                    <div class="d-flex">
+                                        <div class="msg-img me-1 rounded-circle">
+                                            <img src="assets/images/user.jpg" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column flex-grow-1">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1 msg-name">Dr. Mazen Hany</h5>
+                                                <small class="text-muted msg-date">12/10/2022</small>
+                                            </div>
+                                            <div class="d-flex flex-column msg-details">
+                                                <p class="mb-1">RE: Case of lun</p>
+                                                <small class="text-secondary">56 yo female pt. known case of lung ca s/p
+                                                    radio and chemotherapy.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action msg-item">
+                                    <div class="d-flex">
+                                        <div class="msg-img me-1 rounded-circle">
+                                            <img src="assets/images/user.jpg" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column flex-grow-1">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1 msg-name">Dr. Mazen Hany</h5>
+                                                <small class="text-muted msg-date">12/10/2022</small>
+                                            </div>
+                                            <div class="d-flex flex-column msg-details">
+                                                <p class="mb-1">RE: Case of lun</p>
+                                                <small class="text-secondary">56 yo female pt. known case of lung ca s/p
+                                                    radio and chemotherapy.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="p-1 d-grid alert-all text-center">View all messages</a>
+                            </div>
+                        </li>
+                        <li class="px-2 dropdown" title="Alert">
+                            <a href="#" data-bs-toggle="dropdown"
+                                class="navbar-link dropdown-toggle icon position-relative" role="button"
+                                aria-expanded="false"><i class="dms-icon-bell"></i>
+                                <span
+                                    class="position-absolute top-0 translate-middle p-1 bg-danger border-light rounded-circle badge"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end animate slideIn msg-view p-2">
+                                <p class="msg-num">Notifications (<span>5</span>)</p>
+                                <a href="#" class="list-group-item list-group-item-action msg-item">
+                                    <div class="d-flex flex-column flex-grow-1">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1 msg-name">Ali Ahmed</h5>
+                                            <small class="text-muted msg-date">12/10/2022</small>
+                                        </div>
+                                        <div class="d-flex flex-column msg-details">
+                                            <p class="mb-1 text-secondary">
+                                                Not sure if we'll need any further instruction on how to utilise the
+                                                encoded ID in links from the new email broadcast tool.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action msg-item">
+                                    <div class="d-flex flex-column flex-grow-1">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1 msg-name">Islam Mohamed</h5>
+                                            <small class="text-muted msg-date">12/10/2022</small>
+                                        </div>
+                                        <div class="d-flex flex-column msg-details">
+                                            <p class="mb-1 text-secondary">
+                                                Not sure if we'll need any further instruction on how to utilise the
+                                                encoded ID in links from the new email broadcast tool.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="p-1 d-grid alert-all text-center">View all notifications</a>
+                            </div>
+                        </li>
+                        <li class="px-2 dropdown" title="Apps Menu">
+                            <a href="#" data-bs-toggle="dropdown"
+                                class="navbar-link dropdown-toggle icon position-relative" aria-expanded="false"><i
+                                    class="dms-icon-grid"></i></a>
+                            <div class="dropdown-menu apps-menu dropdown-menu-end animate slideIn">
+                                <div class="d-flex flex-row flex-wrap justify-content-center">
+                                    <a href="#" class="col-4 app-item mb-2"><img src="assets/images/lab.png" alt=""
+                                            title="LAB">
+                                        <p class="mt-2">LAB</p>
+                                    </a>
+                                    <a href="#" class="col-4 app-item mb-2"><img src="assets/images/operation.png"
+                                            alt="" title="operation">
+                                        <p class="mt-2">operation</p>
+                                    </a>
+                                    <a href="#" class="col-4 app-item mb-2"><img src="assets/images/outpa.png" alt=""
+                                            title="Outpatient Manager">
+                                        <p class="mt-2">Outpatient Manager</p>
+                                    </a>
+                                    <a href="#" class="col-4 app-item mb-2"><img src="assets/images/assets.png" alt=""
+                                            title="Fixed Assets">
+                                        <p class="mt-2">Fixed Assets</p>
+                                    </a>
+                                    <a href="#" class="col-4 app-item mb-2"><img src="assets/images/invoice.png" alt=""
+                                            title="invoice">
+                                        <p class="mt-2">invoice</p>
+                                    </a>
+                                    <a href="#" class="col-4 app-item mb-2"><img src="assets/images/housekeeping.png"
+                                            alt="" title="housekeeping">
+                                        <p class="mt-2">housekeeping</p>
+                                    </a>
+                                </div>
+                                <a href="#" class="btn btn-secondary btn-sm d-grid px-5">Main Menu</a>
+                            </div>
+                        </li>
+                        <li class="px-1" title="Arabic Lang"> <a href="#"><i class="dms-icon-arabic"></i></a></li>
+                        <li class="vr mx-2"></li>
+                        <li class="navbar-user dropdown">
+                            <a href="#" class="navbar-link dropdown-toggle d-flex align-items-center"
+                                data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                                <img src="assets/images/user.jpg" alt=""><span class="d-none d-md-inline">Islam
+                                    Ali</span><b class="caret"></b>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end animate slideIn me-1">
+                                <a href="#" class="dropdown-item">Edit Profile</a>
+                                <a href="#" class="dropdown-item">Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">Log Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="bg-light shadow sidebar">
+        <ul class="sidebar-item">
+            <li>
+                <a href="#" title="dashboard"><i class="fa-solid fa-house"></i>
+                    <h3>dashboard</h3>
+                </a>
+            </li>
+            <li class="active">
+                <a href="Record-Incident.html" title="Incidents"><i class="fa-solid fa-exclamation-triangle"></i>
+                    <h3>Incidents</h3>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- main content min-vh-100-->
+    <main class="main-content">
+        <div class="container-fluid">
+            <!-- page title -->
+            <div
+                class="page-title mb-3 border-bottom bg-light d-flex align-items-center justify-content-center sticky-top">
+                <!-- breadcrumb -->
+                <div class="p-0 ps-1 m-auto m-sm-0">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb position-relative">
+                            <li class="breadcrumb-item">OVR</li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                <h2>Incidents</h2>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                <!-- action-tools  -->
+                <div class="ms-auto ms-sm-auto m-sm-0 p-1">
+                    <div class="action-tools d-flex align-items-center justify-content-end">
+                        <a class="px-1 btn-filter" title="Advance Search" data-bs-toggle="offcanvas"
+                            href="#offcanvasFilter" role="button" aria-controls="offcanvasFilter">
+                            <i class="fa fa-filter"></i>
+                        </a>
+                        <span class="vr mx-2"></span>
+                        <a href="#" class="px-1 text-primary" title="Save"><i class="fa fa-floppy-disk"></i></a>
+                    </div>
+                    <!-- filter element-->
+                    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                        id="offcanvasFilter" aria-labelledby="offcanvasFilterLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><i class="fa fa-filter"></i> Search
+                            </h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+                                    <label class="form-label">Incident ID</label>
+                                    <input type="text" class="form-control form-control-sm" placeholder="Example: 205">
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <label class="form-label">Incident Type</label>
+                                    <input type="text" class="form-control form-control-sm" placeholder="Fire Incident">
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <label class="form-label">Incident Date (from - to)</label>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-2">
+                                            <input type="text" class="form-control form-control-sm from"
+                                                value="22/03/2022">
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <input type="text" class="form-control form-control-sm to"
+                                                value="22/06/2022">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="col-12 mb-2">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="CategorySelect"
+                                            onclick="this.setAttribute('value', this.value);"
+                                            onchange="this.setAttribute('value', this.value);" value="">
+                                            <option value=""></option>
+                                            <option value="1">Alabama</option>
+                                            <option value="2">Boston</option>
+                                            <option value="3">Ohaio</option>
+                                            <option value="4">New York</option>
+                                            <option value="5">Washington</option>
+                                        </select>
+                                        <label for="CategorySelect">Select Category</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="HarmLevel"
+                                            onclick="this.setAttribute('value', this.value);"
+                                            onchange="this.setAttribute('value', this.value);" value="">
+                                            <option value=""></option>
+                                            <option value="Low">Low</option>
+                                            <option value="moderate harm">moderate harm</option>
+                                            <option value="unintended severe">unintended severe</option>
+                                        </select>
+                                        <label for="HarmLevel">Select Harm Level</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="CorrectiveAction"
+                                            onclick="this.setAttribute('value', this.value);"
+                                            onchange="this.setAttribute('value', this.value);" value="">
+                                            <option value=""></option>
+                                            <option value="1">Alabama</option>
+                                            <option value="2">Boston</option>
+                                            <option value="3">Ohaio</option>
+                                            <option value="4">New York</option>
+                                            <option value="5">Washington</option>
+                                        </select>
+                                        <label for="CorrectiveAction">Select Corrective Action</label>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="mt-2 d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <a href="#" class="btn btn-outline-secondary btn-sm px-5"><i
+                                            class="fa fa-refresh"></i> Refresh</a>
+                                    <a href="#" class="btn btn-primary btn-sm px-5" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"><i class="fa fa-search"></i> Search</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- filter tags -->
+                    <div
+                        class="filter-tags d-flex flex-row align-items-center justify-content-end flex-wrap gap-2 me-2">
+                        <!-- <div class="tag">
+                            <span class="tag-icon"><i class="fa fa-filter"></i></span>
+                            <span class="tag-text">Name</span>
+                            <a href="#" class="tag-close" aria-hidden="true"><i class="fa fa-remove"></i></a>
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- content -->
+            <div class="page-content">
+                <div id="patientsBody" class="">
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="IncidentsTable" class="table-responsive mt-3">
+                                <table class="table table-striped table-hover align-middle table-sm">
+                                    <colgroup>
+                                        <col style="width:100px;">
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col style="width:200px;">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col" data-orderable="false">Affected Person</th>
+                                            <th scope="col">Number</th>
+                                            <th scope="col" data-orderable="false">Gender</th>
+                                            <th scope="col" data-orderable="false">Email</th>
+                                            <th scope="col" data-orderable="false">Supervisor</th>
+                                            <th scope="col">Category</th>
+                                            <th scope="col">Harm Level</th>
+                                            <th scope="col">Incident Type</th>
+                                            <th scope="col" data-orderable="false">Department</th>
+                                            <th scope="col" data-orderable="false" class="text-center">Status</th>
+                                            <th scope="col" data-orderable="false" class="text-center">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span>200</span>
+                                            </td>
+                                            <td>
+                                                <span>Patient</span>
+                                            </td>
+                                            <td>
+                                                <span>MR#: 3214681</span>
+                                            </td>
+                                            <td>
+                                                <span>male</span>
+                                            </td>
+                                            <td>
+                                                <span>info@company.com</span>
+                                            </td>
+                                            <td>
+                                                <span>Ahmed Mahmoud</span>
+                                            </td>
+                                            <td>
+                                                <span>Safety</span>
+                                            </td>
+                                            <td>
+                                                <span>Low</span>
+                                            </td>
+                                            <td>
+                                                <span>Security Incident</span>
+                                            </td>
+                                            <td>
+                                                <span>Inventory</span>
+                                            </td>
+                                            <td>
+                                                <div class="steps">
+                                                    <div class="step" title="Requested / 22-10-2021 / 10:00 AM">
+                                                        <span class="bg-requested"><i
+                                                                class="fas fa-hourglass-end"></i></span>
+                                                    </div>
+                                                    <div class="step" title="Received / 22-10-2021 / 11:00 AM">
+                                                        <span class="bg-appointment"><i
+                                                                class="fas fa-clipboard-list"></i></span>
+                                                    </div>
+                                                    <div class="step" title="Allocated / 23-10-2021 / 02:00 PM">
+                                                        <span class="bg-processing"><i
+                                                                class="fas fa-clipboard-check"></i></span>
+                                                    </div>
+                                                    <div class="step" title="Examined / 01-11-2021 / 09:10 AM">
+                                                        <span class="bg-confirmed"><i
+                                                                class="fas fa-check-double"></i></span>
+                                                    </div>
+                                                    <div class="step" title="Discharged / 02-11-2021 / 10:00 AM">
+                                                        <span class="bg-ended"><i
+                                                                class="fas fa-check-circle"></i></span>
+                                                    </div>
+                                                    <div class="step" title="Discharged">
+                                                        <span class="undone"></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="#ActionModal" data-bs-toggle="modal" class="text-primary">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>201</span>
+                                            </td>
+                                            <td>
+                                                <span>staff</span>
+                                            </td>
+                                            <td>
+                                                <span>emp#: 9871</span>
+                                            </td>
+                                            <td>
+                                                <span>male</span>
+                                            </td>
+                                            <td>
+                                                <span>info@company.com</span>
+                                            </td>
+                                            <td>
+                                                <span>Ahmed Mahmoud</span>
+                                            </td>
+                                            <td>
+                                                <span>Safety</span>
+                                            </td>
+                                            <td>
+                                                <span>moderate harm</span>
+                                            </td>
+                                            <td>
+                                                <span>Unsafe Acts</span>
+                                            </td>
+                                            <td>
+                                                <span>Inventory</span>
+                                            </td>
+                                            <td>
+                                                <div class="steps">
+                                                    <div class="step" title="Requested / 22-10-2021 / 10:00 AM">
+                                                        <span class="done"><i class="fas fa-hourglass-end"></i></span>
+                                                    </div>
+                                                    <div class="step" title="Appointment / 22-10-2021 / 11:00 AM">
+                                                        <span class="done"><i class="fas fa-clipboard-list"></i></span>
+                                                    </div>
+                                                    <div class="step" title="Processing / 23-10-2021 / 02:00 PM">
+                                                        <span class="done"><i class="fas fa-clipboard-check"></i></span>
+                                                    </div>
+                                                    <div class="step" title="Resulted / 01-11-2021 / 09:00 AM">
+                                                        <span class="done"><i class="fas fa-poll"></i></span>
+                                                    </div>
+                                                    <div class="step" title="Confirmed / 01-11-2021 / 09:10 AM">
+                                                        <span class="done"><i class="fas fa-check-double"></i></span>
+                                                    </div>
+                                                    <div class="step" title="Ended / 02-11-2021 / 10:00 AM">
+                                                        <span class="done"><i class="fas fa-check-circle"></i></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="#ActionModal" data-bs-toggle="modal" class="text-primary">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>202</span>
+                                            </td>
+                                            <td>
+                                                <span>Visitor</span>
+                                            </td>
+                                            <td>
+                                                <span>ID#: 2974156871</span>
+                                            </td>
+                                            <td>
+                                                <span>female</span>
+                                            </td>
+                                            <td>
+                                                <span>info@company.com</span>
+                                            </td>
+                                            <td>
+                                                <span>Ahmed Mahmoud</span>
+                                            </td>
+                                            <td>
+                                                <span>Safety</span>
+                                            </td>
+                                            <td>
+                                                <span>unintended severe</span>
+                                            </td>
+                                            <td>
+                                                <span>Fire Incident</span>
+                                            </td>
+                                            <td>
+                                                <span>Inventory</span>
+                                            </td>
+                                            <td>
+                                                <div class="steps">
+                                                    <div class="step" title="Requested / 22-10-2021 / 10:00 AM">
+                                                        <span class="done"><i class="fas fa-hourglass-end"></i></span>
+                                                    </div>
+                                                    <div class="step" title="Appointment / 22-10-2021 / 11:00 AM">
+                                                        <span class="done"><i class="fas fa-clipboard-list"></i></span>
+                                                    </div>
+                                                    <div class="step" title="Processing / 23-10-2021 / 02:00 PM">
+                                                        <span class="done"><i class="fas fa-clipboard-check"></i></span>
+                                                    </div>
+                                                    <div class="step" title="Resulted / 01-11-2021 / 09:00 AM">
+                                                        <span class="done"><i class="fas fa-poll"></i></span>
+                                                    </div>
+                                                    <div class="step" title="Confirmed / 01-11-2021 / 09:10 AM">
+                                                        <span class="done"><i class="fas fa-check-double"></i></span>
+                                                    </div>
+                                                    <div class="step" title="Ended / 02-11-2021 / 10:00 AM">
+                                                        <span class="done"><i class="fas fa-check-circle"></i></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="#ActionModal" data-bs-toggle="modal" class="text-primary">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="d-flex align-items-center justify-content-center fixed-bottom border-top bg-light">
+        <div class="d-flex align-items-center py-2">
+            <span class="me-2">&copy; All rights reserved 2023
+                <a href="https://www.dmsegypt.net/" class="me-2 text-decoration-none lh-1">
+                    <img src="assets/images/logo-small.png" alt="DMS logo" class="">
+                </a></span>
+            <ul class="nav list-unstyled d-flex ms-2 align-items-center social">
+                <li class="ms-2"><a class="" href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li class="ms-2"><a class="" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li class="ms-2"><a class="" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li class="ms-2"><a class="" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- ========== Start Action Modal ========== -->
+    <div class="modal fade" id="ActionModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========== End Action Modal ========== -->
+
+    <!-- ========== Start Default modal ========== -->
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+
+    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== End Default modal ========== -->
+
+    <script>
+        //   Incidents Table
+        var tableSetup = IncidentsTable();
+
+        function IncidentsTable() {
+            var table = $('#IncidentsTable table').DataTable({
+                "dom": 'Btpil',
+                "stateSave": false,
+                "scrollCollapse": false,
+                "info": true,
+                "paging": true,
+                "responsive": true,
+                "ordering": true,
+                "colReorder": false,
+                buttons: [{
+                    extend: 'copy',
+                    className: 'btn-sm'
+                },
+                {
+                    extend: 'csv',
+                    className: 'btn-sm'
+                },
+                {
+                    extend: 'excel',
+                    className: 'btn-sm'
+                },
+                {
+                    extend: 'pdf',
+                    className: 'btn-sm'
+                },
+                {
+                    extend: 'print',
+                    className: 'btn-sm'
+                }
+                ],
+            });
+            return table;
+        };
+
+        // Timeline 
+
+        $(document).ready(function () {
+            $(".nav-filter li").on("click", function () {
+                var target = $(this).closest(".nav-filter").data("target");
+                var value = $(this).data("value");
+                var table = $(target).DataTable();
+                var columnTarget = $(this).closest(".nav-filter").data("column"); // starts counting from zero
+                var column = table.column(columnTarget);
+
+                if ($(this).hasClass("all-filter")) {
+                    $(".nav-filter li").addClass("active").removeClass("not-active");
+                }
+                else {
+                    $(this).addClass("active").removeClass("not-active").siblings().addClass("not-active").removeClass("active");
+                }
+
+                column.search(value).draw();
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

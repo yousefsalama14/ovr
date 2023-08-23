@@ -271,371 +271,12 @@
                 <!-- action-tools  -->
                 <div class="ms-auto ms-sm-auto m-sm-0 p-1">
                     <div class="action-tools d-flex align-items-center justify-content-end">
-                        <!--  -->
-                        <select id="themeSelector" class="form-select me-2">
-                            <option selected="" disabled="" value="">Theme</option>
-                            <option value="NewDMS">New DMS</option>
-                            <option value="DMSBlueBlue">CMIS</option>
-                            <option value="DMSBlue">ERP</option>
-                        </select>
-                        <select id="MenuSize" class="form-select me-2">
-                            <option selected="" disabled="" value="">Menu</option>
-                            <option value="menu-lg">Big</option>
-                            <option value="menu-sm">Icon Bar</option>
-                            <option value="pinned-menu">Pinned Menu</option>
-                        </select>
-                        <select id="themeColor" class="form-select me-2 d-none">
-                            <option selected="" disabled="" value="">Color</option>
-                            <option value="theme-green">green</option>
-                            <option value="theme-red">red</option>
-                            <option value="theme-blue">blue</option>
-                            <option value="theme-yellow">yellow</option>
-                        </select>
-                        <!--  -->
-                        <a class="px-1 btn-filter" title="Advance Search" data-bs-toggle="offcanvas"
-                            href="#offcanvasFilter" role="button" aria-controls="offcanvasFilter"><i
-                                class="fa fa-filter"></i></a>
-                        <span class="vr mx-2"></span>
-                        <a href="#" class="px-1" title="New"><i class="fa fa-plus-circle"></i></a>
-                        <span class="vr mx-2"></span>
-                        <a href="#" class="px-1" title="Save"><i class="fa fa-floppy-disk"></i></a>
-                        <span class="vr mx-2"></span>
-                        <a href="#" class="px-1" title="XLS file"><i class="dms-icon-xls-file1"></i></a>
-                        <a href="#" class="px-1" title="PDF file"><i class="dms-icon-pdf-file1"></i></a>
-                    </div>
-                    <!-- filter element-->
-                    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-                        id="offcanvasFilter" aria-labelledby="offcanvasFilterLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><i class="fa fa-filter"></i> Search
-                            </h5>
-                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <div class="row">
-                                <div class="col-12 mb-2">
-                                    <label class="form-label">Name</label>
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <input type="text" class="form-control form-control-sm" placeholder="code">
-                                        </div>
-                                        <div class="col-md-9">
-                                            <input type="text" class="form-control form-control-sm">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-2">
-                                    <label class="form-label">Title</label>
-                                    <input type="text" class="form-control form-control-sm">
-                                </div>
-                                <div class="col-md-6 mb-2">
-                                    <label class="form-label">Title</label>
-                                    <input type="text" class="form-control form-control-sm">
-                                </div>
-                                <div class="col-12 mb-2">
-                                    <label class="form-label">Date (from - to)</label>
-                                    <div class="row">
-                                        <div class="col-md-6 mb-2">
-                                            <input type="text" class="form-control form-control-sm from">
-                                        </div>
-                                        <div class="col-md-6 mb-2">
-                                            <input type="text" class="form-control form-control-sm to">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 mb-2">
-                                    <fieldset class="rounded-1 p-2">
-                                        <legend class="ps-1 pe-1"> Group Title</legend>
-                                        <div class="row">
-                                            <div class="col-12 mb-1">
-                                                <label class="form-label">text</label>
-                                                <input type="text" class="form-control form-control-sm">
-                                            </div>
-                                            <div class="col-2 mb-1 pe-0">
-                                                <label class="form-label">#</label>
-                                                <input type="text" class="form-control form-control-sm">
-                                            </div>
-                                            <div class="col-10 mb-1">
-                                                <label class="form-label">text</label>
-                                                <input type="text" class="form-control form-control-sm">
-                                            </div>
-                                            <div class="col-12 col-md-6 mb-1">
-                                                <label class="form-label">text</label>
-                                                <input type="text" class="form-control form-control-sm">
-                                            </div>
-                                            <div class="col-12 col-md-6 mb-1">
-                                                <label class="form-label">text</label>
-                                                <input type="text" class="form-control form-control-sm">
-                                            </div>
-                                            <div class="col-12 col-md-6 mb-1">
-                                                <label class="form-label">text</label>
-                                                <input type="text" class="form-control form-control-sm">
-                                            </div>
-                                            <div class="col-12 col-md-6 mb-1">
-                                                <label class="form-label">text</label>
-                                                <input type="text" class="form-control form-control-sm">
-                                            </div>
-                                        </div>
-                                    </fieldset>
-                                </div>
-                                <div class="col-12 mb-2">
-                                    <label class="form-label">Email address</label>
-                                    <input type="email" class="form-control form-control-sm"
-                                        placeholder="name@example.com">
-                                </div>
-                                <div class="col-12 mb-2">
-                                    <label class="form-label">textarea</label>
-                                    <textarea class="form-control" rows="2"></textarea>
-                                </div>
-                                <div class="col-md-7 mb-2">
-                                    <label class="form-label">Email</label>
-                                    <input type="text" class="form-control-plaintext form-control-sm"
-                                        value="email@example.com" readonly>
-                                </div>
-                                <div class="col-md-5 mb-2">
-                                    <label class="form-label">Date</label>
-                                    <input type="text" class="form-control form-control-sm datepicker">
-                                </div>
-                                <div class="col-12 mb-2">
-                                    <label class="form-label">Input Title</label>
-                                    <input type="text" class="form-control form-control-sm">
-                                    <span class="form-text">Must be 8-20 characters long.</span>
-                                </div>
-                                <hr class="border-secondary">
-                                <div class="mb-2">
-                                    <label class="me-2 form-label">Group Title</label>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input " type="radio" name="inlineRadioOptions"
-                                            id="inlineRadio1" value="option1">
-                                        <label class="form-check-label" for="inlineRadio1">text 1</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                            id="inlineRadio2" value="option2">
-                                        <label class="form-check-label" for="inlineRadio2">text 2</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                            id="inlineRadio3" value="option3">
-                                        <label class="form-check-label" for="inlineRadio3">text 3 </label>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="mb-2">
-                                    <label class="form-label">Group Title</label>
-                                    <div class="">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input " type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio11" value="option11">
-                                            <label class="form-check-label" for="inlineRadio11">Text 1</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio12" value="option12">
-                                            <label class="form-check-label" for="inlineRadio12">Text 2</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio13" value="option13">
-                                            <label class="form-check-label" for="inlineRadio13">Text 3 </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="mb-2">
-                                    <label class="me-2 form-label"> Group Title</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">Default checkbox</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                                        <label class="form-check-label" for="flexCheckChecked">Checked checkbox</label>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="mb-2">
-                                    <label class="me-2 form-label">Group Title</label>
-                                    <br>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
-                                        <label class="form-check-label" for="flexCheckDefault1">Default checkbox</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
-                                        <label class="form-check-label" for="flexCheckChecked2">Checked checkbox</label>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="mb-2">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="floatingSelect"
-                                            aria-label="Floating label select example">
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select>
-                                        <label for="floatingSelect">Works with selects</label>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="mt-2 d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <a href="#" class="btn btn-outline-secondary btn-sm px-5"><i
-                                            class="fa fa-refresh"></i> Refresh</a>
-                                    <a href="#" class="btn btn-primary btn-sm px-5" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"><i class="fa fa-search"></i> Search</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- filter tags -->
-                    <div
-                        class="filter-tags d-flex flex-row align-items-center justify-content-end flex-wrap gap-2 me-2">
-                        <!-- <div class="tag">
-                                <span class="tag-icon"><i class="fa fa-filter"></i></span>
-                                <span class="tag-text">Name</span>
-                                <a href="#" class="tag-close" aria-hidden="true"><i class="fa fa-remove"></i></a>
-                            </div> -->
+                        <a href="#" class="px-1 text-primary" title="Save"><i class="fa fa-floppy-disk"></i></a>
                     </div>
                 </div>
             </div>
             <!-- content -->
             <div class="page-content">
-                <!-- <div id="patientsPanel" class="row mb-3">
-                    <div id="patientsList" class="col-12 col-lg-4 col-xl-3 mb-3 mb-lg-0">
-                        <div class="card h-100 bg-warning bg-opacity-10">
-                            <div class="card-body p-0">
-                                <div class="card-icons py-1 px-2">
-                                    <div class="row row-cols-lg-4 row-cols-xl-5 g-0" style="counter-reset: myCounter;">
-                                        <div class="col patientIcon">
-                                            <div class="icons-wrapper icons-success"><i class="fas fa-user"></i></div>
-                                        </div>
-                                        <div class="col patientIcon">
-                                            <div class="icons-wrapper icons-success"><i class="fas fa-user"></i></div>
-                                        </div>
-                                        <div class="col patientIcon">
-                                            <div class="icons-wrapper icons-success"><i class="fas fa-user"></i></div>
-                                        </div>
-                                        <div class="col patientIcon">
-                                            <div class="icons-wrapper icons-primary"><i class="fas fa-user"></i></div>
-                                        </div>
-                                        <div class="col patientIcon">
-                                            <div class="icons-wrapper icons-primary"><i class="fas fa-user"></i></div>
-                                        </div>
-                                        <div class="col patientIcon">
-                                            <div class="icons-wrapper icons-primary"><i class="fas fa-user"></i></div>
-                                        </div>
-                                        <div class="col patientIcon">
-                                            <div class="icons-wrapper icons-primary"><i class="fas fa-user"></i></div>
-                                        </div>
-                                        <div class="col patientIcon">
-                                            <div class="icons-wrapper icons-primary"><i class="fas fa-user"></i></div>
-                                        </div>
-                                        <div class="col patientIcon">
-                                            <div class="icons-wrapper icons-warning"><i class="fas fa-user"></i></div>
-                                        </div>
-                                        <div class="col d-flex align-items-center">
-                                            <div class="morePatients">
-                                                <a href="#" class="fw-bold text-dark" data-bs-toggle="modal"
-                                                    data-bs-target="#FullPatientsListModal">
-                                                    19 Patients
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="card-footer">
-                                <div class="d-flex">
-                                    <a href="#" class="btn btn-primary border-end" data-bs-toggle="modal"
-                                        data-bs-target="#FullPatientsListModal">(10) Waiting Patients</a>
-                                    <a href="#" class="btn btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#FullPatientsListModal">(9) Transferred Patients</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="patientInfo" class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
-                        <div class="card flex-row h-100 bg-warning bg-opacity-10">
-                            <div class="card-body d-flex">
-                                <div class="patientPic">
-                                    <div class="icons-wrapper-lg icons-success"><i class="fas fa-user"></i></div>
-                                </div>
-                                <div class="patientText">
-                                    <p class="card-text mb-2 patientName">Ahmed Emadeldeen ismaiel</p>
-                                    <p class="card-text mb-2 patientMR">10523657 / Male / 30 Y</p>
-                                    <div class="critical-indicators">
-                                        <a href="#"><i class="icon icon-bell"></i></a>
-                                        <a href="#"><i class="icon icon-cough"></i></a>
-                                        <a href="#"><i class="fas fa-bell"></i></a>
-                                        <a href="#"><i class="icon icon-alarm-clock"></i></a>
-                                        <a href="#"><i class="icon icon-patient-isolation"></i></a>
-                                        <a href="#"><i class="icon icon-embryo"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="patientHistor" class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
-                        <div class="card h-100 bg-warning bg-opacity-10" style="max-height: 142px;overflow-y: auto;">
-                            <div class="card-header bg-transparent fw-bold border-0">
-                                History
-                            </div>
-                            <div class="card-body pt-2">
-                                <div class="row">
-                                    <div class="col-3">22/03/2023</div>
-                                    <div class="col-6">Preglaucoma Unspecified</div>
-                                    <div class="col-3">365.00</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-3">15/11/2022</div>
-                                    <div class="col-6">Cataract</div>
-                                    <div class="col-3">366.90</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-3">18/11/2021</div>
-                                    <div class="col-6">Preglaucoma Unspecified</div>
-                                    <div class="col-3">365.00</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-3">15/09/2021</div>
-                                    <div class="col-6">Open angle glauc w/borderline</div>
-                                    <div class="col-3">365.01</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-3">15/11/2022</div>
-                                    <div class="col-6">Cataract</div>
-                                    <div class="col-3">366.90</div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-3">22/03/2023</div>
-                                    <div class="col-6">Preglaucoma Unspecified</div>
-                                    <div class="col-3">365.00</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="visitControls" class="col-sm-12 col-xl-1">
-                        <div class="visit-btn-wrapper">
-                            <div class="btn btn-group rounded-0 p-0">
-                                <button type="button" class="btn bg-secondary bg-opacity-50 rounded-0 px-2">End</button>
-                                <button type="button"
-                                    class="btn btn-secondary dropdown-toggle dropdown-toggle-split rounded-0 px-0"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span class="visually-hidden">Toggle Dropdown</span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Wait</a></li>
-                                    <li><a class="dropdown-item" href="#">Transfer</a></li>
-                                </ul>
-                            </div>
-                            <button type="button" class="btn btn-primary rounded-0">Start Next</button>
-                        </div>
-                    </div>
-                </div> -->
                 <div id="patientsBody" class="">
                     <div class="row">
                         <div class="col-12">
@@ -645,7 +286,7 @@
                                         data-bs-target="#Incident-tab-pane" type="button" role="tab"
                                         aria-controls="Incident-tab-pane" aria-selected="true">
                                         <div class="icon-circle">
-                                            <i class="fas fa-inbox"></i>
+                                            <i class="fas fa-exclamation-circle"></i>
                                         </div>
                                         Incident Record
                                     </button>
@@ -655,7 +296,9 @@
                                         data-bs-target="#Supervisor-tab-pane" type="button" role="tab"
                                         aria-controls="Supervisor-tab-pane" aria-selected="false">
                                         <div class="icon-circle">
-                                            <i class="fas fa-inbox"></i>
+                                            <!-- <i class="fas fa-bell"></i> -->
+                                            <!-- <i class="fas fa-user-nurse"></i> -->
+                                            <i class="fas fa-user-doctor"></i>
                                         </div>
                                         Supervisor
                                     </button>
@@ -665,7 +308,7 @@
                                         data-bs-target="#QIPs-tab-pane" type="button" role="tab"
                                         aria-controls="QIPs-tab-pane" aria-selected="false">
                                         <div class="icon-circle">
-                                            <i class="fas fa-inbox"></i>
+                                            <i class="fas fa-search"></i>
                                         </div>
                                         QIPs
                                     </button>
@@ -679,7 +322,7 @@
                                             <div class="col-12">
                                                 <h6 class="text-primary fw-bold">Incident Type</h6>
                                             </div>
-                                            <div class="col-md-3 position-relative">
+                                            <div class="col-md-2 position-relative">
                                                 <label for="IncidentId" class="form-label">Incident Id</label>
                                                 <input type="text" class="form-control" id="IncidentId" value="3256454"
                                                     required="">
@@ -687,26 +330,26 @@
                                                     Looks good!
                                                 </div>
                                             </div>
-                                            <div class="col-md-3 position-relative">
+                                            <div class="col-md-2 position-relative">
                                                 <label for="IncidentDate" class="form-label">Incident Date</label>
-                                                <input type="date" class="form-control" id="IncidentDate" value="Mark"
-                                                    required="">
+                                                <input type="text" class="form-control datepicker" id="IncidentDate"
+                                                    value="08/03/2023" required="">
                                                 <div class="valid-tooltip">
                                                     Looks good!
                                                 </div>
                                             </div>
-                                            <div class="col-md-3 position-relative">
+                                            <div class="col-md-2 position-relative">
                                                 <label for="IncidentTime" class="form-label">Incident Time</label>
-                                                <input type="time" class="form-control" id="IncidentTime" value="Mark"
-                                                    required="">
+                                                <input type="time" class="form-control" id="IncidentTime" required="">
                                                 <div class="valid-tooltip">
                                                     Looks good!
                                                 </div>
                                             </div>
-                                            <div class="col-md-3 position-relative">
+                                            <div class="col-md-2 position-relative">
                                                 <label for="IncidentLocation" class="form-label">Incident
                                                     Location</label>
-                                                <select class="form-select" id="IncidentLocation" required="">
+                                                <select class="form-select chosen-single" id="IncidentLocation"
+                                                    required="">
                                                     <option selected="" disabled="" value="">Choose Location</option>
                                                     <option>...</option>
                                                 </select>
@@ -750,42 +393,111 @@
                                                             class="ms-1 text-primary"><i
                                                                 class="fa-solid fa-magnifying-glass"></i></a></label>
                                                     <div class="d-flex">
-                                                        <input type="text" class="form-control rounded-0 rounded-start" id="MRInput"
+                                                        <input type="text" class="form-control rounded-0 rounded-start"
                                                             placeholder="MR" required="">
-                                                        <input type="text" class="form-control rounded-0 rounded-end" id="MRInput"
+                                                        <input type="text" class="form-control rounded-0 rounded-end"
                                                             placeholder="Patient Name" required="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3 position-relative hidden staff-option">
-                                                    <label for="PatientName" class="form-label">Staff Name</label>
-                                                    <select class="form-select" id="PatientName" required="">
-                                                        <option selected="" disabled="" value="">Choose Patient Name
-                                                        </option>
-                                                        <option>...</option>
-                                                    </select>
+                                                    <label for="StaffName" class="form-label">Staff Name</label>
+                                                    <input type="text" class="form-control" id="StaffName"
+                                                        placeholder="Staff Name" required="">
                                                     <div class="invalid-tooltip">
-                                                        Please select a valid Patient Name.
+                                                        Please select a valid Staff Name.
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3 position-relative hidden visitor-option">
-                                                    <label for="PatientName" class="form-label">Visitor Name</label>
-                                                    <select class="form-select" id="PatientName" required="">
-                                                        <option selected="" disabled="" value="">Choose Patient Name
-                                                        </option>
-                                                        <option>...</option>
-                                                    </select>
+                                                    <label for="VisitorName" class="form-label">Visitor Name</label>
+                                                    <input type="text" class="form-control" id="VisitorName"
+                                                        placeholder="Visitor Name" required="">
+                                                    <div class="invalid-tooltip">
+                                                        Please select a valid Visitor Name.
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 position-relative hidden other-option">
+                                                    <label for="OtherName" class="form-label">Other Name</label>
+                                                    <input type="text" class="form-control" id="OtherName"
+                                                        placeholder="Name" required="">
                                                     <div class="invalid-tooltip">
                                                         Please select a valid Patient Name.
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="row mt-3">
-                                                <!-- <div class="col-12">
-                                                    <p class="text-primary fw-bold">Hossam Hassan Salem /
-                                                        1053333
-                                                    </p>
-                                                </div> -->
-                                                <div class="col-md-4 position-relative">
+                                            <div class="row mt-3 hidden patient-option">
+                                                <div class="col-md-2 position-relative mb-3">
+                                                    <label for="Gender" class="form-label">Gender</label>
+                                                    <p>Male</p>
+                                                </div>
+                                                <div class="col-md-2 position-relative mb-3">
+                                                    <label for="Age" class="form-label">Age</label>
+                                                    <!-- <input type="text" class="form-control" id="Age" required> -->
+                                                    <p>47 Years</p>
+                                                </div>
+                                                <div class="col-md-2 position-relative mb-3">
+                                                    <label for="DateofBirth" class="form-label">Date of
+                                                        Birth</label>
+                                                    <!-- <input type="text" class="form-control datepicker" id="DateofBirth"
+                                                        value="08/03/2023" required> -->
+                                                    <p>12/10/1976 </p>
+                                                </div>
+                                                <div class="col-md-2 position-relative mb-3">
+                                                    <label for="affectedPersonNumber" class="form-label">Mobile
+                                                        number</label>
+                                                    <input type="text" class="form-control" id="affectedPersonNumber"
+                                                        value="01004510645" required="">
+                                                </div>
+                                                <div class="col-md-4 position-relative mb-3">
+                                                    <label for="affectedPersonEmail" class="form-label">Email</label>
+                                                    <input type="text" class="form-control" id="affectedPersonEmail"
+                                                        value="Yousef.mohamed@dmsegypt.com" required="">
+                                                </div>
+                                                <div class="col-md-4 position-relative mb-3">
+                                                    <label for="affectedPersonAddress"
+                                                        class="form-label">Address</label>
+                                                    <input type="text" class="form-control" id="affectedPersonAddress"
+                                                        value="48 Gamal Abd Elnaser st/ Tanta/Gharbia/Egypt"
+                                                        required="">
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3 hidden staff-option">
+                                                <div class="col-md-2 position-relative mb-3">
+                                                    <label for="Gender" class="form-label">Gender</label>
+                                                    <p>Male</p>
+                                                </div>
+                                                <div class="col-md-2 position-relative mb-3">
+                                                    <label for="Age" class="form-label">Age</label>
+                                                    <!-- <input type="text" class="form-control" id="Age" required> -->
+                                                    <p>47 Years</p>
+                                                </div>
+                                                <div class="col-md-2 position-relative mb-3">
+                                                    <label for="DateofBirth" class="form-label">Date of
+                                                        Birth</label>
+                                                    <!-- <input type="text" class="form-control datepicker" id="DateofBirth"
+                                                        value="08/03/2023" required> -->
+                                                    <p>12/10/1976 </p>
+                                                </div>
+                                                <div class="col-md-2 position-relative mb-3">
+                                                    <label for="affectedPersonNumber" class="form-label">Mobile
+                                                        number</label>
+                                                    <input type="text" class="form-control" id="affectedPersonNumber"
+                                                        value="01004510645" required="">
+                                                </div>
+                                                <div class="col-md-4 position-relative mb-3">
+                                                    <label for="affectedPersonEmail" class="form-label">Email</label>
+                                                    <input type="text" class="form-control" id="affectedPersonEmail"
+                                                        value="Yousef.mohamed@dmsegypt.com" required="">
+                                                </div>
+                                                <div class="col-md-4 position-relative mb-3">
+                                                    <label for="affectedPersonAddress"
+                                                        class="form-label">Address</label>
+                                                    <input type="text" class="form-control" id="affectedPersonAddress"
+                                                        value="48 Gamal Abd Elnaser st/ Tanta/Gharbia/Egypt"
+                                                        required="">
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3 hidden visitor-option">
+                                                <div class="col-md-2 position-relative mb-3">
                                                     <label for="Gender" class="form-label">Gender</label>
                                                     <select class="form-select" id="Gender" required>
                                                         <option selected>Male</option>
@@ -793,39 +505,72 @@
                                                     </select>
                                                     <!-- <p>Male</p> -->
                                                 </div>
-                                                <div class="col-md-4 position-relative">
+                                                <div class="col-md-2 position-relative mb-3">
                                                     <label for="Age" class="form-label">Age</label>
-                                                    <!-- <input type="text" class="form-control" id="Age" required> -->
-                                                    <p>47 Years</p>
+                                                    <input type="number" class="form-control" id="Age" placeholder="33"
+                                                        required>
+                                                    <!-- <p>47 Years</p> -->
                                                 </div>
-                                                <div class="col-md-4 position-relative">
+                                                <div class="col-md-2 position-relative mb-3">
                                                     <label for="DateofBirth" class="form-label">Date of
                                                         Birth</label>
-                                                    <!-- <input type="date" class="form-control" id="DateofBirth"
-                                                        value="Mark" required> -->
-                                                    <p>12/10/1976 </p>
+                                                    <input type="text" class="form-control datepicker" id="DateofBirth"
+                                                        value="08/03/2023" required>
+                                                    <!-- <p>12/10/1976 </p> -->
                                                 </div>
-                                                <div class="col-md-4 position-relative">
-                                                    <label for="affectedPersonNumber"
-                                                        class="form-label">Mobile number</label>
+                                                <div class="col-md-2 position-relative mb-3">
+                                                    <label for="affectedPersonNumber" class="form-label">Mobile
+                                                        number</label>
                                                     <input type="text" class="form-control" id="affectedPersonNumber"
                                                         value="01004510645" required="">
                                                 </div>
-                                                <div class="col-md-4 position-relative">
+                                                <div class="col-md-4 position-relative mb-3">
                                                     <label for="affectedPersonEmail" class="form-label">Email</label>
-                                                    <div class="input-group has-validation">
-                                                        <span class="input-group-text"
-                                                            id="affectedPersonEmailPrepend">@</span>
-                                                        <input type="text" class="form-control" id="affectedPersonEmail"
-                                                            aria-describedby="affectedPersonEmailPrepend" required=""
-                                                            value="Yousef.mohamed@dmsegypt.com">
-                                                        <div id="validationServerUsernameFeedback"
-                                                            class="invalid-feedback">
-                                                            Please choose a username.
-                                                        </div>
-                                                    </div>
+                                                    <input type="text" class="form-control" id="affectedPersonEmail"
+                                                        value="Yousef.mohamed@dmsegypt.com" required="">
                                                 </div>
-                                                <div class="col-md-4 position-relative">
+                                                <div class="col-md-4 position-relative mb-3">
+                                                    <label for="affectedPersonAddress"
+                                                        class="form-label">Address</label>
+                                                    <input type="text" class="form-control" id="affectedPersonAddress"
+                                                        value="48 Gamal Abd Elnaser st/ Tanta/Gharbia/Egypt"
+                                                        required="">
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3 hidden other-option">
+                                                <div class="col-md-2 position-relative mb-3">
+                                                    <label for="Gender" class="form-label">Gender</label>
+                                                    <select class="form-select" id="Gender" required>
+                                                        <option selected>Male</option>
+                                                        <option>Female</option>
+                                                    </select>
+                                                    <!-- <p>Male</p> -->
+                                                </div>
+                                                <div class="col-md-2 position-relative mb-3">
+                                                    <label for="Age" class="form-label">Age</label>
+                                                    <input type="number" class="form-control" id="Age" placeholder="33"
+                                                        required>
+                                                    <!-- <p>47 Years</p> -->
+                                                </div>
+                                                <div class="col-md-2 position-relative mb-3">
+                                                    <label for="DateofBirth" class="form-label">Date of
+                                                        Birth</label>
+                                                    <input type="text" class="form-control datepicker" id="DateofBirth"
+                                                        value="08/03/2023" required>
+                                                    <!-- <p>12/10/1976 </p> -->
+                                                </div>
+                                                <div class="col-md-2 position-relative mb-3">
+                                                    <label for="affectedPersonNumber" class="form-label">Mobile
+                                                        number</label>
+                                                    <input type="text" class="form-control" id="affectedPersonNumber"
+                                                        value="01004510645" required="">
+                                                </div>
+                                                <div class="col-md-4 position-relative mb-3">
+                                                    <label for="affectedPersonEmail" class="form-label">Email</label>
+                                                    <input type="text" class="form-control" id="affectedPersonEmail"
+                                                        value="Yousef.mohamed@dmsegypt.com" required="">
+                                                </div>
+                                                <div class="col-md-4 position-relative mb-3">
                                                     <label for="affectedPersonAddress"
                                                         class="form-label">Address</label>
                                                     <input type="text" class="form-control" id="affectedPersonAddress"
@@ -840,7 +585,8 @@
                                             </style>
                                         </form>
 
-                                        <form class="row g-3 needs-validation mt-5 border-top border-primary pt-5" novalidate="">
+                                        <form class="row g-3 needs-validation mt-5 border-top border-primary pt-5"
+                                            novalidate="">
                                             <div class="col-12">
                                                 <label for="EventDetails" class="form-label">Event Details</label>
                                                 <textarea class="form-control" id="EventDetails"
@@ -852,11 +598,14 @@
                                         </form>
                                     </div>
                                     <div class="card-body mt-3">
-                                        <h5 class="text-primary">Immediate Action/Witnesses</h5>
                                         <form class="row g-3 needs-validation" novalidate="">
+                                            <div class="col-12">
+                                                <h6 class="text-primary fw-bold">Immediate Action/Witnesses</h6>
+                                            </div>
                                             <div class="col-md-3 position-relative">
                                                 <label for="ImmediateAction" class="form-label">Immediate Action</label>
-                                                <select class="form-select" id="ImmediateAction" required="">
+                                                <select class="form-select chosen-single" id="ImmediateAction"
+                                                    required="">
                                                     <option selected="" disabled="" value="">Choose Immediate Action
                                                     </option>
                                                     <option>...</option>
@@ -873,27 +622,34 @@
                                                     Please enter a Comment.
                                                 </div>
                                             </div>
+                                        </form>
+                                        <form class="row g-3 needs-validation mt-5 border-top border-primary pt-5"
+                                            novalidate="">
                                             <div class="col-12">
-                                                <h6>Witness Details</h6>
+                                                <h6 class="text-primary fw-bold">Witness Details</h6>
                                             </div>
                                             <div class="col-md-3 position-relative">
-                                                <label for="WitnessType" class="form-label">Type</label>
+                                                <label for="WitnessType" class="form-label">Witness Type</label>
                                                 <select class="form-select" id="WitnessType" required="">
-                                                    <option selected="" disabled="" value="">Choose Type</option>
-                                                    <option>...</option>
+                                                    <option selected="" disabled="" value="">Choose Witness Type</option>
+                                                    <option value="patient">Patient</option>
+                                                    <option value="staff">Staff</option>
+                                                    <option value="visitor">Visitor</option>
+                                                    <option value="other">Other</option>
                                                 </select>
                                                 <div class="invalid-tooltip">
-                                                    Please select a valid Type.
+                                                    Please select a Witness Type.
                                                 </div>
                                             </div>
                                             <div class="col-md-3 position-relative">
-                                                <label for="WitnessMR" class="form-label">MR</label>
-                                                <select class="form-select" id="WitnessMR" required="">
-                                                    <option selected="" disabled="" value="">Choose MR</option>
-                                                    <option>...</option>
-                                                </select>
-                                                <div class="invalid-tooltip">
-                                                    Please select a valid MR.
+                                                <label for="WitnessMR" class="form-label">MR <a href="#"
+                                                        class="ms-1 text-primary"><i
+                                                            class="fa-solid fa-magnifying-glass"></i></a></label>
+                                                <div class="d-flex">
+                                                    <input type="text" class="form-control rounded-0 rounded-start"
+                                                        placeholder="MR" required="">
+                                                    <input type="text" class="form-control rounded-0 rounded-end"
+                                                        placeholder="Patient Name" required="">
                                                 </div>
                                             </div>
                                             <div class="col-md-3 position-relative">
@@ -908,13 +664,15 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-3 d-flex align-items-end justify-content-end">
-                                                <button type="button" class="btn btn-primary">
+                                                <!-- <button type="button" class="btn btn-primary" >
                                                     <i class="fas fa-plus"></i>
                                                     add witness
-                                                </button>
+                                                </button> -->
+                                                <a href="#" class="text-primary fs-5" title="add witness" onclick="addRow();"><i
+                                                        class="fa fa-plus-circle"></i></a>
                                             </div>
                                         </form>
-                                        <div id="setupTabel" class="table-responsive mt-3">
+                                        <div id="" class="table-responsive mt-3">
                                             <table class="table table-striped table-hover align-middle table-sm">
                                                 <colgroup>
                                                     <col style="width: 30px;">
@@ -929,11 +687,11 @@
                                                 <thead>
                                                     <tr>
                                                         <th data-orderable="false"></th>
-                                                        <th scope="col">Type</th>
+                                                        <th scope="col">Witness Type</th>
                                                         <th scope="col">MR</th>
                                                         <th scope="col">Name</th>
                                                         <th scope="col" data-orderable="false">Email</th>
-                                                        <th scope="col" data-orderable="false">Contact</th>
+                                                        <th scope="col" data-orderable="false">Mobile number</th>
                                                         <th scope="col" data-orderable="false">Address</th>
                                                         <th data-orderable="false"></th>
                                                     </tr>
@@ -942,8 +700,8 @@
                                                     <tr>
                                                         <td></td>
                                                         <td class="row-inline-editable" data-search="">
-                                                            <span class="editable">Staff</span>
-                                                            <input type="text" class="form-control" value="Staff">
+                                                            <span class="editable">Patient</span>
+                                                            <input type="text" class="form-control" value="Patient">
                                                         </td>
                                                         <td class="row-inline-editable" data-search="">
                                                             <span class="editable">1053333</span>
@@ -1047,6 +805,36 @@
                                                                 class="text-danger delete-row fa fa-trash-alt"></a>
                                                         </td>
                                                     </tr>
+                                                    <tr class="add-new d-none">
+                                                        <td></td>
+                                                        <td>
+                                                            <input type="text" class="form-control" value="Staff">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control" value="1053333">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control"
+                                                                value="Ahmed Mahmoud">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control"
+                                                                value="info@company.com">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control" value="0123546977">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control"
+                                                                value="48 Gamal Abd Elnaser">
+                                                        </td>
+                                                        <td class="dt-right">
+                                                            <!-- <a href="#"
+                                                                class="text-primary row-edit fa fa-pencil-alt"></a>
+                                                            <a href="#"
+                                                                class="text-danger delete-row fa fa-trash-alt"></a> -->
+                                                        </td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -1055,35 +843,22 @@
                                 <div class="tab-pane fade" id="Supervisor-tab-pane" role="tabpanel"
                                     aria-labelledby="Supervisor-tab" tabindex="0">
                                     <div class="card-body">
-                                        <h5 class="text-primary">Nurse Manager/Supervisor Notification</h5>
                                         <form class="row g-3 needs-validation" novalidate>
-                                            <div class="col-md-4 position-relative">
-                                                <label for="validationTooltip01" class="form-label">ID</label>
-                                                <input type="text" class="form-control" id="validationTooltip01"
-                                                    value="1312648" required="">
-                                                <div class="valid-tooltip">
-                                                    Looks good!
+                                            <div class="col-12">
+                                                <h6 class="text-primary fw-bold">Nurse Manager/Supervisor Notification</h6>
+                                            </div>
+                                            <div class="col-md-3 position-relative patient-option">
+                                                <label for="SupervisorInput" class="form-label">Supervisor <a href="#" class="ms-1 text-primary"><i class="fa-solid fa-magnifying-glass"></i></a></label>
+                                                <div class="d-flex">
+                                                    <input type="text" class="form-control rounded-0 rounded-start" placeholder="ID" required="">
+                                                    <input type="text" class="form-control rounded-0 rounded-end" placeholder="Supervisor Name
+                                                    Name" required="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4 position-relative">
-                                                <label for="validationTooltip01" class="form-label">Supervisor
-                                                    Name</label>
-                                                <input type="text" class="form-control" id="validationTooltip01"
-                                                    value="Mark" required="">
-                                                <div class="valid-tooltip">
-                                                    Looks good!
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 position-relative">
-                                                <label for="validationEmail" class="form-label">Email</label>
-                                                <div class="input-group has-validation">
-                                                    <span class="input-group-text" id="validationEmailPrepend">@</span>
-                                                    <input type="text" class="form-control" id="validationEmail"
-                                                        aria-describedby="validationEmailPrepend" required="">
-                                                    <div class="invalid-tooltip">
-                                                        Please choose a unique and valid Email.
-                                                    </div>
-                                                </div>
+                                                <label for="SupervisorEmail" class="form-label">Email</label>
+                                                <input type="text" class="form-control" id="SupervisorEmail" value="Yousef.mohamed@dmsegypt.com"
+                                                        aria-describedby="SupervisorEmailPrepend" required="">
                                             </div>
                                             <div class="col-12">
                                                 <label for="ReporterRemark" class="form-label">Reporter Remark</label>
@@ -1105,7 +880,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <p>Medical Event</p>
+                                                <label for="MedicalEvent" class="form-label d-block">Medical Event</label>
                                                 <div class="form-check form-check-inline">
                                                     <input type="radio" class="form-check-input" id="MedicalEventYes"
                                                         name="MedicalEvent">
@@ -1119,7 +894,7 @@
                                             </div>
                                             <div class="col-md-3 position-relative">
                                                 <label for="HarmLevel" class="form-label">Harm Level</label>
-                                                <select class="form-select" id="HarmLevel" required="">
+                                                <select class="form-select chosen-single" id="HarmLevel" required="">
                                                     <option selected="" disabled="" value="">Choose Level</option>
                                                     <option>1</option>
                                                     <option>2</option>
@@ -1137,33 +912,18 @@
                                                     Please enter Details.
                                                 </div>
                                             </div>
-                                            <div class="col-12">
-                                                <p>Injury Outcome</p>
-                                                <div class="form-check form-check-inline">
-                                                    <input type="radio" class="form-check-input" id="NoInjury"
-                                                        name="radio-stacked">
-                                                    <label class="form-check-label" for="NoInjury">No Injury</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input type="radio" class="form-check-input" id="Minor"
-                                                        name="radio-stacked">
-                                                    <label class="form-check-label" for="Minor">Minor</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input type="radio" class="form-check-input" id="Serious"
-                                                        name="radio-stacked">
-                                                    <label class="form-check-label" for="Serious">Serious</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input type="radio" class="form-check-input" id="Death"
-                                                        name="radio-stacked">
-                                                    <label class="form-check-label" for="Death">Death</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input type="radio" class="form-check-input" id="InjuryOutcomeOther"
-                                                        name="radio-stacked">
-                                                    <label class="form-check-label"
-                                                        for="InjuryOutcomeOther">Other</label>
+                                            <div class="col-md-3 position-relative">
+                                                <label for="InjuryOutcome" class="form-label">Injury Outcome</label>
+                                                <select class="form-select chosen-single" id="InjuryOutcome" required="">
+                                                    <option selected="" disabled="" value="">Choose Injury Outcome</option>
+                                                    <option>No Injury</option>
+                                                    <option>Minor</option>
+                                                    <option>Serious</option>
+                                                    <option>Death</option>
+                                                    <option>Other</option>
+                                                </select>
+                                                <div class="invalid-tooltip">
+                                                    Please select a Injury Outcome.
                                                 </div>
                                             </div>
                                             <div class="col-12">
@@ -1182,8 +942,10 @@
                                 <div class="tab-pane fade" id="QIPs-tab-pane" role="tabpanel" aria-labelledby="QIPs-tab"
                                     tabindex="0">
                                     <div class="card-body">
-                                        <h5 class="text-primary">RCA</h5>
                                         <form class="row g-3 needs-validation" novalidate="">
+                                            <div class="col-12">
+                                                <h6 class="text-primary fw-bold">RCA</h6>
+                                            </div>
                                             <div class="col-12">
                                                 <label for="MostObviousFailure" class="form-label">Identify The Most
                                                     Obvious Failure</label>
@@ -1247,11 +1009,13 @@
                                         </form>
                                     </div>
                                     <div class="card-body mt-3">
-                                        <h5 class="text-primary">QIPs</h5>
                                         <form class="row g-3 needs-validation" novalidate="">
+                                            <div class="col-12">
+                                                <h6 class="text-primary fw-bold">QIPs</h6>
+                                            </div>
                                             <div class="col-md-3 position-relative">
                                                 <label for="Category" class="form-label">Category</label>
-                                                <select class="form-select" id="Category" required="">
+                                                <select class="form-select chosen-single" id="Category" required="">
                                                     <option selected="" disabled="" value="">Choose Category</option>
                                                     <option>...</option>
                                                 </select>
@@ -1261,7 +1025,7 @@
                                             </div>
                                             <div class="col-md-3 position-relative">
                                                 <label for="EventType" class="form-label"></label>
-                                                <select class="form-select" id="EventType" required="">
+                                                <select class="form-select chosen-single" id="EventType" required="">
                                                     <option selected="" disabled="" value="">Choose Event Type</option>
                                                     <option>...</option>
                                                 </select>
@@ -1270,20 +1034,19 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-3 d-flex align-items-end">
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="CloseEvent">
-                                                    <label class="form-check-label" for="CloseEvent">Close Event</label>
-                                                </div>
+                                                <button type="button" class="btn btn-outline-primary">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                    Incedent sheet
+                                                </button>
                                             </div>
                                             <div class="col-md-3 d-flex align-items-end justify-content-end">
                                                 <button type="button" class="btn btn-primary">
-                                                    <i class="fas fa-external-link-alt"></i>
-                                                    sheet
+                                                    Close Event
                                                 </button>
                                             </div>
                                             <div class="col-md-3 position-relative">
                                                 <label for="Department" class="form-label">Department</label>
-                                                <select class="form-select" id="Department" required="">
+                                                <select class="form-select chosen-single" id="Department" required="">
                                                     <option selected="" disabled="" value="">Choose Department</option>
                                                     <option>...</option>
                                                 </select>
@@ -1292,7 +1055,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <p>Corrective Action</p>
+                                                <label for="CorrectiveAction" class="form-label d-block">Corrective Action</label>
                                                 <div class="form-check form-check-inline">
                                                     <input type="radio" class="form-check-input"
                                                         id="CompleteAppropriate" name="CorrectiveAction">
@@ -1308,7 +1071,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <p>OVR Completeness</p>
+                                                <label for="OVRCompleteness" class="form-label d-block">OVR Completeness</label>
                                                 <div class="form-check form-check-inline">
                                                     <input type="checkbox" class="form-check-input" id="ComplianceTime">
                                                     <label class="form-check-label" for="ComplianceTime">Compliance
@@ -1331,7 +1094,8 @@
                                             <div class="col-md-3 position-relative">
                                                 <label for="OVRClassifications" class="form-label">OVR
                                                     Classifications</label>
-                                                <select class="form-select" id="OVRClassifications" required="">
+                                                <select class="form-select chosen-single" id="OVRClassifications"
+                                                    required="">
                                                     <option selected="" disabled="" value="">Choose OVR Classifications
                                                     </option>
                                                     <option>...</option>
@@ -1341,7 +1105,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <p>Contributing Factor Categories</p>
+                                                <label for="ContributingFactorCategories" class="form-label d-block">Contributing Factor Categories</label>
                                                 <div class="form-check form-check-inline">
                                                     <input type="checkbox" class="form-check-input"
                                                         id="InadequateEducationTraining">
@@ -1528,6 +1292,7 @@
         // const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
 
         $(document).ready(function () {
+
             $("#AffectedPersonSelect").change(function () {
                 var selectedOption = $(this).val();
 
@@ -1539,18 +1304,30 @@
                     $(".patient-option").removeClass("hidden");
                     $(".staff-option").addClass("hidden");
                     $(".visitor-option").addClass("hidden");
+                    $(".other-option").addClass("hidden");
                 } else if (selectedOption === "staff") {
                     $(".staff-option").removeClass("hidden");
                     $(".patient-option").addClass("hidden");
                     $(".visitor-option").addClass("hidden");
+                    $(".other-option").addClass("hidden");
                 } else if (selectedOption === "visitor") {
                     $(".visitor-option").removeClass("hidden");
                     $(".staff-option").addClass("hidden");
                     $(".patient-option").addClass("hidden");
+                    $(".other-option").addClass("hidden");
+                } else if (selectedOption === "other") {
+                    $(".other-option").removeClass("hidden");
+                    $(".visitor-option").addClass("hidden");
+                    $(".staff-option").addClass("hidden");
+                    $(".patient-option").addClass("hidden");
                 }
             });
+
         });
 
+        function addRow() {
+            $(".add-new").removeClass("d-none");
+        }
 
     </script>
     <!-- ========== End Default modal ========== -->

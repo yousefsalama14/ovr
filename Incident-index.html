@@ -275,8 +275,6 @@
                             href="#offcanvasFilter" role="button" aria-controls="offcanvasFilter">
                             <i class="fa fa-filter"></i>
                         </a>
-                        <span class="vr mx-2"></span>
-                        <a href="#" class="px-1 text-primary" title="Save"><i class="fa fa-floppy-disk"></i></a>
                     </div>
                     <!-- filter element-->
                     <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
@@ -293,24 +291,22 @@
                                     <label class="form-label">Incident ID</label>
                                     <input type="text" class="form-control form-control-sm" placeholder="Example: 205">
                                 </div>
-                                <div class="col-md-6 mb-2">
-                                    <label class="form-label">Incident Type</label>
-                                    <input type="text" class="form-control form-control-sm" placeholder="Fire Incident">
-                                </div>
+                                <hr>
                                 <div class="col-12 mb-2">
-                                    <label class="form-label">Incident Date (from - to)</label>
-                                    <div class="row">
-                                        <div class="col-md-6 mb-2">
-                                            <input type="text" class="form-control form-control-sm from"
-                                                value="22/03/2022">
-                                        </div>
-                                        <div class="col-md-6 mb-2">
-                                            <input type="text" class="form-control form-control-sm to"
-                                                value="22/06/2022">
-                                        </div>
+                                    <div class="form-floating">
+                                        <select class="form-select" id="IncidentType"
+                                            onclick="this.setAttribute('value', this.value);"
+                                            onchange="this.setAttribute('value', this.value);" value="">
+                                            <option value=""></option>
+                                            <option value="1">Alabama</option>
+                                            <option value="2">Boston</option>
+                                            <option value="3">Ohaio</option>
+                                            <option value="4">New York</option>
+                                            <option value="5">Washington</option>
+                                        </select>
+                                        <label for="IncidentType">Incident Type</label>
                                     </div>
                                 </div>
-                                <hr>
                                 <div class="col-12 mb-2">
                                     <div class="form-floating">
                                         <select class="form-select" id="CategorySelect"
@@ -354,10 +350,23 @@
                                         <label for="CorrectiveAction">Select Corrective Action</label>
                                     </div>
                                 </div>
+                                <div class="col-12 mb-2">
+                                    <label class="form-label">Incident Date (from - to)</label>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-2">
+                                            <input type="text" class="form-control form-control-sm from"
+                                                value="22/03/2022">
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <input type="text" class="form-control form-control-sm to"
+                                                value="22/06/2022">
+                                        </div>
+                                    </div>
+                                </div>
                                 <hr>
-                                <div class="mt-2 d-grid gap-2 d-md-flex justify-content-md-end">
+                                <div class="mt-2 d-grid gap-2 d-md-flex justify-content-center">
                                     <a href="#" class="btn btn-outline-secondary btn-sm px-5"><i
-                                            class="fa fa-refresh"></i> Refresh</a>
+                                            class="fa fa-refresh"></i> Clear</a>
                                     <a href="#" class="btn btn-primary btn-sm px-5" data-bs-dismiss="offcanvas"
                                         aria-label="Close"><i class="fa fa-search"></i> Search</a>
                                 </div>
@@ -380,15 +389,78 @@
             <div class="page-content">
                 <div id="patientsBody" class="">
                     <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="nav-filter d-flex ps-0 mb-0" data-target="#IncidentsTable table"
+                                data-column="10">
+                                <li class="active all-filter" data-value="">
+                                    <a class="toggle-vis btn-wrapper bg-main" data-column-show="0,1,2,3,4,5,7">
+                                        <div class="icon-box"><i class="fa fa-table"></i></div>
+                                        <div class="content-box">
+                                            <span> All</span>
+                                            <span class="number-box">50</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="active" data-value="Recorded"><a class="toggle-vis btn-wrapper bg-recorded"
+                                        data-column-show="0,1,2,4,5,7,8">
+                                        <div class="icon-box"><i class="fas fa-hourglass-end"></i></div>
+                                        <div class="content-box">
+                                            <span> Recorded</span>
+                                            <span class="number-box">12</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="active" data-value="Notified"><a class="toggle-vis btn-wrapper bg-notified"
+                                        data-column-show="0,1,2,4,5,6,7,12">
+                                        <div class="icon-box"><i class="fas fa-clipboard-list"></i></div>
+                                        <div class="content-box">
+                                            <span> Notified</span>
+                                            <span class="number-box">8</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="active" data-value="Verified"><a class="toggle-vis btn-wrapper bg-verified"
+                                        data-column-show="0,1,2,4,5,6,7,9">
+                                        <div class="icon-box"><i class="fas fa-clipboard-check"></i></div>
+                                        <div class="content-box">
+                                            <span> Verified</span>
+                                            <span class="number-box">15</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="active" data-value="rq"><a class="toggle-vis btn-wrapper bg-rq"
+                                        data-column-show="0,1,2,4,6,7,10,11">
+                                        <div class="icon-box"><i class="fas fa-poll"></i></div>
+                                        <div class="content-box">
+                                            <span> RCA/QIPs</span>
+                                            <span class="number-box">32</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="active" data-value="Closed"><a class="toggle-vis btn-wrapper bg-closed"
+                                        data-column-show="">
+                                        <div class="icon-box"><i class="fas fa-check-double"></i></div>
+                                        <div class="content-box">
+                                            <span> Closed</span>
+                                            <span class="number-box">10</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-12">
                             <div id="IncidentsTable" class="table-responsive mt-3">
                                 <table class="table table-striped table-hover align-middle table-sm">
                                     <colgroup>
+                                        <col style="width:50px;">
+                                        <col style="width:50px;">
                                         <col style="width:100px;">
                                         <col>
                                         <col>
-                                        <col>
-                                        <col>
+                                        <!-- <col>
+                                        <col> -->
                                         <col>
                                         <col>
                                         <col>
@@ -399,24 +471,40 @@
                                     </colgroup>
                                     <thead>
                                         <tr>
+                                            <th scope="col" data-orderable="false" class="text-center"
+                                                style="padding-right: 0.25rem;">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                            </th>
+                                            <th scope="col" data-orderable="false"></th>
+                                            <th scope="col" data-orderable="false" class="text-center">Verify</th>
                                             <th scope="col">ID</th>
                                             <th scope="col" data-orderable="false">Affected Person</th>
                                             <th scope="col">Number</th>
-                                            <th scope="col" data-orderable="false">Gender</th>
-                                            <th scope="col" data-orderable="false">Email</th>
+                                            <!-- <th scope="col" data-orderable="false">Gender</th>
+                                            <th scope="col" data-orderable="false">Email</th> -->
                                             <th scope="col" data-orderable="false">Supervisor</th>
                                             <th scope="col">Category</th>
                                             <th scope="col">Harm Level</th>
                                             <th scope="col">Incident Type</th>
                                             <th scope="col" data-orderable="false">Department</th>
                                             <th scope="col" data-orderable="false" class="text-center">Status</th>
-                                            <th scope="col" data-orderable="false" class="text-center">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
+                                            <td></td>
+                                            <td class="text-center">
+                                                <a href="Record-incident.html" class="text-primary">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="#VerifyModal" data-bs-toggle="modal" class="text-primary">
+                                                    <i class="fa-regular fa-circle-check"></i>
+                                                </a>
+                                            </td>
                                             <td>
-                                                <span>200</span>
+                                                <span>199</span>
                                             </td>
                                             <td>
                                                 <span>Patient</span>
@@ -424,12 +512,12 @@
                                             <td>
                                                 <span>MR#: 3214681</span>
                                             </td>
-                                            <td>
+                                            <!-- <td>
                                                 <span>male</span>
                                             </td>
                                             <td>
                                                 <span>info@company.com</span>
-                                            </td>
+                                            </td> -->
                                             <td>
                                                 <span>Ahmed Mahmoud</span>
                                             </td>
@@ -445,40 +533,108 @@
                                             <td>
                                                 <span>Inventory</span>
                                             </td>
-                                            <td>
+                                            <td data-order="4" data-filter="Closed">
                                                 <div class="steps">
-                                                    <div class="step" title="Requested / 22-10-2021 / 10:00 AM">
-                                                        <span class="bg-requested"><i
+                                                    <div class="step" title="Recorded / 22-10-2021 / 10:00 AM">
+                                                        <span class="bg-recorded"><i
                                                                 class="fas fa-hourglass-end"></i></span>
                                                     </div>
-                                                    <div class="step" title="Received / 22-10-2021 / 11:00 AM">
-                                                        <span class="bg-appointment"><i
+                                                    <div class="step"
+                                                        title="Supervisor Notified / 22-10-2021 / 11:00 AM">
+                                                        <span class="bg-notified"><i
                                                                 class="fas fa-clipboard-list"></i></span>
                                                     </div>
-                                                    <div class="step" title="Allocated / 23-10-2021 / 02:00 PM">
-                                                        <span class="bg-processing"><i
+                                                    <div class="step" title="Verified / 23-10-2021 / 02:00 PM">
+                                                        <span class="bg-verified"><i
                                                                 class="fas fa-clipboard-check"></i></span>
                                                     </div>
-                                                    <div class="step" title="Examined / 01-11-2021 / 09:10 AM">
-                                                        <span class="bg-confirmed"><i
-                                                                class="fas fa-check-double"></i></span>
+                                                    <div class="step" title="RCA/QIPs / 01-11-2021 / 09:10 AM">
+                                                        <span class="bg-rq"><i class="fas fa-check-double"></i></span>
                                                     </div>
-                                                    <div class="step" title="Discharged / 02-11-2021 / 10:00 AM">
-                                                        <span class="bg-ended"><i
+                                                    <div class="step" title="Closed / 02-11-2021 / 10:00 AM">
+                                                        <span class="bg-closed"><i
                                                                 class="fas fa-check-circle"></i></span>
                                                     </div>
-                                                    <div class="step" title="Discharged">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td class="text-center">
+                                                <a href="Record-incident.html" class="text-primary">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="#VerifyModal" data-bs-toggle="modal" class="text-primary">
+                                                    <i class="fa-regular fa-circle-check"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <span>200</span>
+                                            </td>
+                                            <td>
+                                                <span>Patient</span>
+                                            </td>
+                                            <td>
+                                                <span>MR#: 3214681</span>
+                                            </td>
+                                            <!-- <td>
+                                                <span>male</span>
+                                            </td>
+                                            <td>
+                                                <span>info@company.com</span>
+                                            </td> -->
+                                            <td>
+                                                <span>Ahmed Mahmoud</span>
+                                            </td>
+                                            <td>
+                                                <span>Safety</span>
+                                            </td>
+                                            <td>
+                                                <span>Low</span>
+                                            </td>
+                                            <td>
+                                                <span>Security Incident</span>
+                                            </td>
+                                            <td>
+                                                <span>Inventory</span>
+                                            </td>
+                                            <td data-order="1" data-filter="Notified">
+                                                <div class="steps">
+                                                    <div class="step" title="Recorded / 22-10-2021 / 10:00 AM">
+                                                        <span class="bg-recorded"><i
+                                                                class="fas fa-hourglass-end"></i></span>
+                                                    </div>
+                                                    <div class="step"
+                                                        title="Supervisor Notified / 22-10-2021 / 11:00 AM">
+                                                        <span class="bg-notified"><i
+                                                                class="fas fa-clipboard-list"></i></span>
+                                                    </div>
+                                                    <div class="step" title="Verified / 23-10-2021 / 02:00 PM">
+                                                        <span class="undone"></span>
+                                                    </div>
+                                                    <div class="step" title="RCA/QIPs / 01-11-2021 / 09:10 AM">
+                                                        <span class="undone"></span>
+                                                    </div>
+                                                    <div class="step" title="Closed / 02-11-2021 / 10:00 AM">
                                                         <span class="undone"></span>
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td class="text-center">
-                                                <a href="#ActionModal" data-bs-toggle="modal" class="text-primary">
-                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                                                </a>
-                                            </td>
                                         </tr>
                                         <tr>
+                                            <td></td>
+                                            <td class="text-center">
+                                                <a href="Record-incident.html" class="text-primary">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="#VerifyModal" data-bs-toggle="modal" class="text-primary">
+                                                    <i class="fa-regular fa-circle-check"></i>
+                                                </a>
+                                            </td>
                                             <td>
                                                 <span>201</span>
                                             </td>
@@ -488,12 +644,12 @@
                                             <td>
                                                 <span>emp#: 9871</span>
                                             </td>
-                                            <td>
+                                            <!-- <td>
                                                 <span>male</span>
                                             </td>
                                             <td>
                                                 <span>info@company.com</span>
-                                            </td>
+                                            </td> -->
                                             <td>
                                                 <span>Ahmed Mahmoud</span>
                                             </td>
@@ -509,35 +665,39 @@
                                             <td>
                                                 <span>Inventory</span>
                                             </td>
-                                            <td>
+                                            <td data-order="3" data-filter="Closed">
                                                 <div class="steps">
-                                                    <div class="step" title="Requested / 22-10-2021 / 10:00 AM">
+                                                    <div class="step" title="Recorded / 22-10-2021 / 10:00 AM">
                                                         <span class="done"><i class="fas fa-hourglass-end"></i></span>
                                                     </div>
-                                                    <div class="step" title="Appointment / 22-10-2021 / 11:00 AM">
+                                                    <div class="step"
+                                                        title="Supervisor Notified / 22-10-2021 / 11:00 AM">
                                                         <span class="done"><i class="fas fa-clipboard-list"></i></span>
                                                     </div>
-                                                    <div class="step" title="Processing / 23-10-2021 / 02:00 PM">
+                                                    <div class="step" title="Verified / 23-10-2021 / 02:00 PM">
                                                         <span class="done"><i class="fas fa-clipboard-check"></i></span>
                                                     </div>
-                                                    <div class="step" title="Resulted / 01-11-2021 / 09:00 AM">
-                                                        <span class="done"><i class="fas fa-poll"></i></span>
-                                                    </div>
-                                                    <div class="step" title="Confirmed / 01-11-2021 / 09:10 AM">
+                                                    <div class="step" title="RCA/QIPs / 01-11-2021 / 09:10 AM">
                                                         <span class="done"><i class="fas fa-check-double"></i></span>
                                                     </div>
-                                                    <div class="step" title="Ended / 02-11-2021 / 10:00 AM">
+                                                    <div class="step" title="Closed / 02-11-2021 / 10:00 AM">
                                                         <span class="done"><i class="fas fa-check-circle"></i></span>
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td class="text-center">
-                                                <a href="#ActionModal" data-bs-toggle="modal" class="text-primary">
-                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                                                </a>
-                                            </td>
                                         </tr>
                                         <tr>
+                                            <td></td>
+                                            <td class="text-center">
+                                                <a href="Record-incident.html" class="text-primary">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </a>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="#VerifyModal" data-bs-toggle="modal" class="text-primary">
+                                                    <i class="fa-regular fa-circle-check"></i>
+                                                </a>
+                                            </td>
                                             <td>
                                                 <span>202</span>
                                             </td>
@@ -547,12 +707,12 @@
                                             <td>
                                                 <span>ID#: 2974156871</span>
                                             </td>
-                                            <td>
+                                            <!-- <td>
                                                 <span>female</span>
                                             </td>
                                             <td>
                                                 <span>info@company.com</span>
-                                            </td>
+                                            </td> -->
                                             <td>
                                                 <span>Ahmed Mahmoud</span>
                                             </td>
@@ -568,37 +728,44 @@
                                             <td>
                                                 <span>Inventory</span>
                                             </td>
-                                            <td>
+                                            <td data-order="2" data-filter="Verified">
                                                 <div class="steps">
-                                                    <div class="step" title="Requested / 22-10-2021 / 10:00 AM">
+                                                    <div class="step" title="Recorded / 22-10-2021 / 10:00 AM">
                                                         <span class="done"><i class="fas fa-hourglass-end"></i></span>
                                                     </div>
-                                                    <div class="step" title="Appointment / 22-10-2021 / 11:00 AM">
+                                                    <div class="step"
+                                                        title="Supervisor Notified / 22-10-2021 / 11:00 AM">
                                                         <span class="done"><i class="fas fa-clipboard-list"></i></span>
                                                     </div>
-                                                    <div class="step" title="Processing / 23-10-2021 / 02:00 PM">
+                                                    <div class="step" title="Verified / 23-10-2021 / 02:00 PM">
                                                         <span class="done"><i class="fas fa-clipboard-check"></i></span>
                                                     </div>
-                                                    <div class="step" title="Resulted / 01-11-2021 / 09:00 AM">
-                                                        <span class="done"><i class="fas fa-poll"></i></span>
+                                                    <div class="step" title="RCA/QIPs / 01-11-2021 / 09:10 AM">
+                                                        <span class="undone"></span>
                                                     </div>
-                                                    <div class="step" title="Confirmed / 01-11-2021 / 09:10 AM">
-                                                        <span class="done"><i class="fas fa-check-double"></i></span>
-                                                    </div>
-                                                    <div class="step" title="Ended / 02-11-2021 / 10:00 AM">
-                                                        <span class="done"><i class="fas fa-check-circle"></i></span>
+                                                    <div class="step" title="Closed / 02-11-2021 / 10:00 AM">
+                                                        <span class="undone"></span>
                                                     </div>
                                                 </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <a href="#ActionModal" data-bs-toggle="modal" class="text-primary">
-                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                                                </a>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-4 col-lg-3">
+                            <div class="mb-3">
+                                <select class="form-select" name="" id="">
+                                    <option selected disabled>Select one</option>
+                                    <option value="Approve">Approve</option>
+                                    <option value="disapprove">disapprove</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-3 col-lg-2">
+                            <button class="btn btn-primary">Apply</button>
                         </div>
                     </div>
                 </div>
@@ -621,17 +788,24 @@
         </div>
     </footer>
 
-    <!-- ========== Start Action Modal ========== -->
-    <div class="modal fade" id="ActionModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+    <!-- ========== Start Verify Modal ========== -->
+    <div class="modal fade" id="VerifyModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
         role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitleId">Modal title</h5>
+                    <h5 class="modal-title" id="modalTitleId">Verify the incident</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Body
+                    <div class="form-check form-switch d-flex align-items-center mb-3 gap-2">
+                        <input class="form-check-input" type="checkbox" id="ApproveChecked">
+                        <label class="form-check-label fw-bold" for="ApproveChecked">Approve</label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="VerifyComment" class="form-label">Comment</label>
+                        <textarea class="form-control" name="" id="VerifyComment" rows="3"></textarea>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -640,7 +814,7 @@
             </div>
         </div>
     </div>
-    <!-- ========== End Action Modal ========== -->
+    <!-- ========== End Verify Modal ========== -->
 
     <!-- ========== Start Default modal ========== -->
     <!-- Modal Body -->
@@ -673,7 +847,7 @@
 
         function IncidentsTable() {
             var table = $('#IncidentsTable table').DataTable({
-                "dom": 'Btpil',
+                "dom": 'tpil',
                 "stateSave": false,
                 "scrollCollapse": false,
                 "info": true,
@@ -681,27 +855,24 @@
                 "responsive": true,
                 "ordering": true,
                 "colReorder": false,
-                buttons: [{
-                    extend: 'copy',
-                    className: 'btn-sm'
+                columnDefs: [{
+                    className: 'select-checkbox',
+                    targets: 0,
+                }],
+                select: {
+                    style: 'multi', //multi - os - single
+                    selector: 'td:first-child',
                 },
-                {
-                    extend: 'csv',
-                    className: 'btn-sm'
-                },
-                {
-                    extend: 'excel',
-                    className: 'btn-sm'
-                },
-                {
-                    extend: 'pdf',
-                    className: 'btn-sm'
-                },
-                {
-                    extend: 'print',
-                    className: 'btn-sm'
+            });
+
+            // Add select all functionality
+            $('#IncidentsTable table thead th:first-child').html('<input type="checkbox" id="selectAll">');
+            $('#selectAll').on('click', function () {
+                if ($(this).is(':checked')) {
+                    table.rows().select(); // Select all rows
+                } else {
+                    table.rows().deselect(); // Deselect all rows
                 }
-                ],
             });
             return table;
         };

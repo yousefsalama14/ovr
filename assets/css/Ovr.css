@@ -60,6 +60,12 @@ body.DMSBlueBlue .page-title a[data-bs-dismiss="offcanvas"] {
     color: #fff;
 }
 
+.form-switch .form-check-input {
+    width: 3em;
+    height: 1.5em;
+    cursor: pointer;
+}
+
 /***** End Common *****/
 /***** Icons *****/
 .icons-wrapper {
@@ -849,57 +855,57 @@ label+p {
     background-color: #F97171;
 }
 
-.bg-requested {
+.bg-recorded {
     background-color: #FFA500;
     color: #fff;
 }
 
-li.not-active .bg-requested {
+li.not-active .bg-recorded {
     background-color: #ffa5003d;
 }
 
-li.not-active .bg-requested:hover {
+li.not-active .bg-recorded:hover {
     background-color: #FFA500;
     color: #fff;
 }
 
-.step>span.bg-requested:after {
+.step>span.bg-recorded:after {
     background-color: #FFA500;
 }
 
-.bg-appointment {
+.bg-notified {
     background-color: #F24C4C;
     color: #fff;
 }
 
-li.not-active .bg-appointment {
+li.not-active .bg-notified {
     background-color: #f24c4c40;
 }
 
-li.not-active .bg-appointment:hover {
+li.not-active .bg-notified:hover {
     background-color: #F24C4C;
     color: #fff;
 }
 
-.step>span.bg-appointment:after {
+.step>span.bg-notified:after {
     background-color: #F24C4C;
 }
 
-.bg-processing {
+.bg-verified {
     background-color: #0a7687;
     color: #fff;
 }
 
-li.not-active .bg-processing {
+li.not-active .bg-verified {
     background-color: #0a76872b;
 }
 
-li.not-active .bg-processing:hover {
+li.not-active .bg-verified:hover {
     background-color: #0a7687;
     color: #fff;
 }
 
-.step>span.bg-processing:after {
+.step>span.bg-verified:after {
     background-color: #0a7687;
 }
 
@@ -921,51 +927,121 @@ li.not-active .bg-resulted:hover {
     background-color: #601052;
 }
 
-.bg-confirmed {
+.bg-rq {
     background-color: #039A1A;
     color: #fff;
 }
 
-li.not-active .bg-confirmed {
+li.not-active .bg-rq {
     background-color: #039a1a3b;
 }
 
-li.not-active .bg-confirmed:hover {
+li.not-active .bg-rq:hover {
     background-color: #039A1A;
     color: #fff;
 }
 
-.step>span.bg-confirmed:after {
+.step>span.bg-rq:after {
     background-color: #039A1A;
 }
 
-.bg-ended {
+.bg-closed {
     background-color: #29434C;
     color: #fff;
 }
 
-li.not-active .bg-ended {
+li.not-active .bg-closed {
     background-color: #29434c33;
 }
 
-li.not-active .bg-ended:hover {
+li.not-active .bg-closed:hover {
     background-color: #29434C;
     color: #fff;
 }
 
-.step>span.bg-ended:after {
+.step>span.bg-closed:after {
     background-color: #29434C;
 }
 
-li.not-active .bg-primary {
+.bg-main {
+    background-color: var(--appColor);
+    color: #fff;
+}
+
+li.not-active .bg-main {
     background-color: #337ab733;
 }
 
-li.not-active .bg-primary:hover {
+li.not-active .bg-main:hover {
     background-color: #286090;
 }
 
+.step>span.bg-main:after {
+    background-color: #286090;
+}
+
+.btn-wrapper .icon-box {
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+}
+
+.btn-wrapper .content-box {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1;
+}
+
+.btn-wrapper .content-box .number-box {
+    margin-top: 0.25rem;
+}
+
+.nav-tabs>li>a.btn-wrapper:hover,
+.nav-tabs>li.active>a.btn-wrapper,
+.nav-tabs>li.active>a.btn-wrapper:focus,
+.nav-tabs>li.active>a.btn-wrapper:hover {
+    border-bottom: none;
+}
+
+.nav-tabs>li:not(.active)>a.btn-wrapper {
+    background: #b7b7b7 !important;
+}
+
+.nav-tabs li,
+.nav-filter>li {
+    margin-right: 1rem;
+}
+
+.nav-tabs li i,
+.nav-filter>li i {
+    font-size: 14px;
+}
+
+a.btn-wrapper,
+.nav-tabs li a.btn-wrapper {
+    font-size: 14px;
+    display: flex;
+    padding: 0;
+    border: 0;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.not-active a.btn-wrapper {
+    color: #676767;
+}
+
+a.btn-wrapper:hover {
+    color: #fff;
+}
+
 /***** End Timeline *****/
+
 /***** DMS Style issues solutions *****/
 /***** Colors *****/
 .btn-outline-primary {
@@ -1020,4 +1096,20 @@ body.DMSBlueBlue .page-title a[data-bs-dismiss="offcanvas"] {
 }
 
 /***** End Floating select *****/
+/***** Datatable *****/
+
+table.dataTable thead>tr>th[data-orderable="false"]:before,
+table.dataTable thead>tr>th[data-orderable="false"]:after {
+    display: none;
+}
+
+table.dataTable thead th {
+    vertical-align: middle;
+}
+
+table.dataTable.table-striped>tbody>tr.selected .text-primary {
+    color: #fff !important;
+}
+
+/***** End Datatable *****/
 /***** End DMS Style issues solutions *****/

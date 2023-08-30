@@ -245,7 +245,7 @@
                 </a>
             </li>
             <li class="active">
-                <a href="Record-Incident.html" title="Incidents"><i class="fa-solid fa-exclamation-triangle"></i>
+                <a href="Incident-index.html" title="Incidents"><i class="fa-solid fa-exclamation-triangle"></i>
                     <h3>Incidents</h3>
                 </a>
             </li>
@@ -271,14 +271,18 @@
                 <!-- action-tools  -->
                 <div class="ms-auto ms-sm-auto m-sm-0 p-1">
                     <div class="action-tools d-flex align-items-center justify-content-end">
-                        <a class="px-1 btn-filter" title="Advance Search" data-bs-toggle="offcanvas"
+                        <a class="px-1 btn-filter position-relative" title="Advance Search" data-bs-toggle="offcanvas"
                             href="#offcanvasFilter" role="button" aria-controls="offcanvasFilter">
                             <i class="fa fa-filter"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle bg-danger border border-light rounded-circle"
+                                style="padding: 0.4rem;">
+                            </span>
                         </a>
                     </div>
                     <!-- filter element-->
-                    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-                        id="offcanvasFilter" aria-labelledby="offcanvasFilterLabel">
+                    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasFilter"
+                        aria-labelledby="offcanvasFilterLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasExampleLabel"><i class="fa fa-filter"></i> Search
                             </h5>
@@ -293,63 +297,56 @@
                                 </div>
                                 <hr>
                                 <div class="col-12 mb-2">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="IncidentType"
-                                            onclick="this.setAttribute('value', this.value);"
-                                            onchange="this.setAttribute('value', this.value);" value="">
-                                            <option value=""></option>
-                                            <option value="1">Alabama</option>
-                                            <option value="2">Boston</option>
-                                            <option value="3">Ohaio</option>
-                                            <option value="4">New York</option>
-                                            <option value="5">Washington</option>
-                                        </select>
-                                        <label for="IncidentType">Incident Type</label>
-                                    </div>
+                                    <label for="IncidentType" class="form-label">Incident Type</label>
+                                    <select class="form-select" id="IncidentType">
+                                        <option value="0" selected>Select Incident Type</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
                                 </div>
                                 <div class="col-12 mb-2">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="CategorySelect"
-                                            onclick="this.setAttribute('value', this.value);"
-                                            onchange="this.setAttribute('value', this.value);" value="">
-                                            <option value=""></option>
-                                            <option value="1">Alabama</option>
-                                            <option value="2">Boston</option>
-                                            <option value="3">Ohaio</option>
-                                            <option value="4">New York</option>
-                                            <option value="5">Washington</option>
-                                        </select>
-                                        <label for="CategorySelect">Select Category</label>
-                                    </div>
+                                    <label for="CategorySelect" class="form-label">Category</label>
+                                    <select class="form-select" id="CategorySelect">
+                                        <option value="0" selected>Select Category</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
                                 </div>
                                 <div class="col-12 mb-2">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="HarmLevel"
-                                            onclick="this.setAttribute('value', this.value);"
-                                            onchange="this.setAttribute('value', this.value);" value="">
-                                            <option value=""></option>
-                                            <option value="Low">Low</option>
-                                            <option value="moderate harm">moderate harm</option>
-                                            <option value="unintended severe">unintended severe</option>
-                                        </select>
-                                        <label for="HarmLevel">Select Harm Level</label>
-                                    </div>
+                                    <label for="HarmLevel" class="form-label">Harm Level</label>
+                                    <select class="form-select" id="HarmLevel">
+                                        <option value="0" selected>Select Harm Level</option>
+                                        <option value="Low">Low</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="High">High</option>
+                                    </select>
                                 </div>
                                 <div class="col-12 mb-2">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="CorrectiveAction"
-                                            onclick="this.setAttribute('value', this.value);"
-                                            onchange="this.setAttribute('value', this.value);" value="">
-                                            <option value=""></option>
-                                            <option value="1">Alabama</option>
-                                            <option value="2">Boston</option>
-                                            <option value="3">Ohaio</option>
-                                            <option value="4">New York</option>
-                                            <option value="5">Washington</option>
-                                        </select>
-                                        <label for="CorrectiveAction">Select Corrective Action</label>
-                                    </div>
+                                    <label for="StatusFilter" class="form-label">Status</label>
+                                    <select class="form-select" id="StatusFilter">
+                                        <option value="0" selected>Select Status</option>
+                                        <option value="Recorded">Recorded</option>
+                                        <option value="Notified">Notified</option>
+                                        <option value="Verified">Verified</option>
+                                        <option value="RCA/QIPs">RCA/QIPs</option>
+                                        <option value="Closed">Closed</option>
+                                    </select>
                                 </div>
+                                <!-- <div class="col-12 mb-2">
+                                    <label for="CorrectiveAction" class="form-label">Corrective Action</label>
+                                    <select class="form-select" id="CorrectiveAction">
+                                        <option value="0" selected>Select Corrective Action</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div> -->
                                 <div class="col-12 mb-2">
                                     <label class="form-label">Incident Date (from - to)</label>
                                     <div class="row">
@@ -365,8 +362,11 @@
                                 </div>
                                 <hr>
                                 <div class="mt-2 d-grid gap-2 d-md-flex justify-content-center">
-                                    <a href="#" class="btn btn-outline-secondary btn-sm px-5"><i
-                                            class="fa fa-refresh"></i> Clear</a>
+                                    <a href="#" class="btn btn-secondary text-white btn-sm px-5">
+                                        <!-- <i class="fa fa-refresh"></i>  -->
+                                        Clear All
+                                        <span class="ms-2 badge rounded-1">4</span>
+                                    </a>
                                     <a href="#" class="btn btn-primary btn-sm px-5" data-bs-dismiss="offcanvas"
                                         aria-label="Close"><i class="fa fa-search"></i> Search</a>
                                 </div>
@@ -391,7 +391,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <ul class="nav-filter d-flex ps-0 mb-0" data-target="#IncidentsTable table"
-                                data-column="10">
+                                data-column="11">
                                 <li class="active all-filter" data-value="">
                                     <a class="toggle-vis btn-wrapper bg-main" data-column-show="0,1,2,3,4,5,7">
                                         <div class="icon-box"><i class="fa fa-table"></i></div>
@@ -403,7 +403,7 @@
                                 </li>
                                 <li class="active" data-value="Recorded"><a class="toggle-vis btn-wrapper bg-recorded"
                                         data-column-show="0,1,2,4,5,7,8">
-                                        <div class="icon-box"><i class="fas fa-hourglass-end"></i></div>
+                                        <div class="icon-box"><i class="fas fa-exclamation-circle"></i></div>
                                         <div class="content-box">
                                             <span> Recorded</span>
                                             <span class="number-box">12</span>
@@ -412,7 +412,7 @@
                                 </li>
                                 <li class="active" data-value="Notified"><a class="toggle-vis btn-wrapper bg-notified"
                                         data-column-show="0,1,2,4,5,6,7,12">
-                                        <div class="icon-box"><i class="fas fa-clipboard-list"></i></div>
+                                        <div class="icon-box"><i class="fa-solid fa-bell"></i></div>
                                         <div class="content-box">
                                             <span> Notified</span>
                                             <span class="number-box">8</span>
@@ -421,7 +421,7 @@
                                 </li>
                                 <li class="active" data-value="Verified"><a class="toggle-vis btn-wrapper bg-verified"
                                         data-column-show="0,1,2,4,5,6,7,9">
-                                        <div class="icon-box"><i class="fas fa-clipboard-check"></i></div>
+                                        <div class="icon-box"><i class="fa-solid fa-circle-check"></i></div>
                                         <div class="content-box">
                                             <span> Verified</span>
                                             <span class="number-box">15</span>
@@ -430,7 +430,7 @@
                                 </li>
                                 <li class="active" data-value="rq"><a class="toggle-vis btn-wrapper bg-rq"
                                         data-column-show="0,1,2,4,6,7,10,11">
-                                        <div class="icon-box"><i class="fas fa-poll"></i></div>
+                                        <div class="icon-box"><i class="fa-solid fa-file-lines"></i></div>
                                         <div class="content-box">
                                             <span> RCA/QIPs</span>
                                             <span class="number-box">32</span>
@@ -439,7 +439,7 @@
                                 </li>
                                 <li class="active" data-value="Closed"><a class="toggle-vis btn-wrapper bg-closed"
                                         data-column-show="">
-                                        <div class="icon-box"><i class="fas fa-check-double"></i></div>
+                                        <div class="icon-box"><i class="fa-solid fa-lock"></i></div>
                                         <div class="content-box">
                                             <span> Closed</span>
                                             <span class="number-box">10</span>
@@ -479,10 +479,10 @@
                                             <th scope="col" data-orderable="false" class="text-center">Verify</th>
                                             <th scope="col">ID</th>
                                             <th scope="col" data-orderable="false">Affected Person</th>
-                                            <th scope="col">Number</th>
+                                            <th scope="col">MR/EMP/ID#</th>
                                             <!-- <th scope="col" data-orderable="false">Gender</th>
                                             <th scope="col" data-orderable="false">Email</th> -->
-                                            <th scope="col" data-orderable="false">Supervisor</th>
+                                            <th scope="col" data-orderable="false">Name</th>
                                             <th scope="col">Category</th>
                                             <th scope="col">Harm Level</th>
                                             <th scope="col">Incident Type</th>
@@ -495,12 +495,12 @@
                                             <td></td>
                                             <td class="text-center">
                                                 <a href="Record-incident.html" class="text-primary">
-                                                    <i class="fa-regular fa-eye"></i>
+                                                    <i class="fa-solid fa-eye"></i>
                                                 </a>
                                             </td>
                                             <td class="text-center">
                                                 <a href="#VerifyModal" data-bs-toggle="modal" class="text-primary">
-                                                    <i class="fa-regular fa-circle-check"></i>
+                                                    <!-- <i class="fa-regular fa-circle-check"></i> -->
                                                 </a>
                                             </td>
                                             <td>
@@ -525,7 +525,7 @@
                                                 <span>Safety</span>
                                             </td>
                                             <td>
-                                                <span>Low</span>
+                                                <span class="badge rounded-pill text-bg-success">Low</span>
                                             </td>
                                             <td>
                                                 <span>Security Incident</span>
@@ -537,23 +537,23 @@
                                                 <div class="steps">
                                                     <div class="step" title="Recorded / 22-10-2021 / 10:00 AM">
                                                         <span class="bg-recorded"><i
-                                                                class="fas fa-hourglass-end"></i></span>
+                                                                class="fas fa-exclamation-circle"></i></span>
                                                     </div>
                                                     <div class="step"
                                                         title="Supervisor Notified / 22-10-2021 / 11:00 AM">
                                                         <span class="bg-notified"><i
-                                                                class="fas fa-clipboard-list"></i></span>
+                                                                class="fa-solid fa-bell"></i></span>
                                                     </div>
                                                     <div class="step" title="Verified / 23-10-2021 / 02:00 PM">
                                                         <span class="bg-verified"><i
-                                                                class="fas fa-clipboard-check"></i></span>
+                                                                class="fa-solid fa-circle-check"></i></span>
                                                     </div>
                                                     <div class="step" title="RCA/QIPs / 01-11-2021 / 09:10 AM">
-                                                        <span class="bg-rq"><i class="fas fa-check-double"></i></span>
+                                                        <span class="bg-rq"><i
+                                                                class="fa-solid fa-file-lines"></i></span>
                                                     </div>
                                                     <div class="step" title="Closed / 02-11-2021 / 10:00 AM">
-                                                        <span class="bg-closed"><i
-                                                                class="fas fa-check-circle"></i></span>
+                                                        <span class="bg-closed"><i class="fa-solid fa-lock"></i></span>
                                                     </div>
                                                 </div>
                                             </td>
@@ -562,7 +562,7 @@
                                             <td></td>
                                             <td class="text-center">
                                                 <a href="Record-incident.html" class="text-primary">
-                                                    <i class="fa-regular fa-eye"></i>
+                                                    <i class="fa-solid fa-eye"></i>
                                                 </a>
                                             </td>
                                             <td class="text-center">
@@ -592,7 +592,7 @@
                                                 <span>Safety</span>
                                             </td>
                                             <td>
-                                                <span>Low</span>
+                                                <span class="badge rounded-pill text-bg-success">Low</span>
                                             </td>
                                             <td>
                                                 <span>Security Incident</span>
@@ -604,12 +604,12 @@
                                                 <div class="steps">
                                                     <div class="step" title="Recorded / 22-10-2021 / 10:00 AM">
                                                         <span class="bg-recorded"><i
-                                                                class="fas fa-hourglass-end"></i></span>
+                                                                class="fas fa-exclamation-circle"></i></span>
                                                     </div>
                                                     <div class="step"
                                                         title="Supervisor Notified / 22-10-2021 / 11:00 AM">
                                                         <span class="bg-notified"><i
-                                                                class="fas fa-clipboard-list"></i></span>
+                                                                class="fa-solid fa-bell"></i></span>
                                                     </div>
                                                     <div class="step" title="Verified / 23-10-2021 / 02:00 PM">
                                                         <span class="undone"></span>
@@ -627,7 +627,7 @@
                                             <td></td>
                                             <td class="text-center">
                                                 <a href="Record-incident.html" class="text-primary">
-                                                    <i class="fa-regular fa-eye"></i>
+                                                    <i class="fa-solid fa-eye"></i>
                                                 </a>
                                             </td>
                                             <td class="text-center">
@@ -657,7 +657,7 @@
                                                 <span>Safety</span>
                                             </td>
                                             <td>
-                                                <span>moderate harm</span>
+                                                <span class="badge rounded-pill text-bg-warning">Medium</span>
                                             </td>
                                             <td>
                                                 <span>Unsafe Acts</span>
@@ -668,20 +668,22 @@
                                             <td data-order="3" data-filter="Closed">
                                                 <div class="steps">
                                                     <div class="step" title="Recorded / 22-10-2021 / 10:00 AM">
-                                                        <span class="done"><i class="fas fa-hourglass-end"></i></span>
+                                                        <span class="done"><i
+                                                                class="fas fa-exclamation-circle"></i></span>
                                                     </div>
                                                     <div class="step"
                                                         title="Supervisor Notified / 22-10-2021 / 11:00 AM">
-                                                        <span class="done"><i class="fas fa-clipboard-list"></i></span>
+                                                        <span class="done"><i class="fa-solid fa-bell"></i></span>
                                                     </div>
                                                     <div class="step" title="Verified / 23-10-2021 / 02:00 PM">
-                                                        <span class="done"><i class="fas fa-clipboard-check"></i></span>
+                                                        <span class="done"><i
+                                                                class="fa-solid fa-circle-check"></i></span>
                                                     </div>
                                                     <div class="step" title="RCA/QIPs / 01-11-2021 / 09:10 AM">
-                                                        <span class="done"><i class="fas fa-check-double"></i></span>
+                                                        <span class="done"><i class="fa-solid fa-file-lines"></i></span>
                                                     </div>
                                                     <div class="step" title="Closed / 02-11-2021 / 10:00 AM">
-                                                        <span class="done"><i class="fas fa-check-circle"></i></span>
+                                                        <span class="done"><i class="fa-solid fa-lock"></i></span>
                                                     </div>
                                                 </div>
                                             </td>
@@ -690,12 +692,12 @@
                                             <td></td>
                                             <td class="text-center">
                                                 <a href="Record-incident.html" class="text-primary">
-                                                    <i class="fa-regular fa-eye"></i>
+                                                    <i class="fa-solid fa-eye"></i>
                                                 </a>
                                             </td>
                                             <td class="text-center">
                                                 <a href="#VerifyModal" data-bs-toggle="modal" class="text-primary">
-                                                    <i class="fa-regular fa-circle-check"></i>
+                                                    <!-- <i class="fa-regular fa-circle-check"></i> -->
                                                 </a>
                                             </td>
                                             <td>
@@ -720,7 +722,7 @@
                                                 <span>Safety</span>
                                             </td>
                                             <td>
-                                                <span>unintended severe</span>
+                                                <span class="badge rounded-pill text-bg-danger">High</span>
                                             </td>
                                             <td>
                                                 <span>Fire Incident</span>
@@ -731,14 +733,16 @@
                                             <td data-order="2" data-filter="Verified">
                                                 <div class="steps">
                                                     <div class="step" title="Recorded / 22-10-2021 / 10:00 AM">
-                                                        <span class="done"><i class="fas fa-hourglass-end"></i></span>
+                                                        <span class="done"><i
+                                                                class="fas fa-exclamation-circle"></i></span>
                                                     </div>
                                                     <div class="step"
                                                         title="Supervisor Notified / 22-10-2021 / 11:00 AM">
-                                                        <span class="done"><i class="fas fa-clipboard-list"></i></span>
+                                                        <span class="done"><i class="fa-solid fa-bell"></i></span>
                                                     </div>
                                                     <div class="step" title="Verified / 23-10-2021 / 02:00 PM">
-                                                        <span class="done"><i class="fas fa-clipboard-check"></i></span>
+                                                        <span class="done"><i
+                                                                class="fa-solid fa-circle-check"></i></span>
                                                     </div>
                                                     <div class="step" title="RCA/QIPs / 01-11-2021 / 09:10 AM">
                                                         <span class="undone"></span>
@@ -765,7 +769,8 @@
                             </div>
                         </div>
                         <div class="col-3 col-lg-2">
-                            <button class="btn btn-primary">Apply</button>
+                            <button class="btn btn-primary" data-bs-toggle="modal" href="#VerifyModal1"
+                                role="button">Apply</button>
                         </div>
                     </div>
                 </div>
@@ -789,8 +794,8 @@
     </footer>
 
     <!-- ========== Start Verify Modal ========== -->
-    <div class="modal fade" id="VerifyModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
-        role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal fade" id="VerifyModal" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -798,11 +803,57 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-check form-switch d-flex align-items-center mb-3 gap-2">
-                        <input class="form-check-input" type="checkbox" id="ApproveChecked">
-                        <label class="form-check-label fw-bold" for="ApproveChecked">Approve</label>
+                    <div class="card mb-4">
+                        <div class="card-body border border-primary rounded">
+                            <div class="row row-cols-2">
+                                <div class="col mb-2">
+                                    <label for="AffectedPerson">Affected Person</label>
+                                    <p class="mb-0">Patient</p>
+                                </div>
+                                <div class="col mb-2">
+                                    <label for="MR">MR</label>
+                                    <p class="mb-0">3214681</p>
+                                </div>
+                                <div class="col mb-2">
+                                    <label for="Name">Name</label>
+                                    <p class="mb-0">Ahmed Mahmoud</p>
+                                </div>
+                                <div class="col mb-2">
+                                    <label for="HarmLevel">Harm Level</label>
+                                    <p class="mb-0">
+                                        <span class="badge rounded-pill text-bg-success">Low</span>
+                                    </p>
+                                </div>
+                                <div class="col mb-2">
+                                    <label for="IncidentType">Incident Type</label>
+                                    <p class="mb-0">Fire Incident</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-2">
+                        <label class="form-label">Verify the incident</label>
+                        <div class="radio-wrapper d-flex align-items-center">
+                            <div class="radio custom-radio">
+                                <input type="radio" name="RefreshContacts" id="Approve" checked>
+                                <label for="Approve">Approve</label>
+                            </div>
+                            <div class="radio custom-radio">
+                                <input type="radio" name="RefreshContacts" id="Disapprove">
+                                <label for="Disapprove">Disapprove</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <label for="CorrectiveAction" class="form-label">Corrective Action</label>
+                        <select class="form-select" id="CorrectiveAction">
+                            <option value="0" selected="">Select Corrective Action</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="mb-2">
                         <label for="VerifyComment" class="form-label">Comment</label>
                         <textarea class="form-control" name="" id="VerifyComment" rows="3"></textarea>
                     </div>
@@ -814,13 +865,159 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="VerifyModal1" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="VerifyModal1Label">Verify the incident (1 / 2)</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card mb-4">
+                        <div class="card-body border border-primary rounded">
+                            <div class="row row-cols-2">
+                                <div class="col mb-2">
+                                    <label for="AffectedPerson">Affected Person</label>
+                                    <p class="mb-0">Patient</p>
+                                </div>
+                                <div class="col mb-2">
+                                    <label for="MR">MR</label>
+                                    <p class="mb-0">3214681</p>
+                                </div>
+                                <div class="col mb-2">
+                                    <label for="Name">Name</label>
+                                    <p class="mb-0">Ahmed Mahmoud</p>
+                                </div>
+                                <div class="col mb-2">
+                                    <label for="HarmLevel">Harm Level</label>
+                                    <p class="mb-0">
+                                        <span class="badge rounded-pill text-bg-success">Low</span>
+                                    </p>
+                                </div>
+                                <div class="col mb-2">
+                                    <label for="IncidentType">Incident Type</label>
+                                    <p class="mb-0">Fire Incident</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Verify the incident</label>
+                        <div class="radio-wrapper d-flex align-items-center">
+                            <div class="radio custom-radio">
+                                <input type="radio" name="ApproveDisapproveModal1" id="ApproveModal1">
+                                <label for="ApproveModal1">Approve</label>
+                            </div>
+                            <div class="radio custom-radio">
+                                <input type="radio" name="ApproveDisapproveModal1" id="DisapproveModal1">
+                                <label for="DisapproveModal1">Disapprove</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <label for="CorrectiveAction" class="form-label">Corrective Action</label>
+                        <select class="form-select" id="CorrectiveAction">
+                            <option value="0" selected="">Select Corrective Action</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label for="VerifyComment" class="form-label">Comment</label>
+                        <textarea class="form-control" name="" id="VerifyComment" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary me-auto" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-outline-primary" data-bs-target="#VerifyModal2"
+                        data-bs-toggle="modal">Next</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="VerifyModal2" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="VerifyModal2Label2">Verify the incident (2 / 2)</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card mb-4">
+                        <div class="card-body border border-primary rounded">
+                            <div class="row row-cols-2">
+                                <div class="col mb-2">
+                                    <label for="AffectedPerson">Affected Person</label>
+                                    <p class="mb-0">staff</p>
+                                </div>
+                                <div class="col mb-2">
+                                    <label for="emp">emp#</label>
+                                    <p class="mb-0">3214681</p>
+                                </div>
+                                <div class="col mb-2">
+                                    <label for="Name">Name</label>
+                                    <p class="mb-0">Ahmed Mahmoud</p>
+                                </div>
+                                <div class="col mb-2">
+                                    <label for="HarmLevel">Harm Level</label>
+                                    <p class="mb-0">
+                                        <span class="badge rounded-pill text-bg-warning">Medium</span>
+                                    </p>
+                                </div>
+                                <div class="col mb-2">
+                                    <label for="IncidentType">Incident Type</label>
+                                    <p class="mb-0">Fire Incident</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Verify the incident</label>
+                        <div class="radio-wrapper d-flex align-items-center">
+                            <div class="radio custom-radio">
+                                <input type="radio" name="ApproveDisapproveModal2" id="ApproveModal2" checked>
+                                <label for="ApproveModal2">Approve</label>
+                            </div>
+                            <div class="radio custom-radio">
+                                <input type="radio" name="ApproveDisapproveModal2" id="DisapproveModal2">
+                                <label for="DisapproveModal2">Disapprove</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <label for="CorrectiveAction" class="form-label">Corrective Action</label>
+                        <select class="form-select" id="CorrectiveAction">
+                            <option value="0" selected="">Select Corrective Action</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label for="VerifyComment" class="form-label">Comment</label>
+                        <textarea class="form-control" name="" id="VerifyComment" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary me-auto" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-target="#VerifyModal1"
+                        data-bs-toggle="modal">Back</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- ========== End Verify Modal ========== -->
 
     <!-- ========== Start Default modal ========== -->
     <!-- Modal Body -->
     <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
 
-    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+    <div class="modal fade" id="modalId" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false"
         aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">

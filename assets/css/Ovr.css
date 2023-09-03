@@ -1084,6 +1084,10 @@ a.btn-wrapper:hover {
     color: var(--bs-btn-hover-color) !important;
 }
 
+.not-saved .text-primary {
+   color: #fff !important;
+}
+
 /***** End Colors *****/
 /***** Links *****/
 body.DMSBlueBlue .page-title a[data-bs-dismiss="offcanvas"] {
@@ -1136,7 +1140,7 @@ table.dataTable.table-striped>tbody>tr.selected .text-primary {
     color: #fff !important;
 }
 
-table.dataTable>tbody>tr.not-saved{
+table.dataTable>tbody>tr.not-saved {
     background-color: var(--appColor);
 }
 
@@ -1144,6 +1148,16 @@ table.dataTable>tbody>tr.not-saved{
 /***** Select2 *****/
 .select2-container--default .select2-selection--single {
     border: 1px solid #ced4da;
+}
+
+.select2-container {
+    width: auto !important;
+    max-width: 100%;
+}
+
+.not-saved .select2-container,
+.offcanvas-body .select2-container {
+    width: 100% !important;
 }
 
 /***** End Select2 *****/

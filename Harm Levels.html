@@ -43,7 +43,7 @@
     <script src="assets/js/jquery.nicescroll.min.js"></script>
     <!--<script src="assets/js/dashboard-charts.js"></script>-->
     <script src="assets/js/DMSmain.js"></script>
-    <script src="assets/js/Oph.js"></script>
+    <script src="assets/js/Ovr.js"></script>
 </head>
 
 <body class="DMSBlueBlue">
@@ -71,6 +71,11 @@
                             <h4 class="text-green">OVR</h4>
                         </li>
                         <li class="vr mx-2"></li>
+                        <li>
+                            <a href="Incident-index.html" class="px-1" title="Transaction"><i
+                                    class="dms-icon-transaction"></i></a>
+                        </li>
+                        <li class="vr mx-1"></li>
                         <li>
                             <a href="#" class="px-1" title="Info"><i class="dms-icon-info"></i></a>
                         </li>
@@ -240,13 +245,28 @@
     <div class="bg-light shadow sidebar">
         <ul class="sidebar-item">
             <li>
-                <a href="#" title="dashboard"><i class="fa-solid fa-house"></i>
-                    <h3>dashboard</h3>
+                <a href="User Permissions.html" title="User Permissions"><i class="fas fa-user-lock"></i>
+                    <h3>User Permissions</h3>
+                </a>
+            </li>
+            <li>
+                <a href="Incident Categories.html" title="Incident Categories"><i class="fas fa-tools"></i>
+                    <h3>Incident Categories</h3>
                 </a>
             </li>
             <li class="active">
-                <a href="Incident-index.html" title="Incidents"><i class="fa-solid fa-exclamation-triangle"></i>
-                    <h3>Incidents</h3>
+                <a href="Harm Levels.html" title="Harm Levels"><i class="fas fa-biohazard"></i>
+                    <h3>Harm Levels</h3>
+                </a>
+            </li>
+            <li>
+                <a href="Prevent Ability.html" title="Prevent Ability"><i class="fas fa-stop-circle"></i>
+                    <h3>Prevent Ability</h3>
+                </a>
+            </li>
+            <li>
+                <a href="Reminder.html" title="Reminder"><i class="far fa-bell"></i>
+                    <h3>Reminder</h3>
                 </a>
             </li>
         </ul>
@@ -262,6 +282,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb position-relative">
                             <li class="breadcrumb-item">OVR</li>
+                            <li class="breadcrumb-item">Setup</li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 <h2>Harm Levels</h2>
                             </li>
@@ -331,24 +352,26 @@
                     <div class="row">
                         <div class="col-12">
                             <div id="" class="table-responsive mt-3">
-                                <table class="table table-striped table-hover align-middle table-sm">
+                                <table class="table table-striped table-hover align-middle table-sm init_datatable">
                                     <colgroup>
                                         <col>
                                         <col>
                                         <col>
                                         <col>
                                         <col>
-                                        <col style="width: 150px;">
+                                        <col style="width: 250px;">
                                         <col style="width:80px;">
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th scope="col" class="text-center">Code</th>
+                                            <th scope="col" class="text-center searchableTh" data-searchtype="text">Code
+                                            </th>
                                             <th scope="col" data-orderable="false">English Description</th>
                                             <th scope="col" data-orderable="false">Arabic Description</th>
                                             <th scope="col" data-orderable="false">Details in English</th>
                                             <th scope="col" data-orderable="false">Details in Arabic</th>
-                                            <th scope="col">Harm Level</th>
+                                            <th scope="col" class="searchableTh" data-searchtype="select">Harm Level color
+                                            </th>
                                             <th scope="col" data-orderable="false"></th>
                                         </tr>
                                     </thead>
@@ -375,7 +398,7 @@
                                                 <input type="text" class="form-control" value="تفاصيل">
                                             </td>
                                             <td class="row-inline-editable">
-                                                <span class="badge rounded-pill text-bg-danger editable">High</span>
+                                                <span class="red editable">red</span>
                                                 <select class="form-select harmLevel-select"></select>
                                             </td>
                                             <td class="text-center">
@@ -405,7 +428,7 @@
                                                 <input type="text" class="form-control" value="تفاصيل">
                                             </td>
                                             <td class="row-inline-editable">
-                                                <span class="badge rounded-pill text-bg-warning editable">Medium</span>
+                                                <span class="yellow-level editable">yellow-level</span>
                                                 <select class="form-select harmLevel-select"></select>
                                             </td>
                                             <td class="text-center">
@@ -435,7 +458,97 @@
                                                 <input type="text" class="form-control" value="تفاصيل">
                                             </td>
                                             <td class="row-inline-editable">
-                                                <span class="badge rounded-pill text-bg-success editable">Low</span>
+                                                <span class="green-level editable">green-level</span>
+                                                <select class="form-select harmLevel-select"></select>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="#" class="text-primary row-edit fa fa-pencil-alt"></a>
+                                                <a href="#" class="text-danger delete-row fa fa-trash-alt"></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="row-inline-editable text-center">
+                                                <span class="editable">43423</span>
+                                                <input type="text" class="form-control" value="43423">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">Description</span>
+                                                <input type="text" class="form-control" value="Description">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">توصيف</span>
+                                                <input type="text" class="form-control" value="توصيف">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">Details</span>
+                                                <input type="text" class="form-control" value="Details">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">تفاصيل</span>
+                                                <input type="text" class="form-control" value="تفاصيل">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="black-level editable">black-level</span>
+                                                <select class="form-select harmLevel-select"></select>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="#" class="text-primary row-edit fa fa-pencil-alt"></a>
+                                                <a href="#" class="text-danger delete-row fa fa-trash-alt"></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="row-inline-editable text-center">
+                                                <span class="editable">43423</span>
+                                                <input type="text" class="form-control" value="43423">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">Description</span>
+                                                <input type="text" class="form-control" value="Description">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">توصيف</span>
+                                                <input type="text" class="form-control" value="توصيف">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">Details</span>
+                                                <input type="text" class="form-control" value="Details">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">تفاصيل</span>
+                                                <input type="text" class="form-control" value="تفاصيل">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="blue-level editable">blue-level</span>
+                                                <select class="form-select harmLevel-select"></select>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="#" class="text-primary row-edit fa fa-pencil-alt"></a>
+                                                <a href="#" class="text-danger delete-row fa fa-trash-alt"></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="row-inline-editable text-center">
+                                                <span class="editable">43423</span>
+                                                <input type="text" class="form-control" value="43423">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">Description</span>
+                                                <input type="text" class="form-control" value="Description">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">توصيف</span>
+                                                <input type="text" class="form-control" value="توصيف">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">Details</span>
+                                                <input type="text" class="form-control" value="Details">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">تفاصيل</span>
+                                                <input type="text" class="form-control" value="تفاصيل">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="lightBlue-level editable">lightBlue-level</span>
                                                 <select class="form-select harmLevel-select"></select>
                                             </td>
                                             <td class="text-center">
@@ -524,36 +637,48 @@
         }
 
         //   Incidents Table
-        var tableSetup = IncidentsTable();
+        // var tableSetup = IncidentsTable();
 
-        function IncidentsTable() {
-            var table = $('table').DataTable({
-                "dom": 'tpil',
-                "stateSave": false,
-                "scrollCollapse": false,
-                "info": true,
-                "paging": true,
-                "responsive": true,
-                "ordering": true,
-                "colReorder": false,
-            });
+        // function IncidentsTable() {
+        //     var table = $('table').DataTable({
+        //         "dom": 'tpil',
+        //         "stateSave": false,
+        //         "scrollCollapse": false,
+        //         "info": true,
+        //         "paging": true,
+        //         "responsive": true,
+        //         "ordering": true,
+        //         "colReorder": false,
+        //     });
 
-            return table;
-        };
+        //     return table;
+        // };
 
 
 
         var data = [
             {
                 id: 0,
-                text: `<div class="badge rounded-pill text-bg-success">Low</div>`
+                text: `<div class="red">red</div>`
             }, {
                 id: 1,
-                text: `<div class="badge rounded-pill text-bg-warning">Medium</div>`
+                text: `<div class="yellow-level">yellow-level</div>`
             },
             {
                 id: 2,
-                text: `<div class="badge rounded-pill text-bg-danger">High</div>`
+                text: `<div class="green-level">green-level</div>`
+            },
+            {
+                id: 3,
+                text: `<div class="black-level">black-level</div>`
+            },
+            {
+                id: 4,
+                text: `<div class="blue-level">blue-level</div>`
+            },
+            {
+                id: 4,
+                text: `<div class="lightBlue-level">lightBlue-level</div>`
             }
         ];
 

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <title>Prevent Ability</title>
+    <title>Reminder</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/datatables.min.css">
     <link rel="stylesheet" href="assets/css/dataTables.bootstrap5.min.css">
@@ -259,12 +259,12 @@
                     <h3>Harm Levels</h3>
                 </a>
             </li>
-            <li class="active">
+            <li>
                 <a href="Prevent Ability.html" title="Prevent Ability"><i class="fas fa-stop-circle"></i>
                     <h3>Prevent Ability</h3>
                 </a>
             </li>
-            <li>
+            <li class="active">
                 <a href="Reminder.html" title="Reminder"><i class="far fa-bell"></i>
                     <h3>Reminder</h3>
                 </a>
@@ -284,7 +284,7 @@
                             <li class="breadcrumb-item">OVR</li>
                             <li class="breadcrumb-item">Setup</li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                <h2>Prevent Ability</h2>
+                                <h2>Reminder</h2>
                             </li>
                         </ol>
                     </nav>
@@ -292,7 +292,7 @@
                 <!-- action-tools  -->
                 <div class="ms-auto ms-sm-auto m-sm-0 p-1">
                     <div class="action-tools d-flex align-items-center justify-content-end">
-                        <!-- <a class="px-1 btn-filter position-relative" title="Advance Search" data-bs-toggle="offcanvas"
+                        <a class="px-1 btn-filter position-relative" title="Advance Search" data-bs-toggle="offcanvas"
                             href="#offcanvasFilter" role="button" aria-controls="offcanvasFilter">
                             <i class="fa fa-filter"></i>
                             <span
@@ -300,11 +300,11 @@
                                 style="padding: 0.4rem;">
                             </span>
                         </a>
-                        <span class="vr mx-2"></span> -->
-                        <a href="#" class="px-1 text-primary" title="Add Harm Level" onclick="addPreventAbility();"><i
+                        <span class="vr mx-2"></span>
+                        <a href="#" class="px-1 text-primary" title="Add Reminder" onclick="addReminder();"><i
                                 class="fa fa-plus-circle"></i></a>
-                        <!-- <span class="vr mx-2"></span>
-                        <a href="#" class="px-1 text-primary" title="Save"><i class="fa fa-floppy-disk"></i></a> -->
+                        <span class="vr mx-2"></span>
+                        <a href="#" class="px-1 text-primary" title="Save"><i class="fa fa-floppy-disk"></i></a>
                     </div>
                     <!-- filter element-->
                     <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasFilter"
@@ -318,24 +318,86 @@
                         <div class="offcanvas-body">
                             <div class="row">
                                 <div class="col-md-6 mb-2">
-                                    <label class="form-label">Code</label>
-                                    <input type="text" class="form-control form-control-sm" placeholder="Example: 205">
+                                    <label class="form-label">Reporter Reminder (from - to)</label>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-2">
+                                            <input type="number" class="form-control form-control-sm" value="1">
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <input type="number" class="form-control form-control-sm" value="10">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-3 col-md-2 mb-2 d-flex align-items-end">
+                                <div class="col-md-6 mb-2">
+                                    <label class="form-label">Reporter Interval (from - to)</label>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-2">
+                                            <input type="number" class="form-control form-control-sm" value="1">
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <input type="number" class="form-control form-control-sm" value="10">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <label class="form-label">Supervisor Reminder (from - to)</label>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-2">
+                                            <input type="number" class="form-control form-control-sm" value="1">
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <input type="number" class="form-control form-control-sm" value="10">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <label class="form-label">Supervisor Interval (from - to)</label>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-2">
+                                            <input type="number" class="form-control form-control-sm" value="1">
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <input type="number" class="form-control form-control-sm" value="10">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <label class="form-label">Manager Reminder (from - to)</label>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-2">
+                                            <input type="number" class="form-control form-control-sm" value="1">
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <input type="number" class="form-control form-control-sm" value="10">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <label class="form-label">Manager Interval (from - to)</label>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-2">
+                                            <input type="number" class="form-control form-control-sm" value="1">
+                                        </div>
+                                        <div class="col-md-6 mb-2">
+                                            <input type="number" class="form-control form-control-sm" value="10">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="col-12 mb-2">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="activeCheckbox">
                                         <label class="form-check-label" for="activeCheckbox">
-                                            Active
+                                            Don’t Use New Hr
                                         </label>
                                     </div>
                                 </div>
-
                                 <hr>
                                 <div class="mt-2 d-grid gap-2 d-md-flex justify-content-center">
                                     <a href="#" class="btn btn-secondary text-white btn-sm px-5">
                                         <!-- <i class="fa fa-refresh"></i>  -->
                                         Clear All
-                                        <span class="ms-2 badge rounded-1">1</span>
+                                        <span class="ms-2 badge rounded-1">2</span>
                                     </a>
                                     <a href="#" class="btn btn-primary btn-sm px-5" data-bs-dismiss="offcanvas"
                                         aria-label="Close"><i class="fa fa-search"></i> Search</a>
@@ -355,43 +417,203 @@
                     <div class="row">
                         <div class="col-12">
                             <div id="" class="table-responsive mt-3">
-                                <table class="table table-striped table-hover align-middle table-sm init_datatable">
+                                <table class="table table-striped table-hover align-middle table-sm">
                                     <colgroup>
                                         <col>
                                         <col>
                                         <col>
-                                        <col style="width: 100px;">
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col style="width: 150px;">
                                         <col style="width:80px;">
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th scope="col" class="text-center searchableTh" data-searchtype="text">Code</th>
-                                            <th scope="col" data-orderable="false">English Description</th>
-                                            <th scope="col" data-orderable="false">Arabic Description</th>
+                                            <th scope="col" colspan="3" class="text-center border-end">Reminder/Hour -
+                                                Interval/Hour</th>
+                                            <th scope="col" colspan="3" class="text-center border-end">Escalation Email
+                                            </th>
+                                            <th scope="col" colspan="2"></th>
+                                        </tr>
+                                        <tr class="align-middle">
+                                            <th scope="col" data-orderable="false">Reporter</th>
+                                            <th scope="col" data-orderable="false">Supervisor</th>
+                                            <th scope="col" data-orderable="false">Manager</th>
+                                            <th scope="col" data-orderable="false">First</th>
+                                            <th scope="col" data-orderable="false">Second</th>
+                                            <th scope="col" data-orderable="false">Third</th>
                                             <th scope="col" data-orderable="false" class="text-center">
-                                                Active</th>
+                                                Don’t Use New Hr</th>
                                             <th scope="col" data-orderable="false"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="row-inline-editable text-center">
-                                                <span class="editable">43423</span>
-                                                <input type="text" class="form-control" value="43423">
+                                            <td class="row-inline-editable">
+                                                <span class="editable">1 - 2</span>
+                                                <div class="d-flex gap-1">
+                                                    <input type="text" class="form-control" value="1">
+                                                    <input type="text" class="form-control" value="2">
+                                                </div>
                                             </td>
                                             <td class="row-inline-editable">
-                                                <span class="editable">Description</span>
-                                                <input type="text" class="form-control" value="Description">
+                                                <span class="editable">1 - 2</span>
+                                                <div class="d-flex gap-1">
+                                                    <input type="text" class="form-control" value="1">
+                                                    <input type="text" class="form-control" value="2">
+                                                </div>
                                             </td>
                                             <td class="row-inline-editable">
-                                                <span class="editable">توصيف</span>
-                                                <input type="text" class="form-control" value="توصيف">
+                                                <span class="editable">1 - 2</span>
+                                                <div class="d-flex gap-1">
+                                                    <input type="text" class="form-control" value="1">
+                                                    <input type="text" class="form-control" value="2">
+                                                </div>
                                             </td>
-                                            <td class="row-inline-editable text-center">
-                                                <span class="editable">
-                                                    <i class="fas fa-check"></i>
-                                                </span>
-                                                <input class="form-check-input" type="checkbox" checked="">
+                                            <td class="row-inline-editable">
+                                                <span class="editable">ramy@hospital.com</span>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">ramy@hospital.com</span>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">ramy@hospital.com</span>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox" value="" id="" checked>
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="#" class="text-primary row-edit fa fa-pencil-alt"></a>
+                                                <a href="#" class="text-danger delete-row fa fa-trash-alt"></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="not-saved d-none addReminder">
+                                            <td>
+                                                <div class="d-flex gap-1">
+                                                    <input type="text" class="form-control" value="1">
+                                                    <input type="text" class="form-control" value="2">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex gap-1">
+                                                    <input type="text" class="form-control" value="1">
+                                                    <input type="text" class="form-control" value="2">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex gap-1">
+                                                    <input type="text" class="form-control" value="1">
+                                                    <input type="text" class="form-control" value="2">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox" value="" id="">
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="#" class="text-primary row-edit fa fa-floppy-disk"></a>
+                                                <a href="#" class="text-danger delete-row fa fa-trash-alt"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div id="" class="table-responsive mt-3">
+                                <table class="table table-striped table-hover table-bordered align-middle table-sm">
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col style="width: 150px;">
+                                        <col style="width:80px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr class="align-middle">
+                                            <th scope="col" colspan="2" class="text-center border-bottom border-start">
+                                                Reporter</th>
+                                            <th scope="col" colspan="2" class="text-center border-bottom">Supervisor
+                                            </th>
+                                            <th scope="col" colspan="2" class="text-center border-bottom">Manager</th>
+                                            <th scope="col" colspan="3" class="text-center border-bottom">Escalation
+                                                Email
+                                            </th>
+                                            <th scope="col" colspan="2" class="border-bottom"></th>
+                                        </tr>
+                                        <tr class="align-middle">
+                                            <th scope="col" data-orderable="false">Reminder/Hour</th>
+                                            <th scope="col" data-orderable="false">Interval/Hour</th>
+                                            <th scope="col" data-orderable="false">Reminder/Hour</th>
+                                            <th scope="col" data-orderable="false">Interval/Hour</th>
+                                            <th scope="col" data-orderable="false">Reminder/Hour</th>
+                                            <th scope="col" data-orderable="false">Interval/Hour</th>
+                                            <th scope="col" data-orderable="false" class="text-center">First</th>
+                                            <th scope="col" data-orderable="false" class="text-center">Second</th>
+                                            <th scope="col" data-orderable="false" class="text-center">Third</th>
+                                            <th scope="col" data-orderable="false" class="text-center">
+                                                Don’t Use New Hr</th>
+                                            <th scope="col" data-orderable="false"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="1">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="2">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="1">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="2">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="1">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="2">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">ramy@hospital.com</span>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">ramy@hospital.com</span>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">ramy@hospital.com</span>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox" value="" id="" checked>
                                             </td>
                                             <td class="text-center">
                                                 <a href="#" class="text-primary row-edit fa fa-pencil-alt"></a>
@@ -399,23 +621,44 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="row-inline-editable text-center">
-                                                <span class="editable">43423</span>
-                                                <input type="text" class="form-control" value="43423">
+                                            <td class="row-inline-editable">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="1">
                                             </td>
                                             <td class="row-inline-editable">
-                                                <span class="editable">Description</span>
-                                                <input type="text" class="form-control" value="Description">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="2">
                                             </td>
                                             <td class="row-inline-editable">
-                                                <span class="editable">توصيف</span>
-                                                <input type="text" class="form-control" value="توصيف">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="1">
                                             </td>
-                                            <td class="row-inline-editable text-center">
-                                                <span class="editable">
-                                                    <i class="fas fa-check"></i>
-                                                </span>
-                                                <input class="form-check-input" type="checkbox" checked="">
+                                            <td class="row-inline-editable">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="2">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="1">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="2">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">ramy@hospital.com</span>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">ramy@hospital.com</span>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">ramy@hospital.com</span>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox" value="" id="" checked>
                                             </td>
                                             <td class="text-center">
                                                 <a href="#" class="text-primary row-edit fa fa-pencil-alt"></a>
@@ -423,38 +666,77 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="row-inline-editable text-center">
-                                                <span class="editable">43423</span>
-                                                <input type="text" class="form-control" value="43423">
+                                            <td class="row-inline-editable">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="1">
                                             </td>
                                             <td class="row-inline-editable">
-                                                <span class="editable">Description</span>
-                                                <input type="text" class="form-control" value="Description">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="2">
                                             </td>
                                             <td class="row-inline-editable">
-                                                <span class="editable">توصيف</span>
-                                                <input type="text" class="form-control" value="توصيف">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="1">
                                             </td>
-                                            <td class="row-inline-editable text-center">
-                                                <span class="editable">
-                                                    <i class="fas fa-check"></i>
-                                                </span>
-                                                <input class="form-check-input" type="checkbox" checked="">
+                                            <td class="row-inline-editable">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="2">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="1">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">1</span>
+                                                <input type="text" class="form-control" value="2">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">ramy@hospital.com</span>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">ramy@hospital.com</span>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td class="row-inline-editable">
+                                                <span class="editable">ramy@hospital.com</span>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox" value="" id="" checked>
                                             </td>
                                             <td class="text-center">
                                                 <a href="#" class="text-primary row-edit fa fa-pencil-alt"></a>
                                                 <a href="#" class="text-danger delete-row fa fa-trash-alt"></a>
                                             </td>
                                         </tr>
-                                        <tr class="not-saved d-none addPreventAbility">
-                                            <td class=" text-center">
-                                                <input type="text" class="form-control" value="748323">
+                                        <tr class="not-saved d-none addReminder">
+                                            <td>
+                                                <input type="text" class="form-control" value="1">
                                             </td>
-                                            <td class="">
-                                                <input type="text" class="form-control" value="Description">
+                                            <td>
+                                                <input type="text" class="form-control" value="2">
                                             </td>
-                                            <td class="">
-                                                <input type="text" class="form-control" value="توصيف">
+                                            <td>
+                                                <input type="text" class="form-control" value="1">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="2">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="1">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="2">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" value="ramy@hospital.com">
                                             </td>
                                             <td class="text-center">
                                                 <input class="form-check-input" type="checkbox" value="" id="">
@@ -516,27 +798,27 @@
 
     <script>
 
-        function addPreventAbility() {
-            $(".addPreventAbility.not-saved").removeClass("d-none");
+        function addReminder() {
+            $(".addReminder.not-saved").removeClass("d-none");
         }
 
         //   Incidents Table
-        // var tableSetup = IncidentsTable();
+        var tableSetup = IncidentsTable();
 
-        // function IncidentsTable() {
-        //     var table = $('table').DataTable({
-        //         "dom": 'tpil',
-        //         "stateSave": false,
-        //         "scrollCollapse": false,
-        //         "info": true,
-        //         "paging": true,
-        //         "responsive": true,
-        //         "ordering": true,
-        //         "colReorder": false,
-        //     });
+        function IncidentsTable() {
+            var table = $('table').DataTable({
+                "dom": 'tpil',
+                "stateSave": false,
+                "scrollCollapse": false,
+                "info": true,
+                "paging": true,
+                "responsive": true,
+                "ordering": true,
+                "colReorder": false,
+            });
 
-        //     return table;
-        // };
+            return table;
+        };
 
     </script>
 

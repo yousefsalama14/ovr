@@ -303,8 +303,6 @@
                         <span class="vr mx-2"></span>
                         <a href="#" class="px-1 text-primary" title="Add Harm Level" onclick="addHarmLevel();"><i
                                 class="fa fa-plus-circle"></i></a>
-                        <span class="vr mx-2"></span>
-                        <a href="#" class="px-1 text-primary" title="Save"><i class="fa fa-floppy-disk"></i></a>
                     </div>
                     <!-- filter element-->
                     <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasFilter"
@@ -324,7 +322,14 @@
                                 <div class="col-md-6 mb-2">
                                     <div class="d-flex flex-column">
                                         <label for="IncidentType" class="form-label">Harm Levels</label>
-                                        <select class="form-select harmLevel-select"></select>
+                                        <select class="form-select">
+                                                    <option value="red">red</option>
+                                                    <option value="yellow">yellow</option>
+                                                    <option value="green">green</option>
+                                                    <option value="black">black</option>
+                                                    <option value="blue">blue</option>
+                                                    <option value="lightblue">lightblue</option>
+                                                </select>
                                     </div>
                                 </div>
                                 <hr>
@@ -370,7 +375,8 @@
                                             <th scope="col" data-orderable="false">Arabic Description</th>
                                             <th scope="col" data-orderable="false">Details in English</th>
                                             <th scope="col" data-orderable="false">Details in Arabic</th>
-                                            <th scope="col" class="searchableTh" data-searchtype="select">Harm Level color
+                                            <th scope="col" class="searchableTh" data-searchtype="select" data-filter>Harm Level
+                                                color
                                             </th>
                                             <th scope="col" data-orderable="false"></th>
                                         </tr>
@@ -397,9 +403,16 @@
                                                 <span class="editable">تفاصيل</span>
                                                 <input type="text" class="form-control" value="تفاصيل">
                                             </td>
-                                            <td class="row-inline-editable">
+                                            <td class="row-inline-editable" data-filter="red">
                                                 <span class="red editable">red</span>
-                                                <select class="form-select harmLevel-select"></select>
+                                                <select class="form-select">
+                                                    <option value="red" selected>red</option>
+                                                    <option value="yellow">yellow</option>
+                                                    <option value="green">green</option>
+                                                    <option value="black">black</option>
+                                                    <option value="blue">blue</option>
+                                                    <option value="lightblue">lightblue</option>
+                                                </select>
                                             </td>
                                             <td class="text-center">
                                                 <a href="#" class="text-primary row-edit fa fa-pencil-alt"></a>
@@ -427,9 +440,16 @@
                                                 <span class="editable">تفاصيل</span>
                                                 <input type="text" class="form-control" value="تفاصيل">
                                             </td>
-                                            <td class="row-inline-editable">
-                                                <span class="yellow-level editable">yellow-level</span>
-                                                <select class="form-select harmLevel-select"></select>
+                                            <td class="row-inline-editable" data-filter="yellow">
+                                                <span class="yellow editable">yellow</span>
+                                                <select class="form-select">
+                                                    <option value="red">red</option>
+                                                    <option value="yellow" selected>yellow</option>
+                                                    <option value="green">green</option>
+                                                    <option value="black">black</option>
+                                                    <option value="blue">blue</option>
+                                                    <option value="lightblue">lightblue</option>
+                                                </select>
                                             </td>
                                             <td class="text-center">
                                                 <a href="#" class="text-primary row-edit fa fa-pencil-alt"></a>
@@ -457,9 +477,16 @@
                                                 <span class="editable">تفاصيل</span>
                                                 <input type="text" class="form-control" value="تفاصيل">
                                             </td>
-                                            <td class="row-inline-editable">
-                                                <span class="green-level editable">green-level</span>
-                                                <select class="form-select harmLevel-select"></select>
+                                            <td class="row-inline-editable" data-filter="green">
+                                                <span class="green editable">green</span>
+                                                <select class="form-select">
+                                                    <option value="red">red</option>
+                                                    <option value="yellow">yellow</option>
+                                                    <option value="green" selected>green</option>
+                                                    <option value="black">black</option>
+                                                    <option value="blue">blue</option>
+                                                    <option value="lightblue">lightblue</option>
+                                                </select>
                                             </td>
                                             <td class="text-center">
                                                 <a href="#" class="text-primary row-edit fa fa-pencil-alt"></a>
@@ -487,9 +514,16 @@
                                                 <span class="editable">تفاصيل</span>
                                                 <input type="text" class="form-control" value="تفاصيل">
                                             </td>
-                                            <td class="row-inline-editable">
-                                                <span class="black-level editable">black-level</span>
-                                                <select class="form-select harmLevel-select"></select>
+                                            <td class="row-inline-editable" data-filter="black">
+                                                <span class="black editable">black</span>
+                                                <select class="form-select">
+                                                    <option value="red">red</option>
+                                                    <option value="yellow">yellow</option>
+                                                    <option value="green">green</option>
+                                                    <option value="black" selected>black</option>
+                                                    <option value="blue">blue</option>
+                                                    <option value="lightblue">lightblue</option>
+                                                </select>
                                             </td>
                                             <td class="text-center">
                                                 <a href="#" class="text-primary row-edit fa fa-pencil-alt"></a>
@@ -517,9 +551,16 @@
                                                 <span class="editable">تفاصيل</span>
                                                 <input type="text" class="form-control" value="تفاصيل">
                                             </td>
-                                            <td class="row-inline-editable">
-                                                <span class="blue-level editable">blue-level</span>
-                                                <select class="form-select harmLevel-select"></select>
+                                            <td class="row-inline-editable" data-filter="blue">
+                                                <span class="blue editable">blue</span>
+                                                <select class="form-select">
+                                                    <option value="red">red</option>
+                                                    <option value="yellow">yellow</option>
+                                                    <option value="green">green</option>
+                                                    <option value="black">black</option>
+                                                    <option value="blue" selected>blue</option>
+                                                    <option value="lightblue">lightblue</option>
+                                                </select>
                                             </td>
                                             <td class="text-center">
                                                 <a href="#" class="text-primary row-edit fa fa-pencil-alt"></a>
@@ -547,9 +588,16 @@
                                                 <span class="editable">تفاصيل</span>
                                                 <input type="text" class="form-control" value="تفاصيل">
                                             </td>
-                                            <td class="row-inline-editable">
-                                                <span class="lightBlue-level editable">lightBlue-level</span>
-                                                <select class="form-select harmLevel-select"></select>
+                                            <td class="row-inline-editable" data-filter="lightblue">
+                                                <span class="lightblue editable">lightblue</span>
+                                                <select class="form-select">
+                                                    <option value="red">red</option>
+                                                    <option value="yellow">yellow</option>
+                                                    <option value="green">green</option>
+                                                    <option value="black">black</option>
+                                                    <option value="blue">blue</option>
+                                                    <option value="lightblue" selected>lightblue</option>
+                                                </select>
                                             </td>
                                             <td class="text-center">
                                                 <a href="#" class="text-primary row-edit fa fa-pencil-alt"></a>
@@ -573,7 +621,14 @@
                                                 <input type="text" class="form-control" value="تفاصيل">
                                             </td>
                                             <td>
-                                                <select class="form-select harmLevel-select"></select>
+                                                <select class="form-select">
+                                                    <option value="red">red</option>
+                                                    <option value="yellow">yellow</option>
+                                                    <option value="green">green</option>
+                                                    <option value="black">black</option>
+                                                    <option value="blue">blue</option>
+                                                    <option value="lightblue">lightblue</option>
+                                                </select>
                                             </td>
                                             <td class="text-center">
                                                 <a href="#" class="text-primary row-edit fa fa-floppy-disk"></a>
@@ -653,41 +708,6 @@
 
         //     return table;
         // };
-
-
-
-        var data = [
-            {
-                id: 0,
-                text: `<div class="red">red</div>`
-            }, {
-                id: 1,
-                text: `<div class="yellow-level">yellow-level</div>`
-            },
-            {
-                id: 2,
-                text: `<div class="green-level">green-level</div>`
-            },
-            {
-                id: 3,
-                text: `<div class="black-level">black-level</div>`
-            },
-            {
-                id: 4,
-                text: `<div class="blue-level">blue-level</div>`
-            },
-            {
-                id: 4,
-                text: `<div class="lightBlue-level">lightBlue-level</div>`
-            }
-        ];
-
-        $(".harmLevel-select").select2({
-            data: data,
-            escapeMarkup: function (markup) {
-                return markup;
-            }
-        });
 
 
     </script>

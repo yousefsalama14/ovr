@@ -181,9 +181,10 @@ label+p {
     line-height: 28px;
 }
 
-[name$="-level"]{
+[name$="-level"] {
     background-color: white !important;
 }
+
 /***** End Select *****/
 /***** Timeline *****/
 .steps {
@@ -480,7 +481,7 @@ a.btn-wrapper:hover {
 
 .editable .fa-check {
     --bs-text-opacity: 1;
-    color: rgb(var(--bs-primary-rgb));
+    color: rgb(var(--bs-success-rgb));
 }
 
 /***** End Colors *****/
@@ -558,6 +559,36 @@ table.dataTable>tbody>tr.not-saved {
 
 td .input-group-text {
     height: 27px;
+}
+
+.row-edit,
+.delete-row {
+    border-radius: 4px;
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-edit {
+    border: 1px solid var(--appColor);
+}
+
+.row-edit:hover {
+    border: 1px solid var(--appColor);
+    background-color: var(--appColor);
+    --bs-primary-rgb: 255, 255, 255;
+}
+
+.delete-row {
+    border: 1px solid rgb(var(--bs-danger-rgb));
+}
+
+.delete-row:hover {
+    border: 1px solid rgb(var(--bs-danger-rgb));
+    background-color: rgb(var(--bs-danger-rgb));
+    color: #fff !important;
 }
 
 /* thead tr th {
@@ -678,58 +709,76 @@ body.DMSBlueBlue .sidebar-item>li {
 
 /***** End Tabs *****/
 /***** Harm levels classes *****/
-.red{
+.red,
+[value="red"] {
     border-radius: 50rem;
-    color: #fff!important;
-    background-color: RGB(220,53,69)!important;
+    color: #fff !important;
+    background-color: RGB(220, 53, 69) !important;
     padding: 4px 6px;
     font-size: 0.75em;
     font-weight: 700;
 }
 
-.yellow-level{
+.yellow,
+[value="yellow"] {
     border-radius: 50rem;
-    color: #000!important;
-    background-color: RGB(255,193,7)!important;
+    color: #000 !important;
+    background-color: RGB(255, 193, 7) !important;
     padding: 4px 6px;
     font-size: 0.75em;
     font-weight: 700;
 }
 
-.green-level{
+.green,
+[value="green"] {
     border-radius: 50rem;
-    color: #fff!important;
-    background-color: RGB(25,135,84)!important;
+    color: #fff !important;
+    background-color: RGB(25, 135, 84) !important;
     padding: 4px 6px;
     font-size: 0.75em;
     font-weight: 700;
 }
 
-.black-level{
+.black,
+[value="black"] {
     border-radius: 50rem;
-    color: #fff!important;
-    background-color: RGB(33,37,41)!important;
+    color: #fff !important;
+    background-color: RGB(33, 37, 41) !important;
     padding: 4px 6px;
     font-size: 0.75em;
     font-weight: 700;
 }
 
-.blue-level{
+.blue,
+[value="blue"] {
     border-radius: 50rem;
-    color: #fff!important;
-    background-color: RGB(13,110,253)!important;
+    color: #fff !important;
+    background-color: RGB(13, 110, 253) !important;
     padding: 4px 6px;
     font-size: 0.75em;
     font-weight: 700;
 }
 
-.lightBlue-level{
+.lightblue,
+[value="lightblue"] {
     border-radius: 50rem;
-    color: #fff!important;
-    background-color: RGB(13,202,240)!important;
+    color: #fff !important;
+    background-color: RGB(13, 202, 240) !important;
     padding: 4px 6px;
     font-size: 0.75em;
     font-weight: 700;
+}
+
+.select2-selection__rendered .red,
+.select2-selection__rendered .yellow,
+.select2-selection__rendered .green,
+.select2-selection__rendered .black,
+.select2-selection__rendered .blue,
+.select2-selection__rendered .lightblue {
+    height: 22px;
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
 }
 
 /***** End Harm levels classes *****/

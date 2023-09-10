@@ -283,8 +283,9 @@
                         <ol class="breadcrumb position-relative">
                             <li class="breadcrumb-item">OVR</li>
                             <li class="breadcrumb-item">Setup</li>
+                            <li class="breadcrumb-item">Reminder</li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                <h2>Reminder</h2>
+                                <h2>Edit Reminder</h2>
                             </li>
                         </ol>
                     </nav>
@@ -301,7 +302,7 @@
                             </span>
                         </a>
                         <span class="vr mx-2"></span> -->
-                        <a href="Reminder-add.html" class="px-1 text-primary" title="Add"><i class="fas fa-pencil"></i></a>
+                        <!-- <a href="#" class="px-1 text-primary" title="Add"><i class="fas fa-pencil"></i></a> -->
                         <!-- <span class="vr mx-2"></span>
                         <a href="#" class="px-1 text-primary" title="Save"><i class="fa fa-floppy-disk"></i></a> -->
                     </div>
@@ -326,58 +327,58 @@
             </div>
             <!-- content -->
             <div class="page-content">
-                <div id="patientsBody" class="">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 col-md-4 mb-4">
-                            <div class="d-flex flex-column">
-                                <h6 class="mb-2">Reporter</h6>
-                                <div class="d-flex gap-4">
-                                    <p>1Reminder/Hour</p>
-                                    <p>1Interval/Hour</p>
-                                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="d-flex flex-column">
+                            <h6 class="mb-2">Reporter</h6>
+                            <div class="d-flex gap-4">
+                                <input type="text" class="form-control" placeholder="Reminder/Hour">
+                                <input type="text" class="form-control" placeholder="Interval/Hour">
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-4 mb-4">
-                            <div class="d-flex flex-column">
-                                <h6 class="mb-2">Supervisor</h6>
-                                <div class="d-flex gap-4">
-                                    <p>1Reminder/Hour</p>
-                                    <p>1Interval/Hour</p>
-                                </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="d-flex flex-column">
+                            <h6 class="mb-2">Supervisor</h6>
+                            <div class="d-flex gap-4">
+                                <input type="text" class="form-control" placeholder="Reminder/Hour">
+                                <input type="text" class="form-control" placeholder="Interval/Hour">
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-4 mb-4">
-                            <div class="d-flex flex-column">
-                                <h6 class="mb-2">Manager</h6>
-                                <div class="d-flex gap-4">
-                                    <p>1Reminder/Hour</p>
-                                    <p>1Interval/Hour</p>
-                                </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="d-flex flex-column">
+                            <h6 class="mb-2">Manager</h6>
+                            <div class="d-flex gap-4">
+                                <input type="text" class="form-control" placeholder="Reminder/Hour">
+                                <input type="text" class="form-control" placeholder="Interval/Hour">
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-4 mb-4">
-                            <div class="d-flex flex-column">
-                                <h6 class="mb-2">First Escalation Email</h6>
-                                <p>ramy@hospital.com</p>
-                            </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="d-flex flex-column">
+                            <h6 class="mb-2">First Escalation Email</h6>
+                            <input type="text" class="form-control" placeholder="ramy@hospital.com">
                         </div>
-                        <div class="col-12 col-sm-6 col-md-4 mb-4">
-                            <div class="d-flex flex-column">
-                                <h6 class="mb-2">Second Escalation Email</h6>
-                                <p>ramy@hospital.com</p>
-                            </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="d-flex flex-column">
+                            <h6 class="mb-2">Second Escalation Email</h6>
+                            <input type="text" class="form-control" placeholder="ramy@hospital.com">
                         </div>
-                        <div class="col-12 col-sm-6 col-md-4 mb-4">
-                            <div class="d-flex flex-column">
-                                <h6 class="mb-2">Third Escalation Email</h6>
-                                <p>ramy@hospital.com</p>
-                            </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="d-flex flex-column">
+                            <h6 class="mb-2">Third Escalation Email</h6>
+                            <input type="text" class="form-control" placeholder="ramy@hospital.com">
                         </div>
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <p>
-                                <i class="fas fa-times text-danger"></i>
-                                Don’t Use New Hr
-                            </p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="useNewHr">
+                            <label class="form-check-label" for="useNewHr">
+                                use new Hr
+                            </label>
                         </div>
                     </div>
                 </div>
